@@ -749,7 +749,8 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="px-6 md:px-12 py-24 border-t border-white/5 bg-transparent" >
+      {/* Footer — solid black background to hide stars */}
+      <footer className="px-6 md:px-12 py-24 border-t border-white/5 bg-black relative z-10" >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
             <div className="flex flex-col gap-8 max-w-sm">
@@ -757,20 +758,20 @@ export default function App() {
                 <img src={logoImg} alt="DavScale Labs" className="h-8 w-auto object-contain" />
                 <span className="font-display font-bold text-xl tracking-tight">DavScale Labs</span>
               </div>
-              <p className="text-white/40 text-sm leading-relaxed">
+              <p className="text-white/70 text-sm leading-relaxed font-light">
                 The AI-native design agency. We build autonomous digital ecosystems that learn, adapt, and convert.
               </p>
               <div className="flex gap-6">
-                <a href="#" className="text-white/30 hover:text-white transition-colors"><Globe className="w-5 h-5" /></a>
-                <a href="#" className="text-white/30 hover:text-white transition-colors"><Cpu className="w-5 h-5" /></a>
-                <a href="#" className="text-white/30 hover:text-white transition-colors"><Zap className="w-5 h-5" /></a>
+                <a href="#" className="text-white/50 hover:text-white transition-all transform hover:scale-110"><Globe className="w-5 h-5" /></a>
+                <a href="#" className="text-white/50 hover:text-white transition-all transform hover:scale-110"><Cpu className="w-5 h-5" /></a>
+                <a href="#" className="text-white/50 hover:text-white transition-all transform hover:scale-110"><Zap className="w-5 h-5" /></a>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-20">
               <div className="flex flex-col gap-6">
-                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">Platform</span>
-                <ul className="flex flex-col gap-4 text-sm text-white/50">
+                <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-white/40">Platform</span>
+                <ul className="flex flex-col gap-4 text-sm text-white/80">
                   <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Process</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">About</a></li>
@@ -778,8 +779,8 @@ export default function App() {
                 </ul>
               </div>
               <div className="flex flex-col gap-6">
-                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">Connect</span>
-                <ul className="flex flex-col gap-4 text-sm text-white/50">
+                <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-white/40">Connect</span>
+                <ul className="flex flex-col gap-4 text-sm text-white/80">
                   <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
@@ -789,10 +790,10 @@ export default function App() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
-            <span className="text-[10px] uppercase tracking-[0.4em] font-mono text-white/20">
+            <span className="text-[11px] uppercase tracking-[0.4em] font-mono text-white/40">
               © 2025 DavScale Labs. All rights reserved.
             </span>
-            <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-mono text-white/20">
+            <div className="flex gap-8 text-[11px] uppercase tracking-[0.2em] font-mono text-white/40">
               <span>Est. 2024</span>
               <span>Based in the Cloud</span>
             </div>
