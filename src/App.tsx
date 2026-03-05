@@ -9,6 +9,8 @@ import { Cpu, Globe, Sparkles, Zap, ArrowRight } from "lucide-react";
 import { MetallicObject3D } from "./components/MetallicObject3D";
 import { StarBackground } from "./components/StarBackground";
 import logoImg from "./assets/logo.png";
+import { AudioControl } from "./components/AudioControl";
+
 
 export default function App() {
   const heroRef = useRef<HTMLElement>(null);
@@ -189,8 +191,8 @@ export default function App() {
             </div>
           </div>
 
-          {/* Scroll indicator — bottom center of hero */}
-          <div className="absolute bottom-52 left-0 right-0 flex justify-center z-30 pointer-events-auto">
+          {/* Scroll indicator — bottom center of hero — hidden on mobile */}
+          <div className="hidden md:flex absolute bottom-52 left-0 right-0 justify-center z-30 pointer-events-auto">
             <motion.button
               onClick={() => workflowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               animate={{ y: [0, 8, 0] }}
@@ -797,6 +799,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+      <AudioControl />
     </div>
   );
 }
