@@ -7,6 +7,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Cpu, Globe, Sparkles, Zap, ArrowRight } from "lucide-react";
 import { MetallicObject3D } from "./components/MetallicObject3D";
+import { StarBackground } from "./components/StarBackground";
 import logoImg from "./assets/logo.png";
 
 export default function App() {
@@ -21,9 +22,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-white/30 overflow-x-hidden">
+      <StarBackground />
       <div className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-center pointer-events-none">
         {/* We use a relative container to hold the pseudo-element targeted borders */}
-        <nav className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/10 backdrop-blur-3xl border border-white/20 rounded-full px-6 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.6),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-1px_2px_rgba(255,255,255,0.1)]">
+        <nav className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/[0.02] backdrop-blur-2xl border border-white/20 rounded-full px-6 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)]">
 
           <div className="flex items-center gap-3">
             <img src={logoImg} alt="DavScale Labs Logo" className="h-8 w-auto object-contain" />
@@ -32,10 +34,11 @@ export default function App() {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-white/50">
-            <a href="#" className="hover:text-white transition-colors">Platform</a>
-            <a href="#" className="hover:text-white transition-colors">Solutions</a>
-            <a href="#" className="hover:text-white transition-colors">Agency</a>
-            <a href="#" className="hover:text-white transition-colors">Pricing</a>
+            <a href="#" className="hover:text-white transition-colors">Home</a>
+            <a href="#" className="hover:text-white transition-colors">Services</a>
+            <a href="#" className="hover:text-white transition-colors">Work</a>
+            <a href="#" className="hover:text-white transition-colors">About</a>
+            <a href="#" className="hover:text-white transition-colors">Contact Us</a>
           </div>
 
           <div className="flex items-center gap-3">
@@ -66,7 +69,7 @@ export default function App() {
               className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto"
             >
               <div className="rounded-2xl bg-black/90 backdrop-blur-2xl border border-white/10 p-6 flex flex-col gap-5">
-                {['Platform', 'Solutions', 'Agency', 'Pricing'].map((item) => (
+                {['Home', 'Services', 'Work', 'About', 'Contact Us'].map((item) => (
                   <a
                     key={item}
                     href="#"
@@ -95,8 +98,6 @@ export default function App() {
               <MetallicObject3D />
             </div>
 
-            {/* Background Glow - Shifted towards the center boundary */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 blur-[120px] rounded-full -z-10" />
 
             {/* Foreground Content Wrapper - Full-width on mobile, 3/5 on desktop */}
             <div className="relative z-20 w-full md:w-3/5 h-full flex flex-col justify-center px-6 md:px-12 lg:px-20 gap-8 pointer-events-none pt-20">
@@ -135,7 +136,7 @@ export default function App() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="text-white/55 text-sm md:text-base font-light leading-relaxed max-w-md pointer-events-auto"
               >
-                DavScale Labs builds autonomous digital ecosystems — where design, AI, and performance converge.
+                DavScale Labs builds autonomous digital ecosystems where design, AI, and performance converge.
               </motion.p>
 
               {/* Feature rows with dividers */}
@@ -189,7 +190,7 @@ export default function App() {
           </div>
 
           {/* Scroll indicator — bottom center of hero */}
-          <div className="absolute bottom-10 left-0 right-0 flex justify-center z-30 pointer-events-auto">
+          <div className="absolute bottom-52 left-0 right-0 flex justify-center z-30 pointer-events-auto">
             <motion.button
               onClick={() => workflowRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               animate={{ y: [0, 8, 0] }}
@@ -212,19 +213,26 @@ export default function App() {
         </section>
 
         {/* Company Description Section */}
-        <section className="mt-0 mb-20 w-full max-w-4xl mx-auto text-center px-6 relative z-10">
+        <section className="mt-0 mb-20 w-full max-w-6xl mx-auto text-center px-6 relative z-10 flex flex-col items-center justify-center min-h-[40vh]">
+          {/* Background Watermark */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10 select-none overflow-hidden">
+            <span className="text-[35vw] font-display font-black uppercase tracking-tighter opacity-[0.02] text-white whitespace-nowrap leading-none">
+              New Era
+            </span>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center relative z-10"
           >
             <div className="mb-10 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-white/40">
               The future of digital craftsmanship
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-white/90">
+            <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-white/90 max-w-4xl">
               DavScale Labs gives you a complete evolution of your digital presence from autonomous web design and intelligent automation to predictive user experiences. Every component learns and adapts, so you always stay ahead of the curve.
             </h2>
           </motion.div>
@@ -617,7 +625,7 @@ export default function App() {
 
               <div className="absolute bottom-8 left-0 right-0 text-center">
                 <span className="text-[10px] uppercase tracking-[0.4em] font-mono text-white/20 group-hover:text-white/40 transition-colors">
-                  Nova Architecture || Systems
+                  DavScale Labs || Systems
                 </span>
               </div>
             </motion.div>
@@ -739,7 +747,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="px-6 md:px-12 py-24 border-t border-white/5 bg-black" >
+      <footer className="px-6 md:px-12 py-24 border-t border-white/5 bg-transparent" >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
             <div className="flex flex-col gap-8 max-w-sm">
