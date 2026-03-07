@@ -60,8 +60,8 @@ export default function App() {
           <nav className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/[0.02] backdrop-blur-2xl border border-white/20 rounded-full px-6 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)]">
 
             <Link to="/" className="flex items-center gap-3">
-              <img src={logoImg} alt="DavScale Labs Logo" className="h-8 w-auto object-contain" />
-              <span className="font-display font-bold text-base tracking-tight">DavScale Labs</span>
+              <img src={logoImg} alt="DavScale Lab Logo" className="h-8 w-auto object-contain" />
+              <span className="font-display font-bold text-base tracking-tight">DavScale Lab</span>
             </Link>
 
             {/* Desktop nav links */}
@@ -140,8 +140,8 @@ export default function App() {
             <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
               <div className="flex flex-col gap-8 max-w-sm">
                 <div className="flex items-center gap-3">
-                  <img src={logoImg} alt="DavScale Labs" className="h-8 w-auto object-contain" />
-                  <span className="font-display font-bold text-xl tracking-tight">DavScale Labs</span>
+                  <img src={logoImg} alt="DavScale Lab" className="h-8 w-auto object-contain" />
+                  <span className="font-display font-bold text-xl tracking-tight">DavScale Lab</span>
                 </div>
                 <p className="text-white/70 text-sm leading-relaxed font-light">
                   The AI-native design agency. We build autonomous digital ecosystems that learn, adapt, and convert.
@@ -176,7 +176,7 @@ export default function App() {
 
             <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
               <span className="text-[11px] uppercase tracking-[0.4em] font-mono text-white/40">
-                © 2025 DavScale Labs. All rights reserved.
+                © 2025 DavScale Lab. All rights reserved.
               </span>
               <div className="flex gap-8 text-[11px] uppercase tracking-[0.2em] font-mono text-white/40">
                 <span>Est. 2024</span>

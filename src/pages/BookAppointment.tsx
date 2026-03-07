@@ -161,7 +161,7 @@ export default function BookAppointment() {
                             <div>
                                 <h4 className="font-bold mb-1">Direct Inquiry</h4>
                                 <p className="text-xs text-white/40 mb-3">Skip the form and send us a direct brief via email.</p>
-                                <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
+                                <a href="mailto:devscale.lab@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.lab@gmail.com</a>
                             </div>
                         </div>
 
@@ -172,7 +172,7 @@ export default function BookAppointment() {
                             <div>
                                 <h4 className="font-bold mb-1">Technical Support</h4>
                                 <p className="text-xs text-white/40 mb-3">Already building with us? Get dedicated technical support.</p>
-                                <a href="mailto:support@devscale.labs" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">support@devscale.labs</a>
+                                <a href="mailto:support@devscale.lab" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">support@devscale.lab</a>
                             </div>
                         </div>
                     </div>

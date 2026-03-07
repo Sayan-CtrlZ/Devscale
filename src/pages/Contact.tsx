@@ -35,7 +35,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Email Us</h4>
-                                <a href="mailto:devscale.labs@gmail.com" className="text-base text-white/80 hover:text-white transition-colors">devscale.labs@gmail.com</a>
+                                <a href="mailto:devscale.lab@gmail.com" className="text-base text-white/80 hover:text-white transition-colors">devscale.lab@gmail.com</a>
                             </div>
                         </div>
 

@@ -60,7 +60,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="text-white/55 text-sm md:text-base font-light leading-relaxed max-w-md pointer-events-auto"
               >
-                DavScale Labs builds autonomous digital ecosystems where design, AI, and performance converge.
+                DavScale Lab builds autonomous digital ecosystems where design, AI, and performance converge.
               </motion.p>
 
               {/* Feature rows with dividers */}
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
 
             <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-white/90 max-w-4xl">
-              DavScale Labs gives you a <span className="text-gradient-blue font-bold">complete evolution</span> of your digital presence from autonomous web design and intelligent automation to predictive user experiences. Every component learns and adapts, so you always stay ahead of the curve.
+              DavScale Lab gives you a <span className="text-gradient-blue font-bold">complete evolution</span> of your digital presence from autonomous web design and intelligent automation to predictive user experiences. Every component learns and adapts, so you always stay ahead of the curve.
             </h2>
           </motion.div>
         </section>
@@ -429,7 +429,7 @@ export default function Home() {
             </div>
 
             <p className="text-white/50 text-lg leading-relaxed max-w-md">
-              DevScale Labs builds intelligent, self-healing automation pipelines. Connect any trigger, route data through AI decision nodes, and deploy actions across your entire stack in minutes.
+              DevScale Lab builds intelligent, self-healing automation pipelines. Connect any trigger, route data through AI decision nodes, and deploy actions across your entire stack in minutes.
             </p>
 
             <div className="flex flex-col gap-4">
@@ -517,7 +517,7 @@ export default function Home() {
 
               <div className="absolute bottom-8 left-0 right-0 text-center">
                 <span className="text-[10px] uppercase tracking-[0.4em] font-mono text-white/20 group-hover:text-white/40 transition-colors">
-                  DavScale Labs || Systems
+                  DavScale Lab || Systems
                 </span>
               </div>
             </motion.div>
@@ -534,7 +534,7 @@ export default function Home() {
                 Intelligence Foundations
               </h3>
               <p className="text-white/50 text-lg md:text-xl leading-relaxed font-light max-w-xl">
-                DevScale Labs operates at the intersection of neural architecture and creative expression. We build more than just websites; we engineer living digital entities that learn from user behavior, adapting their layout, content, and conversion funnels in real-time to redefine how brands connect with their audience in the decades ahead.
+                DevScale Lab operates at the intersection of neural architecture and creative expression. We build more than just websites; we engineer living digital entities that learn from user behavior, adapting their layout, content, and conversion funnels in real-time to redefine how brands connect with their audience in the decades ahead.
               </p>
             </motion.div>
 
@@ -674,7 +674,7 @@ export default function Home() {
                   <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-4">Endorsed by</span>
                   <p className="text-xs font-medium text-white/60 leading-relaxed">
                     Top Tier AI <br />
-                    Research Labs & <br />
+                    Research Lab & <br />
                     Creative Studios
                   </p>
                 </div>
@@ -688,7 +688,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="pt-12 border-t border-white/5">
-                <span className="text-[10px] uppercase tracking-[0.5em] text-white/20 font-mono">DavScale Labs v1.0</span>
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/20 font-mono">DavScale Lab v1.0</span>
               </div>
             </div>
           </div>

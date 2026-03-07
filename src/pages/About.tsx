@@ -40,7 +40,7 @@ const teamMembers = [
     {
         name: "Pooja Mandal",
         role: "Co-founder & COO",
-        bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of DavScale Labs.",
+        bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of DavScale Lab.",
         image: PoojaImage,
         linkedin: "#"
     }
