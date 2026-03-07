@@ -1,14 +1,20 @@
 import { motion } from "motion/react";
-import { Send, Calendar, Mail, MessageSquare, ArrowRight, Sparkles, Globe, Brain, Zap, Clock } from "lucide-react";
+import { Mail, MessageSquare, ArrowRight } from "lucide-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 export default function BookAppointment() {
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({"namespace":"30min"});
+            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        })();
+    }, []);
     return (
         <main className="relative w-full min-h-screen pt-24 pb-24 flex flex-col items-center overflow-x-hidden">
             {/* Background Grid & Glows */}
             <div className="absolute inset-0 bg-grid -z-10 opacity-30 pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black -z-10 pointer-events-none" />
-            <div className="absolute top-1/4 -right-20 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
-            <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-violet-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+            <div className="absolute inset-0 bg-black -z-10 pointer-events-none" />
 
             <div className="w-full max-w-5xl mx-auto px-6">
                 {/* Header */}
@@ -33,7 +39,7 @@ export default function BookAppointment() {
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="relative p-8 md:p-12 rounded-[40px] border border-white/10 bg-white/[0.02] backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.5)]"
+                        className="relative p-8 md:p-12 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.5)]"
                     >
                         <div className="mb-10">
                             <h2 className="text-2xl font-bold mb-2">Project Discovery Form</h2>
@@ -44,7 +50,7 @@ export default function BookAppointment() {
                             {/* Essentials Group */}
                             <div className="space-y-8">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-8 h-[1px] bg-blue-500" />
+                                    <div className="w-8 h-px bg-blue-500" />
                                     <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-blue-400">Project Essentials</span>
                                 </div>
 
@@ -83,7 +89,7 @@ export default function BookAppointment() {
                             {/* Budget & Contact Group */}
                             <div className="space-y-8 pt-6 border-t border-white/5">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-8 h-[1px] bg-violet-500" />
+                                    <div className="w-8 h-px bg-violet-500" />
                                     <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-violet-400">Budget & Contact</span>
                                 </div>
 
@@ -136,47 +142,19 @@ export default function BookAppointment() {
                             <p className="text-white/40 text-sm max-w-md mx-auto">Schedule a 15-minute discovery call directly with our engineering management team.</p>
                         </div>
 
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            className="w-full max-w-2xl"
-                        >
-                            <a
-                                href="https://cal.com/devscale-labs-bjpifk/15min"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative flex flex-col items-center gap-6 p-10 md:p-16 rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-3xl group transition-all hover:bg-white/[0.05] hover:border-blue-500/30 overflow-hidden"
-                            >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[80px] -z-10 group-hover:bg-blue-500/20 transition-all" />
-
-                                <div className="w-16 h-16 rounded-3xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                                    <Calendar className="w-8 h-8 text-blue-400" />
-                                </div>
-
-                                <div className="text-center">
-                                    <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-blue-400 mb-2 block">Available Next Week</span>
-                                    <h3 className="text-2xl font-bold mb-2">Book Discovery Call</h3>
-                                    <p className="text-white/40 text-sm font-light">15-minute focused strategy session</p>
-                                </div>
-
-                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">
-                                    Open Scheduler <ArrowRight className="w-4 h-4" />
-                                </div>
-
-                                <div className="pt-6 mt-6 border-t border-white/10 w-full flex justify-center items-center gap-8">
-                                    <div className="flex items-center gap-2 text-[10px] text-white/30 uppercase tracking-widest">
-                                        <Clock className="w-3.5 h-3.5" /> 15 Min
-                                    </div>
-                                    <div className="flex items-center gap-2 text-[10px] text-white/30 uppercase tracking-widest">
-                                        <Globe className="w-3.5 h-3.5" /> Video Call
-                                    </div>
-                                </div>
-                            </a>
-                        </motion.div>
+                        <div className="w-full p-6 md:p-8 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.5)] flex flex-col gap-6">
+                            <Cal
+                                namespace="30min"
+                                calLink="devscale-labs-bjpifk/30min"
+                                style={{width:"100%",height:"100%",overflow:"scroll"}}
+                                config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}
+                            />
+                        </div>
                     </div>
 
                     {/* Footer Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                        <div className="p-10 rounded-[40px] border border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col items-center text-center gap-4 group hover:border-white/20 transition-all">
+                        <div className="p-10 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-xl flex flex-col items-center text-center gap-4 group hover:border-white/20 transition-all">
                             <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all">
                                 <Mail className="w-5 h-5 text-white/40" />
                             </div>
@@ -187,7 +165,7 @@ export default function BookAppointment() {
                             </div>
                         </div>
 
-                        <div className="p-10 rounded-[40px] border border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col items-center text-center gap-4 group hover:border-white/20 transition-all">
+                        <div className="p-10 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-xl flex flex-col items-center text-center gap-4 group hover:border-white/20 transition-all">
                             <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all">
                                 <MessageSquare className="w-5 h-5 text-white/40" />
                             </div>

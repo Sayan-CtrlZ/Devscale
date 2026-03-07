@@ -1,16 +1,8 @@
 
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Clock, Sparkles } from "lucide-react";
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
-    useEffect(() => {
-        (async function () {
-            const cal = await getCalApi({"namespace":"15min"});
-            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        })();
-    }, []);
     return (
         <main className="relative w-full min-h-screen pt-24 pb-16 flex flex-col items-center overflow-hidden">
             {/* Background Background Grid */}
@@ -137,18 +129,6 @@ export default function Contact() {
                         </p>
                     </div>
                 </motion.div>
-            </div>
-            {/* Calendar Section Below Form */}
-            <div className="w-full px-6 md:px-12 mt-12 max-w-7xl mx-auto">
-                <div className="w-full p-6 md:p-8 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.5)] flex flex-col gap-6">
-                    <h2 className="text-2xl font-bold text-white mb-4 text-center">Book an Appointment</h2>
-                    <Cal
-                        namespace="15min"
-                        calLink="devscale-labs-bjpifk/15min"
-                        style={{width:"100%",height:"100%",overflow:"scroll"}}
-                        config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}
-                    />
-                </div>
             </div>
         </main>
     );
