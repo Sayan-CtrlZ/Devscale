@@ -139,7 +139,7 @@ export default function BookAppointment() {
                     <div className="py-12 flex flex-col items-center">
                         <div className="text-center mb-12">
                             <h2 className="text-4xl font-display font-bold mb-4">Prefer to talk directly?</h2>
-                            <p className="text-white/40 text-sm max-w-md mx-auto">Schedule a 15-minute discovery call directly with our engineering management team.</p>
+                            <p className="text-white/40 text-sm max-w-md mx-auto">Schedule a 30-minute discovery call directly with our engineering management team.</p>
                         </div>
 
                         <div className="w-full p-6 md:p-8 rounded-[40px] border border-white/10 bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.5)] flex flex-col gap-6">
