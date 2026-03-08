@@ -99,13 +99,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="flex flex-wrap gap-3 pointer-events-auto"
+                className="flex flex-wrap gap-3 pointer-events-auto relative z-30"
               >
                 <Link to="/works" className="px-6 py-3 bg-white text-black rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 text-center flex items-center justify-center">
                   View Our Work
-                </Link>
-                <Link to="/services" className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-md rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition-all text-center flex items-center justify-center">
-                  Our Process
                 </Link>
               </motion.div>
 

@@ -20,6 +20,7 @@ import Contact from "./pages/Contact";
 import BookAppointment from "./pages/BookAppointment";
 import Article from "./pages/Article";
 import Privacy from "./pages/Privacy";
+import Process from "./pages/Process";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -79,6 +80,7 @@ export default function App() {
             {/* Desktop nav links */}
             <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium">
               <NavLink to="/" className={({ isActive }) => `transition-colors ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`}>Home</NavLink>
+              <NavLink to="/process" className={({ isActive }) => `transition-colors ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`}>Process</NavLink>
               <NavLink to="/services" className={({ isActive }) => `transition-colors ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`}>Services</NavLink>
               <NavLink to="/works" className={({ isActive }) => `transition-colors ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`}>Work</NavLink>
               <NavLink to="/about" className={({ isActive }) => `transition-colors ${isActive ? 'text-white' : 'text-white/50 hover:text-white'}`}>About</NavLink>
@@ -113,7 +115,7 @@ export default function App() {
                 className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto"
               >
                 <div className="rounded-2xl bg-black/90 backdrop-blur-2xl border border-white/10 p-6 flex flex-col gap-5">
-                  {['Home', 'Services', 'Work', 'About', 'Contact Us'].map((item) => {
+                  {['Home', 'Process', 'Services', 'Work', 'About', 'Contact Us'].map((item) => {
                     const path = item === 'Home' ? '/' : (item === 'Work' ? '/works' : '/' + item.toLowerCase().replace(' ', ''));
                     return (
                       <NavLink
@@ -145,6 +147,7 @@ export default function App() {
           <Route path="/book" element={<BookAppointment />} />
           <Route path="/article" element={<Article />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/process" element={<Process />} />
         </Routes>
 
         {/* Footer */}
@@ -172,6 +175,7 @@ export default function App() {
                   <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-white/40">Platform</span>
                   <ul className="flex flex-col gap-4 text-sm text-white/80">
                     <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                    <li><Link to="/process" className="hover:text-white transition-colors">Process</Link></li>
                     <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
                     <li><Link to="/works" className="hover:text-white transition-colors">Work</Link></li>
                     <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
