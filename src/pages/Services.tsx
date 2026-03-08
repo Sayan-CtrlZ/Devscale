@@ -203,7 +203,7 @@ const servicesData = [
         title: "Business Websites",
         summary: "Fast, modern, mobile-friendly websites that turn visitors into paying customers.",
         icon: Globe,
-        includes: ["Landing pages", "Business websites", "Portfolio sites", "Local service websites", "SEO-optimized pages"],
+        includes: ["Landing pages", "Personal landing pages", "Business websites", "Portfolio sites", "Local service websites", "SEO-optimized pages"],
         benefits: ["Fast loading", "Mobile friendly", "Built for conversions", "Easy to manage"],
         howItWorks: [
             "We understand your business and goals",
@@ -217,7 +217,7 @@ const servicesData = [
         title: "Automated Booking Agents",
         summary: "AI chatbots that answer customer questions and book appointments automatically.",
         icon: Bot,
-        includes: ["Clinics", "Salons", "Consultants", "Service providers"],
+        includes: ["AI Agents", "Clinics", "Salons", "Consultants", "Service providers"],
         benefits: ["AI chat support", "Automatic appointment booking", "24/7 responses", "Calendar integration"],
         howItWorks: [
             "Customer asks a question",
@@ -286,9 +286,7 @@ const servicesData = [
 ];
 
 export default function Services() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     return (
         <div className="min-h-screen pt-24 pb-20 w-full">
@@ -322,6 +320,7 @@ export default function Services() {
                     return (
                         <motion.div
                             key={service.title}
+                            id={service.title.toLowerCase().replace(/\s+/g, '-')}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}

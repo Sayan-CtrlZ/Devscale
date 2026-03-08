@@ -6,8 +6,8 @@ import { useEffect } from "react";
 export default function BookAppointment() {
     useEffect(() => {
         (async function () {
-            const cal = await getCalApi({"namespace":"30min"});
-            cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            const cal = await getCalApi({ "namespace": "30min" });
+            cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
         })();
     }, []);
     return (
@@ -95,7 +95,7 @@ export default function BookAppointment() {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="flex flex-col gap-2.5">
-                                        <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40 ml-2">Budget Allocation</label>
+                                        <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40 ml-2">Budget Allocation (Optional)</label>
                                         <div className="grid grid-cols-[auto_1fr] gap-3">
                                             <select className="bg-white/5 border border-white/10 rounded-2xl px-4 py-4 text-white/60 focus:outline-none appearance-none cursor-pointer text-sm">
                                                 <option className="bg-neutral-900">USD ($)</option>
@@ -146,8 +146,8 @@ export default function BookAppointment() {
                             <Cal
                                 namespace="30min"
                                 calLink="devscale-labs-bjpifk/30min"
-                                style={{width:"100%",height:"100%",overflow:"scroll"}}
-                                config={{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}}
+                                style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                                config={{ "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }}
                             />
                         </div>
                     </div>
@@ -161,7 +161,7 @@ export default function BookAppointment() {
                             <div>
                                 <h4 className="font-bold mb-1">Direct Inquiry</h4>
                                 <p className="text-xs text-white/40 mb-3">Skip the form and send us a direct brief via email.</p>
-                                <a href="mailto:devscale.lab@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.lab@gmail.com</a>
+                                <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
                             </div>
                         </div>
 
@@ -172,7 +172,7 @@ export default function BookAppointment() {
                             <div>
                                 <h4 className="font-bold mb-1">Technical Support</h4>
                                 <p className="text-xs text-white/40 mb-3">Already building with us? Get dedicated technical support.</p>
-                                <a href="mailto:support@devscale.lab" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">support@devscale.lab</a>
+                                <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
                             </div>
                         </div>
                     </div>

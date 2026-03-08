@@ -18,12 +18,24 @@ import Works from "./pages/Works";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BookAppointment from "./pages/BookAppointment";
+import Article from "./pages/Article";
+import Privacy from "./pages/Privacy";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 }
 
@@ -131,6 +143,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/book" element={<BookAppointment />} />
+          <Route path="/article" element={<Article />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
 
         {/* Footer */}
@@ -158,17 +172,17 @@ export default function App() {
                   <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-white/40">Platform</span>
                   <ul className="flex flex-col gap-4 text-sm text-white/80">
                     <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                    <li><Link to="/services" className="hover:text-white transition-colors">Process</Link></li>
+                    <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+                    <li><Link to="/works" className="hover:text-white transition-colors">Work</Link></li>
                     <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-                    <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                    <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
                   </ul>
                 </div>
                 <div className="flex flex-col gap-6">
                   <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-white/40">Connect</span>
                   <ul className="flex flex-col gap-4 text-sm text-white/80">
-                    <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/devscale-lab" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/devscale.labs/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
                   </ul>
                 </div>
               </div>
@@ -176,10 +190,10 @@ export default function App() {
 
             <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
               <span className="text-[11px] uppercase tracking-[0.4em] font-mono text-white/40">
-                © 2025 DavScale Lab. All rights reserved.
+                © 2026 DavScale Lab. All rights reserved.
               </span>
               <div className="flex gap-8 text-[11px] uppercase tracking-[0.2em] font-mono text-white/40">
-                <span>Est. 2024</span>
+                <span>Est. 2026</span>
                 <span>Based in the Cloud</span>
               </div>
             </div>

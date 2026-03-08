@@ -1,6 +1,7 @@
 
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
     return (
@@ -35,7 +36,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Email Us</h4>
-                                <a href="mailto:devscale.lab@gmail.com" className="text-base text-white/80 hover:text-white transition-colors">devscale.lab@gmail.com</a>
+                                <a href="mailto:devscale.labs@gmail.com" className="text-base text-white/80 hover:text-white transition-colors">devscale.labs@gmail.com</a>
                             </div>
                         </div>
 
@@ -125,7 +126,7 @@ export default function Contact() {
                         </button>
 
                         <p className="text-[10px] text-white/20 text-center leading-relaxed font-light">
-                            By submitting, you agree to our <a href="#" className="underline hover:text-white/40">Privacy Policy</a>.
+                            By submitting, you agree to our <Link to="/privacy" className="underline hover:text-white/40">Privacy Policy</Link>.
                         </p>
                     </div>
                 </motion.div>

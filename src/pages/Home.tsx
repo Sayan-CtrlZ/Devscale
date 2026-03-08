@@ -1,15 +1,14 @@
 import { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import { Cpu, Globe, Sparkles, Zap, ArrowRight, Bot, BarChart, Link as LinkIcon, Lock, Code } from "lucide-react";
+import { Link } from "react-router-dom";
 import { MetallicObject3D } from "../components/MetallicObject3D";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
   const workflowRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
 
   return (
     <>
@@ -86,9 +85,9 @@ export default function Home() {
                 <div className="flex items-center gap-6">
                   <span className="text-[9px] uppercase tracking-[0.3em] text-white/30 font-medium w-20 shrink-0">Execution</span>
                   <div className="flex items-center gap-1.5 flex-wrap">
-                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">Smart Workflows</span>
-                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">10× Speed</span>
-                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">Zero Friction</span>
+                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">AI Agents</span>
+                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">Portfolios</span>
+                    <span className="px-2.5 py-1 text-[10px] rounded-full border border-white/15 text-white/55">Personal Landing Pages</span>
                   </div>
                 </div>
 
@@ -102,12 +101,12 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 className="flex flex-wrap gap-3 pointer-events-auto"
               >
-                <button className="px-6 py-3 bg-white text-black rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95">
+                <Link to="/works" className="px-6 py-3 bg-white text-black rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 text-center flex items-center justify-center">
                   View Our Work
-                </button>
-                <button className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-md rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition-all">
+                </Link>
+                <Link to="/services" className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-md rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition-all text-center flex items-center justify-center">
                   Our Process
-                </button>
+                </Link>
               </motion.div>
 
             </div>
@@ -182,12 +181,12 @@ export default function Home() {
             {[
               {
                 title: "Business Websites",
-                description: "Beautiful, fast websites designed to turn visitors into paying customers for your cafe, clinic, or store.",
+                description: "Beautiful, fast websites, personal landing pages, and portfolio sites designed to turn visitors into paying customers for your cafe, clinic, or store.",
                 icon: Globe,
               },
               {
                 title: "Automated Booking Agents",
-                description: "Intelligent chatbots that answer customer questions and book appointments while you sleep.",
+                description: "Intelligent AI agents and chatbots that answer customer questions and book appointments while you sleep.",
                 icon: Bot,
               },
               {
@@ -229,9 +228,9 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white transition-colors">
+                  <Link to={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white transition-colors">
                     Explore Service <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform group-hover:text-white" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -457,15 +456,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="flex items-center gap-4 mt-2">
-              <button className="group flex items-center gap-3 bg-white text-black px-6 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/90 transition-all hover:scale-105 active:scale-95">
-                See it in action
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="text-sm text-white/40 hover:text-white transition-colors uppercase tracking-widest font-medium">
-                View templates →
-              </button>
-            </div>
+
           </motion.div >
         </section>
 
@@ -581,13 +572,13 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-5 mt-10 w-full justify-center">
-              <button className="w-full sm:w-auto px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 group flex items-center justify-center gap-3">
+              <Link to="/book" className="w-full sm:w-auto px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/90 transition-all shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 group flex items-center justify-center gap-3">
                 Get a Free Quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="w-full sm:w-auto px-10 py-4 bg-white/5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/10 hover:border-white/40 transition-all active:scale-95 group">
+              </Link>
+              <Link to="/contact" className="w-full sm:w-auto px-10 py-4 bg-white/5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/10 hover:border-white/40 transition-all active:scale-95 group text-center flex items-center justify-center">
                 Call Us Now
-              </button>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center gap-6 mt-12 bg-white/5 border border-white/10 px-6 py-3 rounded-full backdrop-blur-md">
@@ -656,9 +647,9 @@ export default function Home() {
                   Digital <br />
                   Ecosystems
                 </h2>
-                <button className="px-10 py-4 bg-white text-black font-bold text-sm uppercase tracking-widest hover:bg-white/90 transition-all">
+                <Link to="/article" className="px-10 py-4 bg-white text-black font-bold text-sm uppercase tracking-widest hover:bg-white/90 transition-all inline-block w-max">
                   Read Article
-                </button>
+                </Link>
               </motion.div>
 
               {/* Background Text Overlay */}
@@ -693,7 +684,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
+      </main >
     </>
   );
 }

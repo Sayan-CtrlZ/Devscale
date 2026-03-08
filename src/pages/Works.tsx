@@ -247,7 +247,7 @@ function AbstractFallback({ type }: { type: string }) {
 
 const portfolioData = [
     {
-        category: "Business Websites",
+        category: "Business Websites, Portfolios, Personal Pages",
         projects: [
             {
                 title: "Cafe Website",
@@ -281,7 +281,7 @@ const portfolioData = [
         ]
     },
     {
-        category: "Automated Booking Agents",
+        category: "Automated Booking & AI Agents",
         projects: [
             {
                 title: "Clinic Booking Agent",
