@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { StarBackground } from "@/components/StarBackground";
-import { AudioControl } from "@/components/AudioControl";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ClientSideBackgrounds } from "@/components/ClientSideBackgrounds";
 
 const inter = Inter({
     variable: "--font-sans",
@@ -80,11 +79,10 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-[#030303] text-white overflow-x-hidden min-h-screen`}
             >
-                <StarBackground />
+                <ClientSideBackgrounds />
                 <Navbar />
                 {children}
                 <Footer />
-                <AudioControl />
             </body>
         </html>
     );

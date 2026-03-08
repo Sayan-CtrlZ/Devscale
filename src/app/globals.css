@@ -73,3 +73,23 @@ img {
   background: #555;
   /* Lighter grey on hover to indicate interactability */
 }
+
+/* Performance-optimized Star Animations */
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle var(--twinkle-duration, 3s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}

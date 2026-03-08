@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Cpu, Globe, Sparkles, Zap, ArrowRight, Bot, BarChart, Link as LinkIcon, Lock, Code } from "lucide-react";
 import Link from "next/link";
@@ -14,6 +14,14 @@ const MetallicObject3D = dynamic(() => import("@/components/MetallicObject3D").t
 export default function Home() {
     const heroRef = useRef<HTMLElement>(null);
     const workflowRef = useRef<HTMLElement>(null);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const checkSize = () => setIsDesktop(window.innerWidth >= 768);
+        checkSize();
+        window.addEventListener('resize', checkSize);
+        return () => window.removeEventListener('resize', checkSize);
+    }, []);
 
     return (
         <>
@@ -22,9 +30,11 @@ export default function Home() {
                     {/* Wrapper for EVERYTHING in the hero */}
                     <div className="relative min-h-screen w-full overflow-hidden flex pointer-events-none">
                         {/* Background 3D Metallic Object — hidden on mobile, full hero on desktop */}
-                        <div className="hidden md:block absolute inset-0 z-10">
-                            <MetallicObject3D />
-                        </div>
+                        {isDesktop && (
+                            <div className="absolute inset-0 z-10">
+                                <MetallicObject3D />
+                            </div>
+                        )}
 
 
                         {/* Foreground Content Wrapper - Full-width on mobile, 3/5 on desktop */}
