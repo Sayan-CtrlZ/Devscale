@@ -1,62 +1,68 @@
-
-# DavScale Labs
-### AI-Native Design Agency - Intelligent Ecosystems for the Next Generation
-</div>
+# 🌐 DavScale Lab
+### **The AI-Native Design Agency - Building Autonomous Digital Ecosystems**
 
 ---
 
 ## 🚀 Overview
 
-DavScale Labs is a futuristic, immersive digital experience that leverages AI-native design principles. Built with React, Three.js (via custom components), and Framer Motion, it features a premium "glassmorphism" aesthetic and interactive 3D elements.
+DavScale Lab is a state-of-the-art digital experience engineered at the intersection of **AI Automation**, **Intelligent Design**, and **Immersive 3D Rendering**. Migrated from a base React setup to a high-performance **Next.js 16** architecture, it serves as a showcase for futuristic, autonomous digital brand identities.
 
 ## ✨ Key Features
 
-- **Interactive 3D Metallic Hero**: A high-performance 3D object that responds to scroll and interaction.
-- **Dynamic Star Background**: A custom-engineered stellar background for deep visual immersion.
-- **Glassmorphic UI System**: A consistent, premium design language with backdrop blurs, soft borders, and subtle gradients.
-- **Audio Control System**: 
-  - Integrated background audio (`audio.mp3`).
-  - Play/Stop toggle with real-time visual feedback and pulsing animations.
-  - Auto-loops when active.
-- **Responsive & Optimized**:
-  - Fully responsive layout for Desktop and Mobile.
-  - Smart UI adjustments (e.g., hiding scroll indicators on mobile for better UX).
-- **Autonomous Workflow Visualizer**: Interactive mockup of AI automation pipelines.
+- **Liquid-Metal 3D Hero**: A polished, iridescent 3D knot using Three.js (via `@react-three/fiber`) with real-time mouse interaction, adaptive resolution, and optimized geometry segments for instant loading.
+- **Glassmorphic Design System**: A consistent, premium aesthetic featuring backdrop-blurs, glowing accents, and high-fidelity typography.
+- **AI-Native Philosophy**: Dedicated sections for "Neural Insights" and autonomous digital ecosystems, showcasing our approach to agency craftsmanship.
+- **Technical SEO Stack**: 
+  - Dynamic `sitemap.xml` and `robots.txt` generation.
+  - Layout-level metadata with OpenGraph and Twitter card integration.
+  - JSON-LD Organization Schema for enhanced search visibility.
+- **High Performance**:
+  - Image optimization via Next.js `<Image />` component.
+  - Dynamic code-splitting and deferred 3D asset loading.
+  - Production-ready build verified for Vercel deployment.
+- **Audio Control**: Integrated atmospheric audio with a custom pulsing UI controller.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [React](https://reactjs.org/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Animations**: [Motion](https://motion.dev/) (formerly Framer Motion)
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **3D Engine**: [Three.js](https://threejs.org/) / [R3F](https://r3f.docs.pmnd.rs/) / [Drei](https://drei.docs.pmnd.rs/)
+- **Animations**: [Motion](https://motion.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Booking**: [Cal.com](https://cal.com/) Integration
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
 
-- **Node.js** (v18 or higher recommended)
-- **npm** or **yarn**
+- **Node.js**: v18.0 or higher
+- **Package Manager**: npm (v9+) or yarn
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies:
+1. **Clone and Install**:
    ```bash
+   git clone https://github.com/Sayan-CtrlZ/Devscale.git
+   cd devscalelab
    npm install
    ```
-3. (Optional) Set up your environment variables in `.env.local`
-4. Start the development server:
+
+2. **Run Development Server**:
    ```bash
    npm run dev
    ```
 
-## 🌐 View the App
+3. **Production Build**:
+   ```bash
+   npm run build
+   ```
 
-Access the live environment or deployment here: [DavScale Labs App](https://ai.studio/apps/c37f22f2-6462-4a2a-8b05-a4c0638fb3dc)
+## 🌐 Live Environment
+
+Experience the autonomous design ecosystem here: [DavScale Labs Live](https://devscalelab.com)
 
 ---
 
 <div align="center">
-  Built with ❤️ for the future of digital craftsmanship.
+  Built with precision for the next era of digital craftsmanship.
 </div>

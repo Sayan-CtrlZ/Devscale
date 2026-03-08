@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/article/page": "/article",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/page": "/blog",
+  "/book/page": "/book",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/privacy/page": "/privacy",
+  "/process/page": "/process",
+  "/robots.txt/route": "/robots.txt",
+  "/services/[slug]/page": "/services/[slug]",
+  "/services/page": "/services",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/works/[slug]/page": "/works/[slug]",
+  "/works/page": "/works"
+}

@@ -1,0 +1,229 @@
+"use client";
+
+import { motion } from "motion/react";
+import { TrendingUp, Zap, ShieldCheck, Target, Eye, Linkedin, Github } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+const philosophyItems = [
+    {
+        icon: <TrendingUp className="w-5 h-5 text-blue-400" />,
+        title: "Step by Step",
+        description: "We don't believe in shortcuts. We build sustainable growth through calculated, incremental improvements."
+    },
+    {
+        icon: <Zap className="w-5 h-5 text-amber-400" />,
+        title: "Speed",
+        description: "In the digital age, speed is a competitive advantage. We deploy fast without compromising on quality."
+    },
+    {
+        icon: <ShieldCheck className="w-5 h-5 text-purple-400" />,
+        title: "Built to Last",
+        description: "Our solutions are engineered for long-term scalability, ensuring your business stays ahead for years."
+    }
+];
+
+const teamMembers = [
+    {
+        name: "Harshvardhan Mewada",
+        role: "Co-founder & CEO",
+        bio: "Data Science student at IIT Madras. AI Automation Architect and ML developer specializing in high-performance enterprise systems.",
+        image: "/assets/Harsh.webp",
+        linkedin: "#"
+    },
+    {
+        name: "Sayan Shil",
+        role: "Co-founder & CTO",
+        bio: "Data Science student at IIT Madras. Full Stack Software Developer focused on building scalable, reliable, and user-centric digital products.",
+        image: "/assets/Sayan.webp",
+        linkedin: "#"
+    },
+    {
+        name: "Pooja Mandal",
+        role: "Co-founder & COO",
+        bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of DavScale Lab.",
+        image: "/assets/Pooja.webp",
+        linkedin: "#"
+    }
+];
+
+export default function About() {
+    return (
+        <main className="relative w-full min-h-screen pb-24 flex flex-col items-center">
+            {/* Hero Section */}
+            <section className="relative w-full pt-32 pb-24 flex flex-col items-center z-10 text-center max-w-5xl px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight text-white/95">
+                        Big Tech Tools.<br />
+                        <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Small Business</span> Heart.
+                    </h1>
+                    <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-10">
+                        We bring enterprise-grade AI and automation to growing businesses, empowering them to compete at the highest level without the corporate price tag.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link href="/works" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all">
+                            View Work
+                        </Link>
+                        <Link href="/contact" className="px-8 py-3.5 border border-white/20 bg-white/5 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/10 transition-all">
+                            Talk To Us
+                        </Link>
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* Philosophy Section */}
+            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col gap-8"
+                    >
+                        <div>
+                            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white">Our 'Growth First' Philosophy</h2>
+                            <p className="text-white/50 text-lg font-light">We don't care about buzzwords. We care about results and actually growing the needs of your business.</p>
+                        </div>
+                        <div className="flex flex-col gap-6">
+                            {philosophyItems.map((item, idx) => (
+                                <div key={idx} className="flex gap-5 p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors group">
+                                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all">
+                                        {item.icon}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-bold mb-1 text-white">{item.title}</h3>
+                                        <p className="text-white/40 text-sm leading-relaxed">{item.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="relative group"
+                    >
+                        <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 via-emerald-500/10 to-purple-500/10 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                        <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#0a0a0c]">
+                            <Image
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"
+                                alt="Modern Office"
+                                width={1200}
+                                height={500}
+                                unoptimized
+                                className="w-full h-[500px] object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                            <div className="absolute bottom-8 left-8 right-8 p-6 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10">
+                                <p className="text-white/80 text-sm italic font-light">
+                                    "We build systems that are not just elegant in code, but explosive in their business impact."
+                                </p>
+                                <p className="text-white/40 text-xs mt-3 uppercase tracking-widest font-bold">DavScale Philosophy</p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Vision Section */}
+            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-32 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <h2 className="text-4xl font-display font-bold mb-4 text-white">A Vision for the Digital Future</h2>
+                    <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full" />
+                </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="p-10 rounded-3xl bg-white/[0.02] border border-white/10 flex flex-col items-center gap-6 group hover:bg-white/[0.03] transition-all">
+                        <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                            <Target className="w-8 h-8 text-blue-400" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+                        <p className="text-white/50 leading-relaxed font-light">
+                            To democratize high-end technology for small businesses through intelligent automation and pixel-perfect design, closing the digital gap between local icons and giant conglomerates.
+                        </p>
+                    </div>
+                    <div className="p-10 rounded-3xl bg-white/[0.02] border border-white/10 flex flex-col items-center gap-6 group hover:bg-white/[0.03] transition-all">
+                        <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                            <Eye className="w-8 h-8 text-emerald-400" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+                        <p className="text-white/50 leading-relaxed font-light">
+                            To become the world's leading AI-native design agency, where human creativity and machine intelligence merge to build digital ecosystems that aren't just tools, but living business partners.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Team Section */}
+            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-32">
+                <div className="text-center mb-20 text-white">
+                    <h2 className="text-4xl font-display font-bold mb-4">The Minds Behind the Systems</h2>
+                    <p className="text-white/40 text-sm font-light">Meet the lead engineers and architects driving our technical vision.</p>
+                    <div className="w-20 h-1 bg-blue-600 mx-auto mt-6 rounded-full" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    {teamMembers.map((member, idx) => (
+                        <motion.div
+                            key={member.name}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="flex flex-col items-center text-center p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 team-card-transition hover:bg-white/[0.03] hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] group"
+                        >
+                            <div className="w-52 h-52 rounded-3xl overflow-hidden mb-8 border-2 border-white/10 relative">
+                                <Image src={member.image} alt={member.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                            </div>
+                            <h3 className="text-xl font-bold mb-1 text-white">{member.name}</h3>
+                            <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] uppercase tracking-widest font-bold mb-6">
+                                {member.role}
+                            </span>
+                            <p className="text-white/50 text-sm leading-relaxed mb-8 flex-1">
+                                {member.bio}
+                            </p>
+                            <div className="flex gap-4">
+                                {member.linkedin && <a href={member.linkedin} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all"><Linkedin className="w-4 h-4" /></a>}
+                                <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all"><Github className="w-4 h-4" /></a>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="w-full max-w-5xl mx-auto px-6 py-32 text-center flex flex-col items-center">
+                <div className="p-16 border border-white/10 rounded-3xl w-full bg-white/[0.02] relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
+                    <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight text-white">
+                        Ready to grow your <br />
+                        <span className="underline decoration-blue-500/50 underline-offset-8">business?</span>
+                    </h3>
+                    <p className="text-white/50 mb-10 max-w-md mx-auto text-lg font-light">
+                        Our systems are build to scale and our designs are build to last. Start your digital journey with DavScale.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-6">
+                        <Link href="/book" className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                            Book a Free Audit
+                        </Link>
+                        <Link href="/contact" className="px-10 py-4 border border-white/20 bg-white/5 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/10 transition-all">
+                            Talk To Sales
+                        </Link>
+                    </div>
+                    <div className="mt-8 flex justify-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">
+                        <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Limited Slots</span>
+                        <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> 24/7 Support</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}

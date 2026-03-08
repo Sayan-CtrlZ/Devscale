@@ -1,6 +1,8 @@
-import { useRef, memo } from 'react';
+"use client";
+
+import { useRef, memo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, Float, PresentationControls } from '@react-three/drei';
+import { Environment, Float, PresentationControls, AdaptiveDpr, Preload } from '@react-three/drei';
 import * as THREE from 'three';
 
 // Memoized so it never re-renders unless props change
@@ -16,21 +18,23 @@ const MetallicShape = memo(function MetallicShape() {
 
     return (
         <Float
-            speed={2}
-            rotationIntensity={0.5}
-            floatIntensity={1}
+            speed={1.5}
+            rotationIntensity={0.8}
+            floatIntensity={0.5}
             floatingRange={[-0.1, 0.1]}
         >
             <mesh ref={meshRef} castShadow receiveShadow scale={0.63} position={[2.2, 0.4, 0]}>
-                {/* Reduced tube segments 256→128, radial segments 32→24 — still looks polished but 40% less vertices */}
-                <torusKnotGeometry args={[1.5, 0.4, 128, 24]} />
+                <torusKnotGeometry args={[1.5, 0.4, 100, 16]} />
                 <meshPhysicalMaterial
-                    color="#e0e0e0"
+                    color="#ffffff"
                     metalness={1.0}
-                    roughness={0.1}
+                    roughness={0.05}
                     clearcoat={1.0}
-                    clearcoatRoughness={0.1}
-                    envMapIntensity={2.5}
+                    clearcoatRoughness={0.05}
+                    envMapIntensity={3.5}
+                    iridescence={0.8}
+                    iridescenceIOR={1.5}
+                    thickness={2}
                 />
             </mesh>
         </Float>
@@ -55,19 +59,25 @@ export const MetallicObject3D = memo(function MetallicObject3D() {
                     gl.domElement.style.touchAction = 'pan-y';
                 }}
             >
-                <Environment preset="city" environmentIntensity={1} />
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1.5} />
-                <directionalLight position={[-10, -10, -5]} intensity={0.5} color="#4444ff" />
+                <Suspense fallback={null}>
+                    <Environment preset="city" environmentIntensity={1} />
+                    <ambientLight intensity={0.6} />
+                    <directionalLight position={[10, 10, 5]} intensity={2} />
+                    <directionalLight position={[-10, -10, -5]} intensity={1} color="#4444ff" />
+                    <pointLight position={[5, 5, -5]} intensity={10} color="#ffffff" /> {/* Rim light 1 */}
+                    <pointLight position={[-5, -5, -10]} intensity={15} color="#ffffff" /> {/* Rim light 2 */}
 
-                <PresentationControls
-                    global
-                    rotation={[0, 0, 0]}
-                    polar={[-Math.PI / 3, Math.PI / 3]}
-                    azimuth={[-Math.PI / 1.4, Math.PI / 2]}
-                >
-                    <MetallicShape />
-                </PresentationControls>
+                    <PresentationControls
+                        global
+                        rotation={[0, 0, 0]}
+                        polar={[-Math.PI / 3, Math.PI / 3]}
+                        azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+                    >
+                        <MetallicShape />
+                    </PresentationControls>
+                </Suspense>
+                <AdaptiveDpr pixelated />
+                <Preload all />
             </Canvas>
         </div>
     );
