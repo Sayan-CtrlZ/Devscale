@@ -55,11 +55,13 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                     >
                         {/* Glowing border wrapper with rotating light */}
                         <div
-                            className="flex-1 flex flex-col rounded-xl overflow-hidden relative p-[1px] group"
+                            className="flex flex-col rounded-xl overflow-hidden relative p-[1px] group"
                             style={{
                                 background: 'rgba(255,255,255,0.05)',
                                 transition: 'all 0.3s ease',
                                 height: '240px', // Strict height for all cards
+                                width: '100%',
+                                minWidth: '180px'
                             }}
                         >
                             {/* Animated rotating border light segment */}
@@ -72,7 +74,7 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                             />
 
                             {/* Inner content area to isolate border light */}
-                            <div className="flex-1 flex flex-col rounded-[11px] overflow-hidden relative z-10 bg-[#0a0a0c]">
+                            <div className="w-full h-full flex flex-col rounded-[11px] overflow-hidden relative z-10 bg-[#0a0a0c]">
                                 {/* Window chrome */}
                                 <div className="w-full h-4 shrink-0 border-b border-white/10 bg-white/[0.03] flex items-center px-2 gap-1 z-20">
                                     <div className="w-1.5 h-1.5 rounded-full bg-red-400/40" />
@@ -80,12 +82,13 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                                     <div className="w-1.5 h-1.5 rounded-full bg-green-400/40" />
                                 </div>
                                 {/* Image / abstract content */}
-                                <div className="flex-1 bg-[#0a0a0c] relative overflow-hidden">
+                                <div className="flex-1 w-full bg-[#0a0a0c] relative overflow-hidden">
                                     {shot.imgUrl ? (
                                         <Image
                                             src={shot.imgUrl}
                                             alt={shot.label}
                                             fill
+                                            sizes="(max-width: 768px) 100vw, 320px"
                                             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                         />
                                     ) : (
@@ -378,9 +381,9 @@ const portfolioData: Category[] = [
                 title: "Customer Management System",
                 description: "A tool that helps businesses manage customer data, track interactions, and organize leads.",
                 screenshots: [
-                    { type: "table", label: "Customer Database" },
-                    { type: "profile", label: "Customer Profile" },
-                    { type: "table", label: "Activity Tracking" }
+                    { type: "table", label: "Customer Database", imgUrl: "/mockups/crm_database.png" },
+                    { type: "profile", label: "Customer Profile", imgUrl: "/mockups/crm_profile.png" },
+                    { type: "table", label: "Activity Tracking", imgUrl: "/mockups/crm_activity.png" }
                 ]
             }
         ]

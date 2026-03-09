@@ -10,11 +10,16 @@ const AudioControl = dynamic(() => import("./AudioControl").then(mod => mod.Audi
     ssr: false,
 });
 
+const PromotionalPopups = dynamic(() => import("./PromotionalPopups").then(mod => mod.PromotionalPopups), {
+    ssr: false,
+});
+
 export const ClientSideBackgrounds = () => {
     return (
         <>
             <StarBackground />
             <AudioControl />
+            <PromotionalPopups />
         </>
     );
 };

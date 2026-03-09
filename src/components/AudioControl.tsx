@@ -29,7 +29,7 @@ export const AudioControl = () => {
     };
 
     return (
-        <div className="fixed bottom-8 right-8 z-[100]">
+        <div className="fixed bottom-6 right-6 z-[100]">
             <audio ref={audioRef} src="/audio.mp3" preload="auto" />
 
             <motion.button
@@ -38,7 +38,7 @@ export const AudioControl = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="relative group flex items-center justify-center w-12 h-12 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.1)] transition-all hover:border-white/30"
+                className="relative group flex items-center justify-center w-10 h-10 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.1)] transition-all hover:border-white/30"
                 aria-label={isPlaying ? "Stop Music" : "Play Music"}
             >
                 <AnimatePresence mode="wait">
@@ -50,7 +50,7 @@ export const AudioControl = () => {
                             exit={{ opacity: 0, rotate: 90 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <Volume2 className="w-5 h-5 text-white" />
+                            <Volume2 className="w-4 h-4 text-white" />
                         </motion.div>
                     ) : (
                         <motion.div
@@ -60,7 +60,7 @@ export const AudioControl = () => {
                             exit={{ opacity: 0, rotate: 90 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <VolumeX className="w-5 h-5 text-white/40" />
+                            <VolumeX className="w-4 h-4 text-white/40" />
                         </motion.div>
                     )}
                 </AnimatePresence>
