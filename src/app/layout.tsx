@@ -39,9 +39,6 @@ export const metadata: Metadata = {
         "on page seo", "website speed optimization", "vercel deployment", "nextjs agency", "react agency",
         "devscale lab", "DevScale Lab"
     ],
-    alternates: {
-        canonical: BASE_URL,
-    },
     openGraph: {
         title: "DevScale Lab | The AI-Native Design Agency",
         description: "DevScale Lab builds fast, SEO-optimized, and conversion-focused websites for businesses, startups, and agencies using Next.js, React, and Vercel hosting. Get a professional website that ranks on Google.",
