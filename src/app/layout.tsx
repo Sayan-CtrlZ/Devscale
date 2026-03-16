@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         default: "DevScale Lab | The AI-Native Design Agency",
         template: "%s | DevScale Lab"
     },
-    description: "DevScale Lab is a modern web development agency specializing in Next.js, React, and SEO-optimized high-performance websites for startups and businesses worldwide.",
+    description: "DevScale Lab is a premier web development agency building fast, SEO-optimized Next.js websites for startups and businesses worldwide.",
     keywords: [
         "web development agency", "website development company", "next js developer", "react developer",
         "frontend developer", "full stack developer", "landing page developer", "business website design",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "DevScale Lab | The AI-Native Design Agency",
-        description: "DevScale Lab builds fast, SEO-optimized, and conversion-focused websites for businesses, startups, and agencies using Next.js, React, and Vercel hosting. Get a professional website that ranks on Google.",
+        description: "DevScale Lab builds fast, SEO-optimized Next.js websites for startups and businesses. Get a high-converting site that ranks on Google.",
         url: BASE_URL,
         siteName: "DevScale Lab",
         images: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "DevScale Lab | The AI-Native Design Agency",
-        description: "DevScale Lab builds fast, SEO-optimized, and conversion-focused websites for businesses, startups, and agencies using Next.js, React, and Vercel hosting.",
+        description: "DevScale Lab builds fast, SEO-optimized Next.js websites for startups and businesses.",
     },
     verification: {
         google: "ad0485019d01d5bc",

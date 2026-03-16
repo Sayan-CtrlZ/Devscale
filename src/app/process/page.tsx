@@ -111,17 +111,17 @@ export default function Process() {
                                 </motion.div>
 
                                 <div className="flex-1 text-white">
-                                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white/95 mb-4">
+                                    <h2 className="text-2xl md:text-3xl font-display font-bold text-white/95 mb-4">
                                         {step.title}
-                                    </h3>
+                                    </h2>
                                     <p className="text-white/60 leading-relaxed font-light mb-8 max-w-2xl">
                                         {step.description}
                                     </p>
 
                                     <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
-                                        <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">
+                                        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">
                                             Key Deliverables
-                                        </h4>
+                                        </h3>
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {step.deliverables.map((item, i) => (
                                                 <li key={i} className="flex items-center gap-3 text-sm text-white/70">

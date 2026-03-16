@@ -485,7 +485,7 @@ export default function Works() {
             {/* Bottom CTA for Works Page */}
             <section className="w-full max-w-5xl mx-auto px-6 mt-32 text-center flex flex-col items-center">
                 <div className="p-12 border border-white/10 rounded-3xl w-full bg-white/[0.02] flex flex-col items-center">
-                    <h3 className="text-3xl font-display font-bold mb-4 text-white">Have a project in mind?</h3>
+                    <h2 className="text-3xl font-display font-bold mb-4 text-white">Have a project in mind?</h2>
                     <p className="text-white/50 mb-8 max-w-md">Our team is ready to engineer the exact solution your business needs to scale.</p>
                     <Link href="/book" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                         Start a Project

@@ -191,6 +191,30 @@ export default function Contact() {
                     </form>
                 </motion.div>
             </div>
+
+            {/* Descriptive SEO section */}
+            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 mt-8 border-t border-white/5 text-white">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div>
+                        <h2 className="text-lg font-bold mb-3 text-white/90">How We Work With You</h2>
+                        <p className="text-white/40 text-sm leading-relaxed">
+                            Once you reach out, one of our team members will review your enquiry and respond within 2–4 hours during business hours. For project enquiries, we will typically schedule a short discovery call to understand your goals, timeline, and budget before proposing a tailored engagement plan.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-bold mb-3 text-white/90">What We Can Help You With</h2>
+                        <p className="text-white/40 text-sm leading-relaxed">
+                            Whether you need a new business website, an AI automation system, a landing page, or a full digital ecosystem, we are here to help. We work with startups, SMEs, agencies, and personal brands across industries including real estate, healthcare, e-commerce, education, and professional services.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-bold mb-3 text-white/90">Prefer to Talk?</h2>
+                        <p className="text-white/40 text-sm leading-relaxed">
+                            You can also reach us directly by email at <a href="mailto:devscale.labs@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a> or by phone at <a href="tel:+918974637506" className="text-blue-400 hover:text-blue-300 transition-colors">+91 89746 37506</a>. We are a remote-first agency, so we collaborate with clients worldwide across all time zones.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }

@@ -244,7 +244,7 @@ export default function BookAppointment() {
                                 <Mail className="w-5 h-5 text-white/40" />
                             </div>
                             <div>
-                                <h4 className="font-bold mb-1">Direct Inquiry</h4>
+                                <h3 className="font-bold mb-1">Direct Inquiry</h3>
                                 <p className="text-xs text-white/40 mb-3">Skip the form and send us a direct brief via email.</p>
                                 <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
                             </div>
@@ -262,6 +262,32 @@ export default function BookAppointment() {
                         </div>
                     </div>
                 </div>
+
+                {/* Descriptive SEO section */}
+                <section className="border-t border-white/5 pt-16 pb-8 text-white">
+                    <h2 className="text-3xl font-display font-bold mb-8 text-center">How Our Project Process Works</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                        <div className="flex flex-col gap-3">
+                            <span className="text-4xl font-display font-bold text-white/10">01</span>
+                            <h3 className="text-base font-bold text-white/90">Submit Your Vision</h3>
+                            <p className="text-white/40 text-sm leading-relaxed">Fill in the project discovery form above with your goals, timeline, and budget. The more detail you provide, the better we can tailor our approach and estimate scope and cost accurately.</p>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <span className="text-4xl font-display font-bold text-white/10">02</span>
+                            <h3 className="text-base font-bold text-white/90">Discovery Call</h3>
+                            <p className="text-white/40 text-sm leading-relaxed">We will reach out within 24 hours to schedule a free 30-minute discovery call. During this call, our engineering and design team will ask clarifying questions, share examples of similar work, and confirm the best way to move forward.</p>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <span className="text-4xl font-display font-bold text-white/10">03</span>
+                            <h3 className="text-base font-bold text-white/90">Proposal &amp; Kick-off</h3>
+                            <p className="text-white/40 text-sm leading-relaxed">After the discovery call, we will send a detailed project proposal covering scope, deliverables, timeline, and pricing. Once approved, we kick off with a structured onboarding sprint and deliver regular progress updates throughout the build.</p>
+                        </div>
+                    </div>
+                    <p className="text-white/30 text-xs text-center max-w-2xl mx-auto">
+                        DevScale Lab partners with startups, SMEs, agencies, and personal brands worldwide. We specialize in Next.js websites, AI automation pipelines, digital ecosystems, and conversion-focused landing pages. Our remote-first team operates across time zones so that your project always moves forward.
+                    </p>
+                </section>
+
             </div>
         </main>
     );

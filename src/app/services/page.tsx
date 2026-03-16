@@ -341,7 +341,7 @@ export default function Services() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {/* Features / Includes */}
                                     <div>
-                                        <h4 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">What's Included</h4>
+                                        <h3 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">What's Included</h3>
                                         <ul className="flex flex-col gap-3">
                                             {service.includes.map((item, i) => (
                                                 <li key={i} className="flex items-start gap-2 text-sm text-white/80">
@@ -354,7 +354,7 @@ export default function Services() {
 
                                     {/* Benefits */}
                                     <div>
-                                        <h4 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">Core Benefits</h4>
+                                        <h3 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-4">Core Benefits</h3>
                                         <ul className="flex flex-col gap-3">
                                             {service.benefits.map((item, i) => (
                                                 <li key={i} className="flex items-start gap-2 text-sm text-white/80">
@@ -368,7 +368,7 @@ export default function Services() {
 
                                 {/* How it Works */}
                                 <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5">
-                                    <h4 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-6">How It Works</h4>
+                                    <h3 className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/40 mb-6">How It Works</h3>
                                     <div className="flex flex-col gap-4">
                                         {service.howItWorks.map((step, i) => (
                                             <div key={i} className="flex items-center gap-4">
