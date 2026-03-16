@@ -60,11 +60,11 @@ export default function Home() {
                                 transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                                 className="pointer-events-auto"
                             >
-                                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] drop-shadow-2xl text-white">
+                                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] drop-shadow-2xl text-white">
                                     Intelligent Design<br />
                                     <span className="text-white/40">For The Next</span>{" "}
                                     Generation
-                                </h2>
+                                </h1>
                             </motion.div>
 
                             {/* Short description */}
