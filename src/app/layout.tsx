@@ -23,13 +23,28 @@ export const metadata: Metadata = {
         default: "DevScale Lab | The AI-Native Design Agency",
         template: "%s | DevScale Lab"
     },
-    description: "We build autonomous digital ecosystems that learn, adapt, and convert. Specializing in AI design, high-performance web apps, and immersive 3D experiences.",
+    description: "DevScale Lab is a modern web development agency providing professional website development, custom web design, landing page development, business website solutions, SEO optimization, and high-performance web applications for startups, businesses, real estate agencies, personal brands, and companies worldwide. We specialize in Next.js development, React development, Vercel deployment, fast loading websites, responsive design, UI/UX optimization, and conversion-focused landing pages that help businesses grow online.",
+    keywords: [
+        "web development agency", "website development company", "next js developer", "react developer",
+        "frontend developer", "full stack developer", "landing page developer", "business website design",
+        "seo optimized website", "fast website development", "vercel hosting", "custom website development",
+        "responsive website design", "ui ux design", "website for real estate", "agency website development",
+        "startup website", "portfolio website", "website maintenance service", "affordable web development",
+        "professional website developer", "india web developer", "freelance web developer", "modern website design",
+        "tailwind css developer", "node js developer", "javascript developer", "website redesign service",
+        "high converting landing page", "seo friendly website", "google ranking website",
+        "performance optimized website", "static website development", "dynamic website development",
+        "custom web application", "business landing page", "digital agency website", "tech agency website",
+        "fast loading website", "mobile responsive website", "website seo optimization", "technical seo",
+        "on page seo", "website speed optimization", "vercel deployment", "nextjs agency", "react agency",
+        "devscale lab", "DevScale Lab"
+    ],
     alternates: {
         canonical: "/",
     },
     openGraph: {
         title: "DevScale Lab | The AI-Native Design Agency",
-        description: "We build autonomous digital ecosystems that learn, adapt, and convert.",
+        description: "DevScale Lab builds fast, SEO-optimized, and conversion-focused websites for businesses, startups, and agencies using Next.js, React, and Vercel hosting. Get a professional website that ranks on Google.",
         url: BASE_URL,
         siteName: "DevScale Lab",
         images: [
@@ -45,7 +60,10 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "DevScale Lab | The AI-Native Design Agency",
-        description: "We build autonomous digital ecosystems that learn, adapt, and convert.",
+        description: "DevScale Lab builds fast, SEO-optimized, and conversion-focused websites for businesses, startups, and agencies using Next.js, React, and Vercel hosting.",
+    },
+    verification: {
+        google: "ad0485019d01d5bc",
     },
 };
 

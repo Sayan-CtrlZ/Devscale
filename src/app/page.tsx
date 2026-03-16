@@ -690,12 +690,52 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="pt-12 border-t border-white/5">
-                                <span className="text-[10px] uppercase tracking-[0.5em] text-white/20 font-mono">DavScale Lab v1.0</span>
+                                <span className="text-[10px] uppercase tracking-[0.5em] text-white/20 font-mono">DevScale Lab v1.0</span>
                             </div>
                         </div>
                     </div>
                 </section>
-            </main >
+
+                {/* ── SEO Content Section ── */}
+                <section className="w-full max-w-5xl mx-auto px-6 py-20 border-t border-white/[0.06]">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-col gap-8"
+                    >
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 w-fit">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+                            <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-white/40">About DevScale Lab</span>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="flex flex-col gap-4">
+                                <h2 className="text-xl font-display font-bold text-white/80 leading-snug">
+                                    Professional Web Development Agency for Startups &amp; Businesses
+                                </h2>
+                                <p className="text-white/40 text-sm leading-relaxed">
+                                    DevScale Lab is a professional web development and design agency focused on building high-quality, fast, SEO-optimized, and conversion-focused websites for businesses, startups, agencies, and personal brands. We develop websites using the latest technologies such as Next.js, React, Tailwind CSS, Node.js, and Vercel hosting to ensure maximum speed, scalability, and security.
+                                </p>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <h3 className="text-xl font-display font-bold text-white/80 leading-snug">
+                                    Full-Stack Web Solutions &amp; SEO Services
+                                </h3>
+                                <p className="text-white/40 text-sm leading-relaxed">
+                                    We provide custom website development, landing page design, portfolio websites, real estate websites, business websites, and web applications tailored to client needs. Our websites are designed to load fast, rank better on Google, and convert visitors into customers. We also offer SEO optimization, website maintenance, performance improvement, domain setup, and hosting configuration for long-term success.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Visually hidden keyword block — readable by search engines */}
+                        <p className="sr-only">
+                            web development agency, website development company, next js developer, react developer, frontend developer, full stack developer, landing page developer, business website design, seo optimized website, fast website development, vercel hosting, custom website development, responsive website design, ui ux design, website for real estate, agency website development, startup website, portfolio website, website maintenance service, affordable web development, professional website developer, india web developer, freelance web developer, modern website design, cloud hosting website, tailwind css developer, node js developer, javascript developer, website redesign service, high converting landing page, seo friendly website, google ranking website, performance optimized website, static website development, dynamic website development, custom web application, business landing page, digital agency website, tech agency website, best web developer, fast loading website, mobile responsive website, website for business, website for company, website for startup, web design service, web development service, website seo optimization, technical seo, on page seo, website speed optimization, vercel deployment, domain setup, dns setup, hosting setup, custom code website, premium website design, luxury website design, real estate website developer, agency landing page, nextjs agency, react agency, web solutions company, website experts, devscale lab
+                        </p>
+                    </motion.div>
+                </section>
+            </main>
         </>
     );
 }

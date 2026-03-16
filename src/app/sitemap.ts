@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://devscale-five.vercel.app';
+const BASE_URL = 'https://devscalelab.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
