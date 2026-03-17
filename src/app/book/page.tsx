@@ -48,7 +48,7 @@ function ProjectForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+        <form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-10">
             {/* Essentials Group */}
             <div className="space-y-8">
                 <div className="flex items-center gap-3">
@@ -94,13 +94,13 @@ function ProjectForm() {
                         placeholder="Briefly describe what you're looking to build..."
                         rows={5}
                         required
-                        className="w-full bg-black/[0.02] dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 text-black dark:text-white placeholder:text-black/20 dark:placeholder:text-white/20 focus:outline-none focus:border-blue-500/50 transition-all resize-none"
+                        className="w-full bg-black/[0.02] dark:bg-white/5 border border-black/20 dark:border-white/10 rounded-2xl px-6 py-4 text-black dark:text-white placeholder:text-black/20 dark:placeholder:text-white/20 focus:outline-none focus:border-blue-500/50 transition-all resize-none"
                     />
                 </div>
             </div>
 
             {/* Budget & Contact Group */}
-            <div className="space-y-8 pt-6 border-t border-black/10 dark:border-white/5 transition-colors">
+            <div className="space-y-8 pt-6 border-t border-black/20 dark:border-white/5 transition-colors">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-px bg-violet-500" />
                     <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-violet-600 dark:text-violet-400">Budget & Contact</span>
@@ -113,7 +113,7 @@ function ProjectForm() {
                             <select
                                 value={currency}
                                 onChange={(e) => setCurrency(e.target.value)}
-                                className="bg-black/[0.02] dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-4 py-4 text-black/60 dark:text-white/60 focus:outline-none appearance-none cursor-pointer text-sm transition-colors"
+                                className="bg-black/[0.02] dark:bg-white/5 border border-black/20 dark:border-white/10 rounded-2xl px-4 py-4 text-black/60 dark:text-white/60 focus:outline-none appearance-none cursor-pointer text-sm transition-colors"
                             >
                                 <option className="bg-white dark:bg-neutral-900 border-none">USD ($)</option>
                                 <option className="bg-white dark:bg-neutral-900 border-none">INR (₹)</option>
@@ -123,7 +123,7 @@ function ProjectForm() {
                                 value={budget}
                                 onChange={(e) => setBudget(e.target.value)}
                                 placeholder="Amount"
-                                className="w-full bg-black/[0.02] dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-6 py-4 text-black dark:text-white placeholder:text-black/20 dark:placeholder:text-white/20 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
+                                className="w-full bg-black/[0.02] dark:bg-white/5 border border-black/20 dark:border-white/10 rounded-2xl px-6 py-4 text-black dark:text-white placeholder:text-black/20 dark:placeholder:text-white/20 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
                             />
                         </div>
                     </div>
@@ -131,6 +131,8 @@ function ProjectForm() {
                         <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/40 dark:text-white/40 ml-2 transition-colors">Your Full Name</label>
                         <input
                             type="text"
+                            autoComplete="off"
+                            name="project_full_name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="John Doe"
@@ -144,6 +146,8 @@ function ProjectForm() {
                     <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/40 dark:text-white/40 ml-2 transition-colors">Business Email</label>
                     <input
                         type="email"
+                        autoComplete="off"
+                        name="project_business_email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="john@company.com"
@@ -210,7 +214,7 @@ export default function BookAppointment() {
                         initial={{ opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="relative p-8 md:p-12 rounded-[40px] border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_80px_rgba(0,0,0,0.5)] transition-colors"
+                        className="relative p-8 md:p-12 rounded-[40px] border border-black/20 dark:border-white/10 bg-black/[0.02] dark:bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_80px_rgba(0,0,0,0.5)] transition-colors"
                     >
                         <div className="mb-10">
                             <h2 className="text-2xl font-bold mb-2 transition-colors">Project Discovery Form</h2>
@@ -227,13 +231,15 @@ export default function BookAppointment() {
                             <p className="text-black/40 dark:text-white/40 text-sm max-w-md mx-auto transition-colors">Schedule a 30-minute discovery call directly with our engineering management team.</p>
                         </div>
 
-                        <div className="w-full p-6 md:p-8 rounded-[40px] border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_80px_rgba(0,0,0,0.5)] flex flex-col gap-6 transition-colors">
-                            <Cal
-                                namespace="30min"
-                                calLink="devscale-labs-bjpifk/30min"
-                                style={{ width: "100%", height: "100%", overflow: "scroll" }}
-                                config={{ "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }}
-                            />
+                        <div className="w-full p-6 md:p-8 rounded-[40px] border border-black/20 dark:border-white/10 bg-black/[0.02] dark:bg-white/2 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_80px_rgba(0,0,0,0.5)] flex flex-col gap-6 transition-colors">
+                            <div className="w-full h-[700px] md:h-[760px]">
+                                <Cal
+                                    namespace="30min"
+                                    calLink="devscale-labs-bjpifk/30min?name=&email="
+                                    style={{ width: "100%", height: "100%", overflow: "auto" }}
+                                    config={{ "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }}
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -264,7 +270,7 @@ export default function BookAppointment() {
                 </div>
 
                 {/* Descriptive SEO section */}
-                <section className="border-t border-black/10 dark:border-white/5 pt-16 pb-8 text-black dark:text-white transition-colors">
+                <section className="border-t border-black/20 dark:border-white/5 pt-16 pb-8 text-black dark:text-white transition-colors">
                     <h2 className="text-3xl font-display font-bold mb-8 text-center transition-colors">How Our Project Process Works</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
                         <div className="flex flex-col gap-3">

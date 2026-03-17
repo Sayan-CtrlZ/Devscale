@@ -28,7 +28,7 @@ export default function Article() {
                         <p>
                             Our vision at Devscale Lab is to empower businesses with platforms that automatically capture leads, answer questions, close deals, and build customer relationships. By connecting cutting-edge AI chatbots, seamless booking systems, dynamic storefronts, and automated marketing tools, we engineer a single continuous pipeline of growth.
                         </p>
-                        <div className="p-8 my-4 rounded-2xl bg-black/[0.02] dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-sm transition-colors">
+                        <div className="p-8 my-4 rounded-2xl bg-black/[0.02] dark:bg-white/5 border border-black/20 dark:border-white/10 backdrop-blur-sm transition-colors">
                             <h3 className="text-xl font-bold text-black dark:text-white mb-4 -mt-2 transition-colors">What makes an ecosystem autonomous?</h3>
                             <ul className="flex flex-col gap-4 list-disc pl-5">
                                 <li><strong>Self-healing pipelines:</strong> Systems that detect failure points and adjust routing automatically.</li>

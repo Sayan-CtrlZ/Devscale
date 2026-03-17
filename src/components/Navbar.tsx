@@ -76,7 +76,7 @@ export const Navbar = () => {
                             transition={{ duration: 0.12, ease: "easeOut" }}
                             className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto will-change-transform"
                         >
-                            <div className="rounded-2xl border border-white/50 bg-[linear-gradient(155deg,rgba(255,255,255,0.7),rgba(252,248,242,0.45))] shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_24px_60px_-34px_rgba(70,52,38,0.32)] backdrop-blur-xl supports-[backdrop-filter]:bg-[linear-gradient(155deg,rgba(255,255,255,0.5),rgba(252,248,242,0.28))] dark:border-white/10 dark:bg-neutral-950/95 dark:[background-image:none] p-6 flex flex-col gap-5">
+                            <div className="rounded-2xl border border-black/20 dark:border-neutral-800 bg-[linear-gradient(155deg,rgba(255,255,255,1),rgba(252,248,242,1))] dark:bg-[linear-gradient(155deg,rgba(30,30,30,1),rgba(15,15,15,1))] shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_24px_60px_-34px_rgba(70,52,38,0.32)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_24px_60px_-34px_rgba(0,0,0,0.8)] p-6 flex flex-col gap-5">
                                 {[
                                     { name: "Home", path: "/" },
                                     { name: "Process", path: "/process" },
@@ -90,7 +90,7 @@ export const Navbar = () => {
                                         key={item.name}
                                         href={item.path}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className={`text-xs uppercase tracking-widest font-bold transition-colors border-b border-black/5 dark:border-white/5 pb-4 last:border-0 last:pb-0 ${pathname === item.path ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/70 hover:text-black dark:hover:text-white'}`}
+                                        className={`text-xs uppercase tracking-widest font-bold transition-colors border-b border-black/15 dark:border-white/15 pb-4 last:border-0 last:pb-0 ${pathname === item.path ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/70 hover:text-black dark:hover:text-white'}`}
                                     >
                                         {item.name}
                                     </Link>

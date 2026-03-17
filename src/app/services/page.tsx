@@ -13,7 +13,7 @@ const ecommerceImg = "/mockups/ecommerce_ui_mockup.webp"; // Updated path
 function MockupFrame({ children, className = "" }: { children: React.ReactNode, className?: string }) {
     return (
         <div className={`relative rounded-2xl liquid-glass overflow-hidden transition-colors ${className}`}>
-            <div className="flex items-center gap-1.5 px-4 py-3 border-b border-black/5 dark:border-white/5 bg-black/[0.01] dark:bg-white/[0.01] transition-colors">
+            <div className="flex items-center gap-1.5 px-4 py-3 border-b border-black/15 dark:border-white/5 bg-black/[0.01] dark:bg-white/[0.01] transition-colors">
                 <div className="w-2.5 h-2.5 rounded-full bg-black/20 dark:bg-white/20" />
                 <div className="w-2.5 h-2.5 rounded-full bg-black/20 dark:bg-white/20" />
                 <div className="w-2.5 h-2.5 rounded-full bg-black/20 dark:bg-white/20" />
@@ -183,7 +183,7 @@ const ToolsMockups = () => (
         </div>
         <div className="space-y-2">
             {[1, 2, 3].map(i => (
-                <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-black/[0.02] dark:bg-white/5 border border-black/5 dark:border-white/5 transition-colors">
+                <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-black/[0.02] dark:bg-white/5 border border-black/15 dark:border-white/5 transition-colors">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-black/10 dark:bg-white/10 transition-colors" />
                         <div className="flex flex-col gap-1">
@@ -290,9 +290,9 @@ export default function Services() {
 
 
     return (
-        <div className="min-h-screen pt-24 pb-20 w-full bg-background transition-colors">
+        <div className="min-h-screen pt-28 pb-20 w-full bg-background transition-colors">
             {/* 1. Services Hero Section */}
-            <section className="relative w-full px-6 md:px-12 max-w-5xl mx-auto text-center pt-20 pb-32">
+            <section className="relative w-full px-6 md:px-12 max-w-5xl mx-auto text-center pt-12 pb-16">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -315,7 +315,7 @@ export default function Services() {
             </section>
 
             {/* 2 & 3. Detailed Service Sections */}
-            <section className="w-full max-w-7xl mx-auto flex flex-col gap-32 px-6 md:px-12">
+            <section className="w-full max-w-7xl mx-auto flex flex-col gap-16 px-6 md:px-12 py-12">
                 {servicesData.map((service, idx) => {
                     const isReversed = idx % 2 !== 0;
                     return (
@@ -326,7 +326,7 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.7 }}
-                            className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}
+                            className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-12 items-center`}
                         >
                             {/* Text Side */}
                             <div className="flex-1 flex flex-col gap-8">
@@ -367,7 +367,7 @@ export default function Services() {
                                 </div>
 
                                 {/* How it Works */}
-                                <div className="p-6 rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 transition-colors">
+                                <div className="p-6 rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/15 dark:border-white/5 transition-colors">
                                     <h3 className="text-[11px] uppercase tracking-[0.2em] font-bold text-black/40 dark:text-white/40 mb-6 transition-colors">How It Works</h3>
                                     <div className="flex flex-col gap-4">
                                         {service.howItWorks.map((step, i) => (
@@ -401,10 +401,10 @@ export default function Services() {
             </section>
 
             {/* 4. Final CTA Section */}
-            <section className="relative w-full max-w-5xl mx-auto px-6 py-32 mt-20 text-center flex flex-col items-center">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[300px] bg-black/5 dark:bg-white/5 blur-[100px] rounded-full pointer-events-none -z-10 transition-colors" />
+            <section className="relative w-full max-w-5xl mx-auto px-6 py-12 mt-8 text-center flex flex-col items-center border-t border-black/10 dark:border-white/20">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[300px] bg-black/5 dark:bg-black/20 blur-[100px] rounded-full pointer-events-none -z-10 transition-colors" />
 
-                <div className="p-12 md:p-16 rounded-[40px] liquid-glass shadow-2xl w-full flex flex-col items-center gap-6 transition-colors">
+                <div className="p-12 md:p-16 rounded-[40px] liquid-glass shadow-2xl w-full flex flex-col items-center gap-6 bg-white/80 dark:bg-white/5 transition-colors">
                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-black dark:text-white transition-colors">
                         Ready to Grow<br /> Your Business?
                     </h3>

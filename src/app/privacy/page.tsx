@@ -63,7 +63,7 @@ export default function Privacy() {
                         <p>We may update this policy anytime. Changes happen immediately when posted. Check back to see updates.</p>
                     </section>
 
-                    <section className="mt-8 pt-8 border-t border-black/10 dark:border-white/10 transition-colors">
+                    <section className="mt-8 pt-8 border-t border-black/20 dark:border-white/10 transition-colors">
                         <p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with Devscale Lab, please contact us at:</p>
                         <p className="mt-2 text-black dark:text-white font-medium transition-colors">contact@devscalelab.com</p>
                     </section>

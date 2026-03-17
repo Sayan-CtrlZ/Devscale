@@ -93,7 +93,7 @@ export default function About() {
                         </div>
                         <div className="flex flex-col gap-6">
                             {philosophyItems.map((item, idx) => (
-                                <div key={idx} className="flex gap-5 p-6 rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-colors group">
+                                <div key={idx} className="flex gap-5 p-6 rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/15 dark:border-white/5 hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-colors group">
                                     <div className="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center border border-black/10 dark:border-white/10 group-hover:border-black/20 dark:group-hover:border-white/20 transition-all">
                                         {item.icon}
                                     </div>
@@ -180,7 +180,7 @@ export default function About() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="flex flex-col items-center text-center p-8 rounded-3xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/5 hover:border-black/10 dark:hover:border-white/10 team-card-transition hover:bg-black/[0.03] dark:hover:bg-white/[0.03] hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] group transition-all"
+                            className="flex flex-col items-center text-center p-8 rounded-3xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/15 dark:border-white/5 hover:border-black/10 dark:hover:border-white/10 team-card-transition hover:bg-black/[0.03] dark:hover:bg-white/[0.03] hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] group transition-all"
                         >
                             <div className="w-52 h-52 rounded-3xl overflow-hidden mb-8 border-2 border-black/10 dark:border-white/10 relative transition-colors">
                                 <Image src={member.image} alt={member.name} width={208} height={208} className="object-cover transition-transform duration-700 group-hover:scale-110" />

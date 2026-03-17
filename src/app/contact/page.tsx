@@ -155,7 +155,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="pt-6 border-t border-black/5 dark:border-white/5 flex flex-col gap-5 transition-colors">
+                    <div className="pt-6 border-t border-black/15 dark:border-white/5 flex flex-col gap-5 transition-colors">
                         <div className="flex items-center gap-3 text-black/30 dark:text-white/30 text-xs transition-colors">
                             <Clock className="w-4 h-4" />
                             <span>Average response time: 2-4 hours</span>
@@ -251,7 +251,7 @@ export default function Contact() {
             </div>
 
             {/* FAQ Section */}
-            <section className="w-full max-w-4xl mx-auto px-6 md:px-12 py-24 border-t border-black/5 dark:border-white/5 transition-colors">
+            <section className="w-full max-w-4xl mx-auto px-6 md:px-12 py-24 border-t border-black/15 dark:border-white/5 transition-colors">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ export default function Contact() {
             </section>
 
             {/* Descriptive SEO section */}
-            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 mt-8 border-t border-black/5 dark:border-white/5 text-black dark:text-white transition-colors">
+            <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 mt-8 border-t border-black/15 dark:border-white/5 text-black dark:text-white transition-colors">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div>
                         <h3 className="text-lg font-bold mb-3 text-black/90 dark:text-white/90 transition-colors">How We Work With You</h3>

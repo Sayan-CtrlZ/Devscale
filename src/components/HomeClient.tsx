@@ -38,7 +38,7 @@ export function HomeClient() {
     return (
         <>
             <main className="relative w-full flex flex-col items-center">
-                <section ref={heroRef} className="relative w-full min-h-screen pt-24 pb-12">
+                <section ref={heroRef} className="relative w-full min-h-screen pt-28 pb-8">
                     {/* Wrapper for EVERYTHING in the hero */}
                     <div className="relative min-h-screen w-full overflow-hidden flex pointer-events-none">
                         {/* Background 3D Metallic Object — hidden on mobile, full hero on desktop */}
@@ -50,7 +50,7 @@ export function HomeClient() {
 
 
                         {/* Foreground Content Wrapper - Full-width on mobile, 3/5 on desktop */}
-                        <div className="relative z-20 w-full md:w-3/5 h-full flex flex-col justify-center px-6 md:px-12 lg:px-20 gap-8 pointer-events-none pt-20">
+                        <div className="relative z-20 w-full md:w-3/5 h-full flex flex-col justify-center px-6 md:px-12 lg:px-20 gap-6 pointer-events-none pt-12">
 
                             {/* Eyebrow badge */}
                             <motion.div
@@ -59,7 +59,7 @@ export function HomeClient() {
                                 transition={{ duration: 0.6, ease: "easeOut" }}
                                 className="pointer-events-auto"
                             >
-                                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/15 bg-black/5 dark:bg-white/5 text-[10px] uppercase tracking-[0.3em] font-bold text-black/60 dark:text-white/50 transition-colors">
+                                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/8 text-[10px] uppercase tracking-[0.3em] font-bold text-black/60 dark:text-white/50 transition-colors">
                                     <span className="w-1.5 h-1.5 rounded-full bg-black/80 dark:bg-white/60 animate-pulse" />
                                     AI-Native Design Agency
                                 </span>
@@ -102,12 +102,12 @@ export function HomeClient() {
                                     <span className="text-[9px] uppercase tracking-[0.3em] text-black/50 dark:text-white/30 font-bold w-20 shrink-0 transition-colors">Cognitive</span>
                                     <div className="flex items-center gap-1.5 flex-wrap">
                                         <span className="px-2.5 py-1 text-[10px] rounded-full bg-black dark:bg-white text-white dark:text-black font-bold transition-colors">AI Automation</span>
-                                        <span className="px-2.5 py-1 text-[10px] rounded-full border border-black/20 dark:border-white/15 text-black/70 dark:text-white/55 font-bold transition-colors">Generative UI</span>
-                                        <span className="px-2.5 py-1 text-[10px] rounded-full border border-black/20 dark:border-white/15 text-black/70 dark:text-white/55 font-bold transition-colors">24/7 Ops</span>
+                                        <span className="px-2.5 py-1 text-[10px] rounded-full border border-black/20 dark:border-white/25 text-black/70 dark:text-white/55 font-bold transition-colors">Generative UI</span>
+                                        <span className="px-2.5 py-1 text-[10px] rounded-full border border-black/20 dark:border-white/25 text-black/70 dark:text-white/55 font-bold transition-colors">24/7 Ops</span>
                                     </div>
                                 </div>
 
-                                <div className="h-px bg-black/5 dark:bg-white/8 transition-colors" />
+                                <div className="h-px bg-black/5 dark:bg-white/15 transition-colors" />
 
                                 <div className="flex items-center gap-6">
                                     <span className="text-[9px] uppercase tracking-[0.3em] text-black/30 dark:text-white/30 font-medium w-20 shrink-0 transition-colors">Execution</span>
@@ -175,7 +175,7 @@ export function HomeClient() {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-center relative z-10 max-w-4xl rounded-[32px] px-6 py-8 md:px-10 md:py-10 text-surface backdrop-blur-sm"
                     >
-                        <div className="mb-10 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 transition-colors">
+                        <div className="mb-10 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/8 text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 transition-colors">
                             The future of digital craftsmanship
                         </div>
 
@@ -243,7 +243,7 @@ export function HomeClient() {
                                 className="group relative flex flex-col justify-between overflow-hidden rounded-[24px] liquid-glass p-8"
                             >
                                 <div>
-                                    <div className="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-black/10 dark:group-hover:bg-white/15 group-hover:border-black/30 dark:group-hover:border-white/30 group-hover:scale-110">
+                                    <div className="w-12 h-12 rounded-xl bg-black/5 dark:bg-white/8 border border-black/10 dark:border-white/20 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-black/10 dark:group-hover:bg-white/15 group-hover:border-black/30 dark:group-hover:border-white/30 group-hover:scale-110">
                                         <service.icon className="w-5 h-5 text-black/50 dark:text-white/50 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                                     </div>
                                     <h3 className="text-xl font-display font-bold mb-3 text-black/95 dark:text-white/95 transition-colors">{service.title}</h3>
@@ -262,7 +262,7 @@ export function HomeClient() {
                 </section>
 
                 {/* ── Workflow Mockup Section ── */}
-                <section ref={workflowRef} className="w-full max-w-7xl mx-auto px-6 md:px-12 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <section ref={workflowRef} className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                     {/* LEFT — Workflow Diagram Mockup */}
                     <motion.div
@@ -485,7 +485,7 @@ export function HomeClient() {
 
 
                 {/* Discover Section */}
-                <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-32 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start" >
+                <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" >
                     <div className="flex flex-col gap-12">
                         <motion.h2
                             initial={{ opacity: 0, x: -20 }}

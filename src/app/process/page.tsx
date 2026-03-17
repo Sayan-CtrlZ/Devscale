@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowLeft, Rocket, Map, Code, CheckCircle, HeadphonesIcon } from "lucide-react";
+import { Rocket, Map, Code, CheckCircle, HeadphonesIcon } from "lucide-react";
 import Link from "next/link";
 
 const processSteps = [
@@ -48,13 +48,9 @@ export default function Process() {
     const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <div className="min-h-screen pt-32 pb-20 w-full overflow-hidden bg-background transition-colors">
-            <div className="max-w-4xl mx-auto px-6 md:px-12 w-full mt-20">
-                <Link href="/" className="inline-flex items-center gap-2 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors text-sm font-medium mb-12">
-                    <ArrowLeft className="w-4 h-4" /> Back to Home
-                </Link>
-
-                <div className="mb-20 text-black dark:text-white transition-colors">
+        <div className="min-h-screen pt-28 pb-20 w-full overflow-hidden bg-background transition-colors">
+            <div className="max-w-4xl mx-auto px-6 md:px-12 w-full mt-6">
+                <div className="mb-12 text-black dark:text-white transition-colors">
                     <div className="px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 w-max mb-6 transition-colors">
                         How We Work
                     </div>
@@ -66,7 +62,7 @@ export default function Process() {
                     </p>
                 </div>
 
-                <div ref={containerRef} className="relative mt-12 pb-12">
+                <div ref={containerRef} className="relative mt-6 pb-8">
                     {/* Vertical Background Line */}
                     <div className="absolute left-6 md:left-8 top-0 bottom-0 w-1 bg-black/5 dark:bg-white/5 rounded-full overflow-hidden transform -translate-x-1/2 transition-colors">
                         {/* Animated Fill Line */}
@@ -76,7 +72,7 @@ export default function Process() {
                         />
                     </div>
 
-                    <div className="flex flex-col gap-16 md:gap-24">
+                    <div className="flex flex-col gap-10 md:gap-14">
                         {processSteps.map((step, idx) => (
                             <motion.div
                                 key={idx}
@@ -118,7 +114,7 @@ export default function Process() {
                                         {step.description}
                                     </p>
 
-                                    <div className="bg-black/5 dark:bg-white/[0.02] border border-black/5 dark:border-white/5 rounded-2xl p-6 md:p-8 transition-colors">
+                                    <div className="bg-black/5 dark:bg-white/[0.02] border border-black/15 dark:border-white/5 rounded-2xl p-6 md:p-8 transition-colors">
                                         <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/40 dark:text-white/40 mb-4 transition-colors">
                                             Key Deliverables
                                         </h3>
@@ -142,7 +138,7 @@ export default function Process() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 p-12 rounded-[32px] border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] text-center flex flex-col items-center shadow-2xl text-black dark:text-white transition-colors"
+                    className="mt-12 p-12 rounded-[32px] border border-black/10 dark:border-white/20 bg-white/50 dark:bg-white/[0.03] text-center flex flex-col items-center shadow-2xl text-black dark:text-white transition-colors"
                 >
                     <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 transition-colors">Ready to start the process?</h3>
                     <p className="text-black/50 dark:text-white/50 max-w-md mx-auto mb-8 font-light transition-colors">Book a free call to discuss your needs and get started on your project.</p>

@@ -160,10 +160,10 @@ function AbstractFallback({ type }: { type: string }) {
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-3">
                     <div className="flex gap-2">
-                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-1/2 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
-                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-3/4 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
+                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/15 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-1/2 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
+                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/15 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-3/4 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
                     </div>
-                    <div className="flex-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-3 flex items-end gap-1 transition-colors">
+                    <div className="flex-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/15 dark:border-white/5 p-3 flex items-end gap-1 transition-colors">
                         {[40, 60, 30, 80, 50, 90, 70, 45].map((h, i) => <div key={i} className="flex-1 bg-blue-600/30 dark:bg-blue-400/30 rounded-t-sm" style={{ height: `${h}%` }} />)}
                     </div>
                 </div>
@@ -185,7 +185,7 @@ function AbstractFallback({ type }: { type: string }) {
                         <div className="w-10 h-1.5 bg-black/30 dark:bg-white/30 rounded-full ml-auto" />
                     </div>
                     {[1, 2, 3, 4].map(i => (
-                        <div key={i} className="w-full h-6 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-md flex items-center px-3 gap-5 transition-colors">
+                        <div key={i} className="w-full h-6 bg-black/5 dark:bg-white/5 border border-black/15 dark:border-white/5 rounded-md flex items-center px-3 gap-5 transition-colors">
                             <div className="w-3 h-3 rounded-full bg-black/10 dark:bg-white/10 shrink-0 transition-colors" />
                             <div className="w-16 h-1.5 bg-black/20 dark:bg-white/20 rounded-full flex-1 transition-colors" />
                             <div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
@@ -199,7 +199,7 @@ function AbstractFallback({ type }: { type: string }) {
                     <div className="w-12 h-12 rounded-full border-2 border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/10 transition-colors" />
                     <div className="w-20 h-3 bg-black/30 dark:bg-white/30 rounded-full transition-colors" />
                     <div className="w-16 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
-                    <div className="w-full h-full mt-3 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-3 flex flex-col gap-2 transition-colors">
+                    <div className="w-full h-full mt-3 bg-black/5 dark:bg-white/5 rounded-lg border border-black/15 dark:border-white/5 p-3 flex flex-col gap-2 transition-colors">
                         <div className="w-full h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
                         <div className="w-3/4 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
                         <div className="w-5/6 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
@@ -209,7 +209,7 @@ function AbstractFallback({ type }: { type: string }) {
         case "homepage":
             return (
                 <div className="w-full h-full flex flex-col pt-2">
-                    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-black/5 dark:border-white/5 transition-colors">
+                    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-black/15 dark:border-white/5 transition-colors">
                         <div className="w-5 h-5 rounded-full bg-black/20 dark:bg-white/20" />
                         <div className="flex gap-3"><div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full" /><div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full" /></div>
                     </div>
@@ -225,7 +225,7 @@ function AbstractFallback({ type }: { type: string }) {
             return (
                 <div className="w-full h-full p-4 flex justify-center items-center gap-4 flex-wrap">
                     {[1, 2, 3, 4].map(i => (
-                        <div key={i} className="w-[45%] h-16 bg-black/5 dark:bg-white/5 rounded-lg flex border border-black/5 dark:border-white/5 p-3 transition-colors">
+                        <div key={i} className="w-[45%] h-16 bg-black/5 dark:bg-white/5 rounded-lg flex border border-black/15 dark:border-white/5 p-3 transition-colors">
                             <div className="w-7 h-7 bg-black/10 dark:bg-white/10 rounded-full shrink-0 transition-colors" />
                             <div className="ml-3 flex-1 flex flex-col gap-1.5 justify-center">
                                 <div className="w-full h-2 bg-black/30 dark:bg-white/30 rounded-full transition-colors" />
