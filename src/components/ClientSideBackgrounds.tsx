@@ -4,10 +4,6 @@ import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const StarBackground = dynamic(() => import("./StarBackground").then(mod => mod.StarBackground), {
-    ssr: false,
-});
-
 const AudioControl = dynamic(() => import("./AudioControl").then(mod => mod.AudioControl), {
     ssr: false,
 });
@@ -39,7 +35,6 @@ export const ClientSideBackgrounds = () => {
 
     return (
         <>
-            <StarBackground />
             <AudioControl />
             <PromotionalPopups />
         </>
