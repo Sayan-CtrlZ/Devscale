@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+import { ThemeToggle } from "./ThemeToggle";
+
 export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
@@ -21,15 +23,14 @@ export const Navbar = () => {
 
     return (
         <nav className="fixed top-0 inset-x-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 flex justify-center pointer-events-none transition-all duration-300">
-            <div className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-black/50 md:bg-white/[0.02] backdrop-blur-xl md:backdrop-blur-2xl border border-white/10 md:border-white/20 rounded-full px-4 py-2.5 md:px-6 md:py-4 shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.2)]">
-
+            <div className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/70 dark:bg-black/70 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10 px-4 py-2.5 md:px-8 md:py-3.5 shadow-lg shadow-black/[0.03] dark:shadow-white/[0.02]">
                 <Link href="/" aria-label="DavScale Lab Home" className="flex items-center gap-2 md:gap-3">
-                    <Image src="/assets/logo.webp" alt="DavScale Lab Logo" width={32} height={32} priority className="h-6 md:h-8 w-auto object-contain" />
-                    <span className="font-display font-bold text-sm md:text-base tracking-tight text-white line-clamp-1">DavScale Lab</span>
+                    <Image src="/assets/logo.webp" alt="DavScale Lab Logo" width={32} height={32} priority className="h-6 md:h-8 w-auto object-contain transition-all" />
+                    <span className="font-display font-black text-sm md:text-base tracking-tight text-black dark:text-white line-clamp-1 transition-colors">DavScale Lab</span>
                 </Link>
 
                 {/* Desktop nav links */}
-                <div className="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-medium">
+                <div className="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold">
                     {[
                         { name: "Home", path: "/" },
                         { name: "Process", path: "/process" },
@@ -42,7 +43,7 @@ export const Navbar = () => {
                         <Link
                             key={item.name}
                             href={item.path}
-                            className={`transition-colors ${pathname === item.path ? 'text-white' : 'text-white/50 hover:text-white'}`}
+                            className={`transition-colors h-14 flex items-center border-b-2 ${pathname === item.path ? 'text-black dark:text-white border-black dark:border-white' : 'text-black/50 dark:text-white/50 border-transparent hover:text-black dark:hover:text-white'}`}
                         >
                             {item.name}
                         </Link>
@@ -50,7 +51,8 @@ export const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                    <Link href="/book" className="hidden md:flex px-5 py-2.5 rounded-full bg-white text-black text-[10px] md:text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 active:scale-95 text-center leading-none items-center justify-center">
+                    <ThemeToggle />
+                    <Link href="/book" className="hidden md:flex px-6 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black text-[10px] md:text-xs uppercase tracking-widest font-black hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 text-center leading-none items-center justify-center">
                         Start Project
                     </Link>
                     {/* Hamburger — mobile only */}
@@ -59,9 +61,9 @@ export const Navbar = () => {
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
-                        <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-                        <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-                        <span className={`block w-5 h-[2px] bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
                     </button>
                 </div>
 
@@ -75,7 +77,7 @@ export const Navbar = () => {
                             transition={{ duration: 0.2 }}
                             className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto"
                         >
-                            <div className="rounded-2xl bg-black/90 backdrop-blur-2xl border border-white/10 p-6 flex flex-col gap-5">
+                            <div className="rounded-2xl liquid-glass p-6 flex flex-col gap-5">
                                 {[
                                     { name: "Home", path: "/" },
                                     { name: "Process", path: "/process" },
@@ -89,12 +91,12 @@ export const Navbar = () => {
                                         key={item.name}
                                         href={item.path}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className={`text-sm uppercase tracking-widest font-medium transition-colors border-b border-white/5 pb-4 last:border-0 last:pb-0 ${pathname === item.path ? 'text-white' : 'text-white/70 hover:text-white'}`}
+                                        className={`text-xs uppercase tracking-widest font-bold transition-colors border-b border-black/5 dark:border-white/5 pb-4 last:border-0 last:pb-0 ${pathname === item.path ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/70 hover:text-black dark:hover:text-white'}`}
                                     >
                                         {item.name}
                                     </Link>
                                 ))}
-                                <Link href="/book" onClick={() => setMobileMenuOpen(false)} className="mt-2 block w-full py-3 rounded-full bg-white text-black text-xs uppercase tracking-widest font-bold text-center">
+                                <Link href="/book" onClick={() => setMobileMenuOpen(false)} className="mt-2 block w-full py-4 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs uppercase tracking-widest font-black text-center shadow-lg">
                                     Start Project
                                 </Link>
                             </div>

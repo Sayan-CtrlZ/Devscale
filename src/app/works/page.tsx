@@ -12,13 +12,14 @@ function FlowArrow() {
         <div className="flex-shrink-0 flex items-center justify-center w-12 relative">
             <svg width="48" height="40" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="overflow-visible">
                 {/* Dashed line */}
-                <line x1="0" y1="20" x2="36" y2="20" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4 3"
+                <line x1="0" y1="20" x2="36" y2="20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3"
+                    className="text-black/25 dark:text-white/25"
                     style={{ animation: "flowDash 1.2s linear infinite" }}
                 />
                 {/* Arrowhead */}
-                <polygon points="36,14 48,20 36,26" fill="rgba(255,255,255,0.5)" />
+                <polygon points="36,14 48,20 36,26" fill="currentColor" className="text-black/50 dark:text-white/50" />
                 {/* Animated pulse dot */}
-                <circle r="3" fill="white" opacity="0.8">
+                <circle r="3" fill="currentColor" opacity="0.8" className="text-black dark:text-white">
                     <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,20 L36,20" />
                     <animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" />
                 </circle>
@@ -55,10 +56,9 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                     >
                         {/* Glowing border wrapper with rotating light */}
                         <div
-                            className="flex flex-col rounded-xl overflow-hidden relative p-[1px] group"
+                            className="flex flex-col rounded-xl overflow-hidden relative p-[1px] group transition-all duration-300"
                             style={{
-                                background: 'rgba(255,255,255,0.05)',
-                                transition: 'all 0.3s ease',
+                                background: 'var(--card-border)',
                                 height: '240px', // Strict height for all cards
                                 width: '100%',
                                 minWidth: '180px'
@@ -68,21 +68,21 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                             <div
                                 className="absolute inset-[-100%] opacity-40 group-hover:opacity-100 transition-opacity duration-700 z-0 pointer-events-none"
                                 style={{
-                                    background: 'conic-gradient(from 0deg, transparent 0deg, transparent 280deg, rgba(255,255,255,1) 320deg, transparent 360deg)',
+                                    background: 'conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--foreground) 320deg, transparent 360deg)',
                                     animation: 'rotateBorder 6s linear infinite',
                                 }}
                             />
 
                             {/* Inner content area to isolate border light */}
-                            <div className="w-full h-full flex flex-col rounded-[11px] overflow-hidden relative z-10 bg-[#0a0a0c]">
+                            <div className="w-full h-full flex flex-col rounded-[11px] overflow-hidden relative z-10 bg-black/[0.05] dark:bg-[#0a0a0c] transition-colors">
                                 {/* Window chrome */}
-                                <div className="w-full h-4 shrink-0 border-b border-white/10 bg-white/[0.03] flex items-center px-2 gap-1 z-20">
+                                <div className="w-full h-4 shrink-0 border-b border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.03] flex items-center px-2 gap-1 z-20 transition-colors">
                                     <div className="w-1.5 h-1.5 rounded-full bg-red-400/40" />
                                     <div className="w-1.5 h-1.5 rounded-full bg-amber-400/40" />
                                     <div className="w-1.5 h-1.5 rounded-full bg-green-400/40" />
                                 </div>
                                 {/* Image / abstract content */}
-                                <div className="flex-1 w-full bg-[#0a0a0c] relative overflow-hidden">
+                                <div className="flex-1 w-full bg-black/[0.05] dark:bg-[#0a0a0c] relative overflow-hidden transition-colors">
                                     {shot.imgUrl ? (
                                         <Image
                                             src={shot.imgUrl}
@@ -104,7 +104,7 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                             </div>
                         </div>
                         {/* Label */}
-                        <span className="text-[9px] uppercase tracking-widest text-white/40 text-center mt-2 block">{shot.label}</span>
+                        <span className="text-[9px] uppercase tracking-widest text-black/40 dark:text-white/40 text-center mt-2 block transition-colors">{shot.label}</span>
                     </div>
                     {idx < screenshots.length - 1 && <FlowArrow key={`arrow-${idx}`} />}
                 </div>
@@ -119,25 +119,25 @@ function AbstractFallback({ type }: { type: string }) {
         case "chat":
             return (
                 <div className="w-full h-full p-4 flex flex-col justify-end gap-2 pb-10 relative">
-                    <div className="flex items-start gap-2"><div className="w-5 h-5 rounded-full bg-blue-500/30 flex-shrink-0" /><div className="bg-white/10 w-28 h-7 rounded-xl rounded-tl-sm" /></div>
-                    <div className="flex items-start justify-end gap-2"><div className="bg-blue-500/20 w-20 h-5 rounded-xl rounded-tr-sm" /></div>
-                    <div className="flex items-start gap-2"><div className="w-5 h-5 rounded-full bg-blue-500/30 flex-shrink-0" /><div className="bg-white/10 w-24 h-5 rounded-xl rounded-tl-sm" /></div>
-                    <div className="absolute bottom-3 left-4 right-4 h-6 bg-white/5 rounded-full border border-white/10" />
+                    <div className="flex items-start gap-2"><div className="w-5 h-5 rounded-full bg-blue-500/30 flex-shrink-0" /><div className="bg-black/10 dark:bg-white/10 w-28 h-7 rounded-xl rounded-tl-sm transition-colors" /></div>
+                    <div className="flex items-start justify-end gap-2"><div className="bg-blue-600/20 dark:bg-blue-500/20 w-20 h-5 rounded-xl rounded-tr-sm transition-colors" /></div>
+                    <div className="flex items-start gap-2"><div className="w-5 h-5 rounded-full bg-blue-500/30 flex-shrink-0" /><div className="bg-black/10 dark:bg-white/10 w-24 h-5 rounded-xl rounded-tl-sm transition-colors" /></div>
+                    <div className="absolute bottom-3 left-4 right-4 h-6 bg-black/5 dark:bg-white/5 rounded-full border border-black/10 dark:border-white/10 transition-colors" />
                 </div>
             );
         case "calendar":
             return (
                 <div className="w-full h-full p-4">
-                    <div className="grid grid-cols-7 gap-1 text-[7px] text-center text-white/40 mb-2">{['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <div key={i}>{d}</div>)}</div>
+                    <div className="grid grid-cols-7 gap-1 text-[7px] text-center text-black/40 dark:text-white/40 mb-2 transition-colors">{['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <div key={i}>{d}</div>)}</div>
                     <div className="grid grid-cols-7 gap-1">
                         {Array.from({ length: 21 }).map((_, i) => (
-                            <div key={i} className={`h-5 rounded ${i === 9 ? 'bg-white text-black font-bold' : 'bg-white/5'}`} />
+                            <div key={i} className={`h-5 rounded transition-colors ${i === 9 ? 'bg-black dark:bg-white text-white dark:text-black font-bold' : 'bg-black/5 dark:bg-white/5'}`} />
                         ))}
                     </div>
                     <div className="mt-4 flex flex-col gap-2">
-                        <div className="w-full h-6 bg-white/10 border border-white/20 rounded-lg flex items-center px-3 gap-2">
-                            <div className="w-2 h-2 rounded-full bg-green-400" />
-                            <div className="w-14 h-1.5 bg-white/30 rounded-full" />
+                        <div className="w-full h-6 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20 rounded-lg flex items-center px-3 gap-2 transition-colors">
+                            <div className="w-2 h-2 rounded-full bg-green-500 dark:bg-green-400" />
+                            <div className="w-14 h-1.5 bg-black/30 dark:bg-white/30 rounded-full" />
                         </div>
                     </div>
                 </div>
@@ -145,14 +145,14 @@ function AbstractFallback({ type }: { type: string }) {
         case "checkout":
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-3">
-                    <div className="w-full h-6 bg-white/10 border border-white/20 rounded-lg" />
+                    <div className="w-full h-6 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20 rounded-lg transition-colors" />
                     <div className="flex gap-2 flex-1">
-                        <div className="flex-1 bg-white/5 rounded-lg" />
-                        <div className="w-1/3 bg-white/5 rounded-lg" />
+                        <div className="flex-1 bg-black/5 dark:bg-white/5 rounded-lg transition-colors" />
+                        <div className="w-1/3 bg-black/5 dark:bg-white/5 rounded-lg transition-colors" />
                     </div>
-                    <div className="w-full h-10 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center justify-center gap-2">
-                        <div className="w-3 h-3 rounded-full bg-green-400" />
-                        <div className="w-14 h-2 bg-green-200/50 rounded-full" />
+                    <div className="w-full h-10 bg-green-600/10 dark:bg-green-500/20 border border-green-600/20 dark:border-green-500/30 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                        <div className="w-3 h-3 rounded-full bg-green-600 dark:bg-green-400" />
+                        <div className="w-14 h-2 bg-green-700/30 dark:bg-green-200/50 rounded-full" />
                     </div>
                 </div>
             );
@@ -160,35 +160,35 @@ function AbstractFallback({ type }: { type: string }) {
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-3">
                     <div className="flex gap-2">
-                        <div className="flex-1 h-10 bg-white/5 rounded-lg border border-white/5 p-2 flex items-end"><div className="w-full h-1/2 bg-white/20 rounded-sm" /></div>
-                        <div className="flex-1 h-10 bg-white/5 rounded-lg border border-white/5 p-2 flex items-end"><div className="w-full h-3/4 bg-white/20 rounded-sm" /></div>
+                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-1/2 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
+                        <div className="flex-1 h-10 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-2 flex items-end transition-colors"><div className="w-full h-3/4 bg-black/20 dark:bg-white/20 rounded-sm" /></div>
                     </div>
-                    <div className="flex-1 bg-white/5 rounded-lg border border-white/5 p-3 flex items-end gap-1">
-                        {[40, 60, 30, 80, 50, 90, 70, 45].map((h, i) => <div key={i} className="flex-1 bg-blue-400/30 rounded-t-sm" style={{ height: `${h}%` }} />)}
+                    <div className="flex-1 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-3 flex items-end gap-1 transition-colors">
+                        {[40, 60, 30, 80, 50, 90, 70, 45].map((h, i) => <div key={i} className="flex-1 bg-blue-600/30 dark:bg-blue-400/30 rounded-t-sm" style={{ height: `${h}%` }} />)}
                     </div>
                 </div>
             );
         case "review":
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-3 justify-center items-center">
-                    <div className="flex gap-1 text-yellow-400">{[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}</div>
-                    <div className="w-28 h-2.5 bg-white/30 rounded-full" />
-                    <div className="w-36 h-2 bg-white/10 rounded-full" />
-                    <div className="w-24 h-2 bg-white/10 rounded-full" />
+                    <div className="flex gap-1 text-amber-500 dark:text-yellow-400">{[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-current" />)}</div>
+                    <div className="w-28 h-2.5 bg-black/20 dark:bg-white/30 rounded-full transition-colors" />
+                    <div className="w-36 h-2 bg-black/5 dark:bg-white/10 rounded-full transition-colors" />
+                    <div className="w-24 h-2 bg-black/5 dark:bg-white/10 rounded-full transition-colors" />
                 </div>
             );
         case "table":
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-2">
-                    <div className="w-full h-6 bg-white/10 border border-white/20 rounded-md flex items-center px-3 gap-3">
-                        <div className="w-6 h-1.5 bg-white/30 rounded-full" />
-                        <div className="w-10 h-1.5 bg-white/30 rounded-full ml-auto" />
+                    <div className="w-full h-6 bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20 rounded-md flex items-center px-3 gap-3 transition-colors">
+                        <div className="w-6 h-1.5 bg-black/30 dark:bg-white/30 rounded-full" />
+                        <div className="w-10 h-1.5 bg-black/30 dark:bg-white/30 rounded-full ml-auto" />
                     </div>
                     {[1, 2, 3, 4].map(i => (
-                        <div key={i} className="w-full h-6 bg-white/5 border border-white/5 rounded-md flex items-center px-3 gap-5">
-                            <div className="w-3 h-3 rounded-full bg-white/10 shrink-0" />
-                            <div className="w-16 h-1.5 bg-white/20 rounded-full flex-1" />
-                            <div className="w-8 h-1.5 bg-white/10 rounded-full" />
+                        <div key={i} className="w-full h-6 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-md flex items-center px-3 gap-5 transition-colors">
+                            <div className="w-3 h-3 rounded-full bg-black/10 dark:bg-white/10 shrink-0 transition-colors" />
+                            <div className="w-16 h-1.5 bg-black/20 dark:bg-white/20 rounded-full flex-1 transition-colors" />
+                            <div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
                         </div>
                     ))}
                 </div>
@@ -196,28 +196,28 @@ function AbstractFallback({ type }: { type: string }) {
         case "profile":
             return (
                 <div className="w-full h-full p-4 flex flex-col gap-3 items-center text-center">
-                    <div className="w-12 h-12 rounded-full border-2 border-white/20 bg-white/10" />
-                    <div className="w-20 h-3 bg-white/30 rounded-full" />
-                    <div className="w-16 h-2 bg-white/10 rounded-full" />
-                    <div className="w-full h-full mt-3 bg-white/5 rounded-lg border border-white/5 p-3 flex flex-col gap-2">
-                        <div className="w-full h-2 bg-white/10 rounded-full" />
-                        <div className="w-3/4 h-2 bg-white/10 rounded-full" />
-                        <div className="w-5/6 h-2 bg-white/10 rounded-full" />
+                    <div className="w-12 h-12 rounded-full border-2 border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/10 transition-colors" />
+                    <div className="w-20 h-3 bg-black/30 dark:bg-white/30 rounded-full transition-colors" />
+                    <div className="w-16 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
+                    <div className="w-full h-full mt-3 bg-black/5 dark:bg-white/5 rounded-lg border border-black/5 dark:border-white/5 p-3 flex flex-col gap-2 transition-colors">
+                        <div className="w-full h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
+                        <div className="w-3/4 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
+                        <div className="w-5/6 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
                     </div>
                 </div>
             );
         case "homepage":
             return (
                 <div className="w-full h-full flex flex-col pt-2">
-                    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-white/5">
-                        <div className="w-5 h-5 rounded-full bg-white/20" />
-                        <div className="flex gap-3"><div className="w-8 h-1.5 bg-white/10 rounded-full" /><div className="w-8 h-1.5 bg-white/10 rounded-full" /></div>
+                    <div className="w-full flex justify-between items-center px-4 py-2 border-b border-black/5 dark:border-white/5 transition-colors">
+                        <div className="w-5 h-5 rounded-full bg-black/20 dark:bg-white/20" />
+                        <div className="flex gap-3"><div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full" /><div className="w-8 h-1.5 bg-black/10 dark:bg-white/10 rounded-full" /></div>
                     </div>
                     <div className="flex-1 p-4 flex flex-col gap-3">
-                        <div className="w-3/4 h-4 bg-white/30 rounded-full mb-2" />
-                        <div className="w-1/2 h-2 bg-white/10 rounded-full" />
-                        <div className="w-1/2 h-2 bg-white/10 rounded-full mb-3" />
-                        <div className="w-1/3 h-6 bg-white/20 rounded-md" />
+                        <div className="w-3/4 h-4 bg-black/30 dark:bg-white/30 rounded-full mb-2 transition-colors" />
+                        <div className="w-1/2 h-2 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
+                        <div className="w-1/2 h-2 bg-black/10 dark:bg-white/10 rounded-full mb-3 transition-colors" />
+                        <div className="w-1/3 h-6 bg-black/10 dark:bg-white/20 rounded-md transition-colors" />
                     </div>
                 </div>
             );
@@ -225,11 +225,11 @@ function AbstractFallback({ type }: { type: string }) {
             return (
                 <div className="w-full h-full p-4 flex justify-center items-center gap-4 flex-wrap">
                     {[1, 2, 3, 4].map(i => (
-                        <div key={i} className="w-[45%] h-16 bg-white/5 rounded-lg flex bg-gradient-to-br border border-white/5 p-3">
-                            <div className="w-7 h-7 bg-white/10 rounded-full shrink-0" />
+                        <div key={i} className="w-[45%] h-16 bg-black/5 dark:bg-white/5 rounded-lg flex border border-black/5 dark:border-white/5 p-3 transition-colors">
+                            <div className="w-7 h-7 bg-black/10 dark:bg-white/10 rounded-full shrink-0 transition-colors" />
                             <div className="ml-3 flex-1 flex flex-col gap-1.5 justify-center">
-                                <div className="w-full h-2 bg-white/30 rounded-full" />
-                                <div className="w-1/2 h-1.5 bg-white/10 rounded-full" />
+                                <div className="w-full h-2 bg-black/30 dark:bg-white/30 rounded-full transition-colors" />
+                                <div className="w-1/2 h-1.5 bg-black/10 dark:bg-white/10 rounded-full transition-colors" />
                             </div>
                         </div>
                     ))}
@@ -237,20 +237,20 @@ function AbstractFallback({ type }: { type: string }) {
             );
         case "mobile":
             return (
-                <div className="w-full h-full flex justify-center items-center bg-black/40">
-                    <div className="w-[50%] h-[90%] rounded-[2rem] border-[4px] border-white/20 bg-[#0d0d0f] p-2 overflow-hidden flex flex-col">
-                        <div className="w-1/3 h-1.5 bg-white/10 rounded-full mx-auto my-1.5" />
-                        <div className="w-full h-9 bg-white/5 rounded-md mt-1 mb-3" />
-                        <div className="flex-1 bg-white/5 rounded-md p-3 flex flex-col gap-2">
-                            <div className="w-full h-5 bg-white/10 rounded-sm" />
-                            <div className="w-3/4 h-2.5 bg-white/10 rounded-sm" />
-                            <div className="w-1/2 h-2.5 bg-white/10 rounded-sm" />
+                <div className="w-full h-full flex justify-center items-center bg-black/10 dark:bg-black/40 transition-colors">
+                    <div className="w-[50%] h-[90%] rounded-[2rem] border-[4px] border-black/10 dark:border-white/20 bg-white dark:bg-[#0d0d0f] p-2 overflow-hidden flex flex-col transition-colors">
+                        <div className="w-1/3 h-1.5 bg-black/10 dark:bg-white/10 rounded-full mx-auto my-1.5 transition-colors" />
+                        <div className="w-full h-9 bg-black/5 dark:bg-white/5 rounded-md mt-1 mb-3 transition-colors" />
+                        <div className="flex-1 bg-black/5 dark:bg-white/5 rounded-md p-3 flex flex-col gap-2 transition-colors">
+                            <div className="w-full h-5 bg-black/10 dark:bg-white/10 rounded-sm transition-colors" />
+                            <div className="w-3/4 h-2.5 bg-black/10 dark:bg-white/10 rounded-sm transition-colors" />
+                            <div className="w-1/2 h-2.5 bg-black/10 dark:bg-white/10 rounded-sm transition-colors" />
                         </div>
                     </div>
                 </div>
             );
         default:
-            return <div className="w-full h-full bg-white/5 flex items-center justify-center text-[10px] text-white/20">Preview</div>;
+            return <div className="w-full h-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-[10px] text-black/20 dark:text-white/20 transition-colors">Preview</div>;
     }
 }
 
@@ -395,7 +395,7 @@ export default function Works() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     return (
-        <main className="relative w-full min-h-screen pb-24 flex flex-col items-center">
+        <main className="relative w-full min-h-screen pb-24 flex flex-col items-center bg-background transition-colors">
             {/* Hero Section */}
             <section className="relative w-full pt-32 pb-24 flex flex-col items-center z-10 text-center max-w-5xl px-6">
                 <motion.div
@@ -403,21 +403,21 @@ export default function Works() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="mx-auto inline-block mb-6 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-white/40">
+                    <div className="mx-auto inline-block mb-6 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 transition-colors">
                         Portfolio & Case Studies
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight text-white/95">
+                    <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight text-black dark:text-white/95 transition-colors">
                         Our Works
                     </h1>
-                   <p className="text-white/90 font-normal md:text-2xl leading-normal mb-12">
+                   <p className="text-black/80 dark:text-white/90 font-normal md:text-2xl leading-normal mb-12 transition-colors">
                     In the fast-moving world of software, <i>AI-native design</i> is the next big step. Most websites use fixed designs that need manual updates. But new AI tools can now create dynamic layouts that adapt and fix themselves in real-time.
                 </p>
  
-                <p>
+                <p className="text-black/60 dark:text-white/60 transition-colors">
                     These tools help automate design choices, fix layout issues instantly, and make it easy to scale large apps.
                 </p>
  
-                <p>
+                <p className="text-black/60 dark:text-white/60 transition-colors">
                     If you are building business tools—like dashboards or SaaS platforms—this shift can save a lot of time and effort. It helps you focus on your users while improving the overall experience.
                 </p>
                 </motion.div>
@@ -432,10 +432,10 @@ export default function Works() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="w-full border-b border-white/10 pb-6 mb-4 flex items-center justify-between"
+                            className="w-full border-b border-black/10 dark:border-white/10 pb-6 mb-4 flex items-center justify-between transition-colors"
                         >
-                            <h2 className="text-3xl font-display font-bold text-white/95 tracking-tight flex items-center gap-4">
-                                <span className="text-white/20 font-mono text-xl">{String(catIdx + 1).padStart(2, '0')}.</span>
+                            <h2 className="text-3xl font-display font-bold text-black dark:text-white/95 tracking-tight flex items-center gap-4 transition-colors">
+                                <span className="text-black/20 dark:text-white/20 font-mono text-xl transition-colors">{String(catIdx + 1).padStart(2, '0')}.</span>
                                 {categoryData.category}
                             </h2>
                         </motion.div>
@@ -449,19 +449,19 @@ export default function Works() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1 }}
-                                    className="bg-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12 overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.2)] hover:bg-white/[0.03] transition-colors"
+                                    className="liquid-glass rounded-3xl p-8 md:p-12 overflow-hidden relative"
                                 >
                                     {/* Abstract glow */}
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full opacity-50 pointer-events-none" />
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 dark:bg-white/5 blur-[80px] rounded-full opacity-50 pointer-events-none transition-colors" />
 
                                     <div className="flex flex-col gap-12 items-stretch">
                                         {/* Text Info */}
-                                        <div className="w-full flex flex-col justify-center text-white">
-                                            <div className="inline-block px-3 py-1 bg-white/5 border border-white/10 text-white/40 text-[9px] uppercase tracking-widest rounded mb-6 w-max">
+                                        <div className="w-full flex flex-col justify-center text-black dark:text-white transition-colors">
+                                            <div className="inline-block px-3 py-1 bg-black/[0.05] dark:bg-white/5 border border-black/10 dark:border-white/10 text-black/40 dark:text-white/40 text-[9px] uppercase tracking-widest rounded mb-6 w-max transition-colors">
                                                 {categoryData.category}
                                             </div>
-                                            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">{project.title}</h3>
-                                            <p className="text-white/50 text-base md:text-lg font-light leading-relaxed mb-8 max-w-4xl">
+                                            <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 transition-colors">{project.title}</h3>
+                                            <p className="text-black/70 dark:text-white/60 text-base md:text-lg font-medium leading-relaxed mb-8 max-w-4xl transition-colors">
                                                 {project.description}
                                             </p>
                                             <div className="mt-auto">
@@ -470,7 +470,7 @@ export default function Works() {
                                                         href={project.liveUrl}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 bg-white/5 text-white font-bold text-xs uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-all"
+                                                        className="inline-flex items-center gap-3 px-6 py-3 border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/5 text-black dark:text-white font-bold text-xs uppercase tracking-widest rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
                                                     >
                                                         View Project <ArrowRight className="w-4 h-4" />
                                                     </a>
@@ -493,10 +493,10 @@ export default function Works() {
 
             {/* Bottom CTA for Works Page */}
             <section className="w-full max-w-5xl mx-auto px-6 mt-32 text-center flex flex-col items-center">
-                <div className="p-12 border border-white/10 rounded-3xl w-full bg-white/[0.02] flex flex-col items-center">
-                    <h3 className="text-3xl font-display font-bold mb-4 text-white">Have a project in mind?</h3>
-                    <p className="text-white/50 mb-8 max-w-md">Our team is ready to engineer the exact solution your business needs to scale.</p>
-                    <Link href="/book" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                <div className="p-12 rounded-3xl w-full liquid-glass flex flex-col items-center">
+                    <h3 className="text-3xl font-display font-bold mb-4 text-black dark:text-white transition-colors">Have a project in mind?</h3>
+                    <p className="text-black/70 dark:text-white/60 mb-8 max-w-md font-medium transition-colors">Our team is ready to engineer the exact solution your business needs to scale.</p>
+                    <Link href="/book" className="px-8 py-3.5 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                         Start a Project
                     </Link>
                 </div>

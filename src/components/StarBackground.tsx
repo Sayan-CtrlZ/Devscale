@@ -59,7 +59,7 @@ export const StarBackground = () => {
                 {starData.stars.map((star, i) => (
                     <div
                         key={`star-${i}`}
-                        className="absolute rounded-full bg-white shadow-[0_0_2px_rgba(255,255,255,0.3)]"
+                        className="absolute rounded-full bg-black/60 dark:bg-white transition-colors shadow-[0_0_2px_rgba(0,0,0,0.1)] dark:shadow-[0_0_2px_rgba(255,255,255,0.3)]"
                         style={{
                             top: star.top,
                             left: star.left,
@@ -75,7 +75,7 @@ export const StarBackground = () => {
             {starData.twinkles.map((twinkle, i) => (
                 <div
                     key={`twinkle-${i}`}
-                    className="absolute rounded-full bg-white/60 animate-twinkle"
+                    className="absolute rounded-full bg-black/40 dark:bg-white/60 animate-twinkle transition-colors"
                     style={{
                         top: twinkle.top,
                         left: twinkle.left,

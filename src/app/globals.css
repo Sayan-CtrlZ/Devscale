@@ -4,12 +4,48 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0b; /* Rich charcoal black */
+  --text-muted: #4a4440; /* Rich charcoal brown */
+  --card-bg: rgba(0, 0, 0, 0.025);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.65);
+  --nav-border: rgba(0, 0, 0, 0.08);
+  
+  /* Liquid Glass specific - Added subtle cool-blue tint */
+  --lg-bg: rgba(246, 248, 255, 0.82);
+  --lg-border: rgba(0, 0, 0, 0.05);
+  --lg-reflection: rgba(255, 255, 255, 0.95);
+}
+
+.dark {
+  --background: #030303;
+  --foreground: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(0, 0, 0, 0.65);
+  --nav-border: rgba(255, 255, 255, 0.12);
+
+  /* Liquid Glass specific */
+  --lg-bg: rgba(255, 255, 255, 0.03);
+  --lg-border: rgba(255, 255, 255, 0.08);
+  --lg-reflection: rgba(255, 255, 255, 0.05);
 }
 
 body {
-  background-color: #030303;
-  color: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Global Image Protection */
@@ -92,4 +128,39 @@ img {
 .animate-twinkle {
   animation: twinkle var(--twinkle-duration, 3s) ease-in-out infinite;
   animation-delay: var(--twinkle-delay, 0s);
+}
+
+/* Liquid Glass Utility */
+.liquid-glass {
+  background: var(--lg-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--lg-border);
+  box-shadow: 
+    inset 0 1px 1px var(--lg-reflection),
+    0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .liquid-glass {
+  box-shadow: 
+    inset 0 1px 1px var(--lg-reflection),
+    0 20px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.liquid-glass:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    inset 0 1px 1px var(--lg-reflection),
+    0 25px 60px -15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .liquid-glass:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    inset 0 1px 1px var(--lg-reflection),
+    0 30px 70px -15px rgba(0, 0, 0, 0.6);
 }

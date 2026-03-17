@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ClientSideBackgrounds } from "@/components/ClientSideBackgrounds";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
     variable: "--font-sans",
@@ -60,6 +61,10 @@ export const metadata: Metadata = {
         title: "DevScale Lab | The AI-Native Design Agency",
         description: "DevScale Lab builds fast, SEO-optimized Next.js websites for startups and businesses.",
     },
+    icons: {
+        icon: "/assets/favicon.ico",
+        shortcut: "/assets/favicon.ico",
+    },
     verification: {
         google: "ad0485019d01d5bc",
     },
@@ -85,7 +90,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html lang="en" suppressHydrationWarning>
             <head>
                 <script
                     type="application/ld+json"
@@ -93,27 +98,34 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-[#030303] text-white overflow-x-hidden min-h-screen`}
+                className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground overflow-x-hidden min-h-screen transition-colors duration-300`}
             >
-                {/* Google Analytics */}
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-LHLMP493G0"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem={false}
+                    disableTransitionOnChange
+                >
+                    {/* Google Analytics */}
+                    <Script
+                        src="https://www.googletagmanager.com/gtag/js?id=G-LHLMP493G0"
+                        strategy="afterInteractive"
+                    />
+                    <Script id="google-analytics" strategy="afterInteractive">
+                        {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
 
                         gtag('config', 'G-LHLMP493G0');
                     `}
-                </Script>
+                    </Script>
 
-                <ClientSideBackgrounds />
-                <Navbar />
-                {children}
-                <Footer />
+                    <ClientSideBackgrounds />
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );
