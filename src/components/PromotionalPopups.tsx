@@ -98,7 +98,7 @@ export const PromotionalPopups = () => {
     };
 
     return (
-        <div className="fixed bottom-24 left-6 z-[110] flex flex-col gap-4 pointer-events-none max-w-[320px]">
+        <div className="fixed bottom-24 left-3 right-3 sm:left-6 sm:right-auto z-[110] flex flex-col gap-4 pointer-events-none w-auto sm:w-full max-w-[320px]">
             <AnimatePresence>
                 {popupsData
                     .filter(p => activePopups.includes(p.id))

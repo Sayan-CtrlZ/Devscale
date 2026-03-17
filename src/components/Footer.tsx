@@ -33,7 +33,7 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-20 w-full md:w-auto">
                         <div className="flex flex-col gap-6">
                             <span className="text-[11px] uppercase tracking-[0.3em] font-black text-black/50 dark:text-white/40 transition-colors">Platform</span>
                             <ul className="flex flex-col gap-4 text-sm text-black/90 dark:text-white/80 font-medium transition-colors">
@@ -58,10 +58,10 @@ export const Footer = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-black/5 dark:border-white/5 gap-6 transition-colors">
-                    <span className="text-[11px] uppercase tracking-[0.4em] font-mono text-black/40 dark:text-white/40 transition-colors">
+                    <span className="text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-mono text-black/40 dark:text-white/40 transition-colors text-center md:text-left">
                         © 2026 DavScale Lab. All rights reserved.
                     </span>
-                    <div className="flex gap-8 text-[11px] uppercase tracking-[0.2em] font-mono text-black/40 dark:text-white/40 transition-colors">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] font-mono text-black/40 dark:text-white/40 transition-colors">
                         <span>Est. 2026</span>
                         <span>Based in the Cloud</span>
                     </div>
