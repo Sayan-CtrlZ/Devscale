@@ -23,7 +23,7 @@ export const Navbar = () => {
 
     return (
         <nav className="fixed top-0 inset-x-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 flex justify-center pointer-events-none transition-all duration-300">
-            <div className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/70 dark:bg-black/70 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10 px-4 py-2.5 md:px-8 md:py-3.5 shadow-lg shadow-black/[0.03] dark:shadow-white/[0.02]">
+            <div className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-[#faf6f0]/88 dark:bg-black/70 backdrop-blur-md rounded-full border border-black/8 dark:border-white/10 px-4 py-2.5 md:px-8 md:py-3.5 shadow-[0_20px_40px_-28px_rgba(70,52,38,0.18)] dark:shadow-white/[0.02]">
                 <Link href="/" aria-label="Devscale Lab Home" className="flex items-center gap-2 md:gap-3">
                     <Image src="/assets/logo.webp" alt="Devscale Lab Logo" width={32} height={32} priority className="h-6 md:h-8 w-auto object-contain transition-all" />
                     <span className="font-display font-black text-sm md:text-base tracking-tight text-black dark:text-white line-clamp-1 transition-colors">Devscale Lab</span>
@@ -77,7 +77,7 @@ export const Navbar = () => {
                             transition={{ duration: 0.12, ease: "easeOut" }}
                             className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto will-change-transform"
                         >
-                            <div className="rounded-2xl bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl p-6 flex flex-col gap-5">
+                            <div className="rounded-2xl bg-[#fcf8f2]/96 dark:bg-neutral-950/95 backdrop-blur-xl border border-black/8 dark:border-white/10 shadow-2xl p-6 flex flex-col gap-5">
                                 {[
                                     { name: "Home", path: "/" },
                                     { name: "Process", path: "/process" },

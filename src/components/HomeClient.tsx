@@ -161,7 +161,7 @@ export function HomeClient() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="flex flex-col items-center relative z-10"
+                        className="flex flex-col items-center relative z-10 max-w-4xl rounded-[32px] px-6 py-8 md:px-10 md:py-10 text-surface backdrop-blur-sm"
                     >
                         <div className="mb-10 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-[10px] uppercase tracking-[0.2em] font-medium text-black/40 dark:text-white/40 transition-colors">
                             The future of digital craftsmanship
@@ -179,7 +179,7 @@ export function HomeClient() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex flex-col items-center justify-center text-center mb-16"
+                        className="flex flex-col items-center justify-center text-center mb-16 max-w-3xl mx-auto rounded-[32px] px-6 py-8 md:px-10 text-surface backdrop-blur-sm"
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold leading-[1.2] tracking-tight text-black dark:text-white/90 mb-6 transition-colors">
                             Services That Grow Your Business
@@ -261,9 +261,9 @@ export function HomeClient() {
                         className="relative"
                     >
                         {/* Editor Chrome */}
-                        <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-[#0d0d0f] overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.04)] dark:shadow-[0_0_80px_rgba(255,255,255,0.04)] transition-colors" >
+                        <div className="rounded-2xl warm-panel dark:bg-[#0d0d0f] overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.04)] dark:shadow-[0_0_80px_rgba(255,255,255,0.04)] transition-colors" >
                             {/* Top bar */}
-                            <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] transition-colors" >
+                            <div className="flex items-center justify-between px-5 py-3.5 border-b border-black/[0.06] dark:border-white/[0.06] bg-[#7b5537]/[0.06] dark:bg-white/[0.02] transition-colors" >
                                 <div className="flex items-center gap-3">
                                     <div className="flex gap-1.5">
                                         <div className="w-2.5 h-2.5 rounded-full bg-red-500/40" />
@@ -290,7 +290,7 @@ export function HomeClient() {
                                 <div className="absolute" style={{ left: 32, top: 170 }}>
                                     <div className="flex flex-col items-center gap-1">
                                         <div className="text-[8px] text-black/30 dark:text-white/30 uppercase tracking-widest mb-1 transition-colors">Webhook Trigger</div>
-                                        <div className="w-[110px] rounded-lg border border-black/10 dark:border-white/20 bg-black/[0.02] dark:bg-white/5 backdrop-blur-sm p-3 flex items-center gap-2.5 hover:border-black/20 dark:hover:border-white/40 transition-colors cursor-pointer">
+                                        <div className="w-[110px] rounded-lg border border-black/10 dark:border-white/20 bg-[#7b5537]/[0.06] dark:bg-white/5 backdrop-blur-sm p-3 flex items-center gap-2.5 hover:border-black/20 dark:hover:border-white/40 transition-colors cursor-pointer">
                                             <div className="w-7 h-7 rounded-md bg-violet-500/20 border border-violet-400/30 flex items-center justify-center flex-shrink-0">
                                                 <Zap className="w-3.5 h-3.5 text-violet-600 dark:text-violet-400" />
                                             </div>
@@ -360,7 +360,7 @@ export function HomeClient() {
                                 <div className="absolute" style={{ left: 368, top: 320 }}>
                                     <div className="flex flex-col items-center gap-1">
                                         <div className="text-[8px] text-black/30 dark:text-white/30 uppercase tracking-widest mb-1 transition-colors">Email Action</div>
-                                        <div className="w-[110px] rounded-lg border border-black/10 dark:border-white/15 bg-black/[0.02] dark:bg-white/5 p-3 flex items-center gap-2.5 hover:border-black/20 dark:hover:border-white/30 transition-colors cursor-pointer">
+                                        <div className="w-[110px] rounded-lg border border-black/10 dark:border-white/15 bg-[#7b5537]/[0.06] dark:bg-white/5 p-3 flex items-center gap-2.5 hover:border-black/20 dark:hover:border-white/30 transition-colors cursor-pointer">
                                             <div className="w-7 h-7 rounded-md bg-black/5 dark:bg-white/10 flex items-center justify-center flex-shrink-0 transition-colors">
                                                 <Zap className="w-3.5 h-3.5 text-black/40 dark:text-white/50 transition-colors" />
                                             </div>
@@ -489,7 +489,7 @@ export function HomeClient() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="aspect-square w-full max-w-lg bg-black/[0.02] dark:bg-white/[0.02] border border-black/10 dark:border-white/10 rounded-sm relative flex flex-col items-center justify-center p-12 overflow-hidden group transition-colors"
+                            className="aspect-square w-full max-w-lg warm-panel border border-[#5b4636]/18 dark:border-white/10 rounded-sm relative flex flex-col items-center justify-center p-12 overflow-hidden group transition-colors"
                         >
                             {/* Corner Accents */}
                             <div className="absolute top-4 left-4 w-1 h-1 bg-black/20 dark:bg-white/20 transition-colors" />
@@ -587,9 +587,9 @@ export function HomeClient() {
                                 Get a Free Quote
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link href="/contact" className="w-full sm:w-auto px-10 py-4 bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/20 text-black dark:text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/40 dark:hover:border-white/40 transition-all active:scale-95 group text-center flex items-center justify-center">
+                            <a href="tel:+918974637506" className="w-full sm:w-auto px-10 py-4 bg-black/5 dark:bg-white/5 border border-black/20 dark:border-white/20 text-black dark:text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-black/10 dark:hover:bg-white/10 hover:border-black/40 dark:hover:border-white/40 transition-all active:scale-95 group text-center flex items-center justify-center">
                                 Call Us Now
-                            </Link>
+                            </a>
                         </div>
                         <div className="flex items-center justify-center gap-6 mt-12 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-6 py-3 rounded-full backdrop-blur-md transition-colors">
                             <div className="flex items-center gap-2.5">
@@ -612,7 +612,7 @@ export function HomeClient() {
                 </section>
 
                 {/* Neural Insights / Journal Section (Grid Layout Inspiration) */}
-                <section className="w-full border-y border-black/10 dark:border-white/10 mt-20 transition-colors" >
+                <section className="w-full border-y border-black/10 dark:border-white/10 mt-20 bg-[#fff8f1]/60 dark:bg-transparent transition-colors" >
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 min-h-[600px]">
                         {/* Left Sidebar - Meta Info */}
                         <div className="md:col-span-3 border-r border-black/10 dark:border-white/10 p-12 flex flex-col justify-between transition-colors">

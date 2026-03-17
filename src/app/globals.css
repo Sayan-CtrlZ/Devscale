@@ -12,17 +12,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #f7efe4;
   --foreground: #0a0a0b; /* Rich charcoal black */
-  --text-muted: #4a4440; /* Rich charcoal brown */
-  --card-bg: rgba(0, 0, 0, 0.025);
-  --card-border: rgba(0, 0, 0, 0.06);
-  --nav-bg: rgba(255, 255, 255, 0.65);
-  --nav-border: rgba(0, 0, 0, 0.08);
-  
-  /* Liquid Glass specific - Added subtle cool-blue tint */
-  --lg-bg: rgba(246, 248, 255, 0.82);
-  --lg-border: rgba(0, 0, 0, 0.05);
+  --text-muted: #5b4636; /* Warm brown for light mode */
+  --card-bg: rgba(111, 78, 55, 0.07);
+  --card-border: rgba(111, 78, 55, 0.14);
+  --nav-bg: rgba(247, 238, 226, 0.88);
+  --nav-border: rgba(111, 78, 55, 0.16);
+
+  /* Liquid Glass specific - Warm beige tint for light mode */
+  --lg-bg: linear-gradient(145deg, rgba(255, 248, 240, 0.92), rgba(235, 220, 201, 0.88));
+  --lg-border: rgba(111, 78, 55, 0.14);
   --lg-reflection: rgba(255, 255, 255, 0.95);
 }
 
@@ -43,9 +43,24 @@
 
 body {
   background-color: var(--background);
+  background-image:
+    radial-gradient(circle at top left, rgba(137, 95, 60, 0.14), transparent 34%),
+    radial-gradient(circle at 85% 18%, rgba(201, 170, 138, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(255, 251, 245, 0.55), rgba(247, 239, 228, 0.9));
   color: var(--foreground);
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Improve muted text readability in light mode */
+html:not(.dark) .text-black\/20 { color: rgba(35, 24, 15, 0.5) !important; }
+html:not(.dark) .text-black\/30 { color: rgba(35, 24, 15, 0.6) !important; }
+html:not(.dark) .text-black\/40 { color: rgba(35, 24, 15, 0.68) !important; }
+html:not(.dark) .text-black\/50 { color: rgba(35, 24, 15, 0.76) !important; }
+html:not(.dark) .text-black\/60 { color: rgba(35, 24, 15, 0.84) !important; }
+
+.dark body {
+  background-image: none;
 }
 
 /* Global Image Protection */
@@ -142,19 +157,40 @@ img {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.warm-panel {
+  background: linear-gradient(145deg, rgba(255, 248, 240, 0.92), rgba(235, 220, 201, 0.82));
+  border: 1px solid rgba(91, 66, 47, 0.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 20px 60px -36px rgba(99, 63, 36, 0.22);
+}
+
+.text-surface {
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.86), rgba(238, 226, 211, 0.74));
+  border: 1px solid rgba(91, 66, 47, 0.14);
+  box-shadow: 0 20px 60px -36px rgba(99, 63, 36, 0.22);
+}
+
 .dark .liquid-glass {
   box-shadow: 
     inset 0 1px 1px var(--lg-reflection),
     0 20px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
+.dark .warm-panel,
+.dark .text-surface {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
 .liquid-glass:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(111, 78, 55, 0.22);
+  background: linear-gradient(145deg, rgba(255, 250, 244, 0.95), rgba(230, 212, 190, 0.9));
   box-shadow: 
     inset 0 1px 1px var(--lg-reflection),
-    0 25px 60px -15px rgba(0, 0, 0, 0.1);
+    0 25px 60px -15px rgba(92, 60, 35, 0.18);
 }
 
 .dark .liquid-glass:hover {
