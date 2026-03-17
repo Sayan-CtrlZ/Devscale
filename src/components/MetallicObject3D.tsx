@@ -1,8 +1,9 @@
+
 "use client";
 
 import { useRef, memo, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, Float, PresentationControls, AdaptiveDpr, Preload } from '@react-three/drei';
+import { Float, PresentationControls, AdaptiveDpr, Preload } from '@react-three/drei';
 import * as THREE from 'three';
 
 // Memoized so it never re-renders unless props change
@@ -60,7 +61,7 @@ export const MetallicObject3D = memo(function MetallicObject3D() {
                 }}
             >
                 <Suspense fallback={null}>
-                    <Environment preset="city" environmentIntensity={1} />
+                    <ambientLight intensity={0.8} />
                     <ambientLight intensity={0.6} />
                     <directionalLight position={[10, 10, 5]} intensity={2} />
                     <directionalLight position={[-10, -10, -5]} intensity={1} color="#4444ff" />

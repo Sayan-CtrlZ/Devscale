@@ -2,6 +2,9 @@
 const nextConfig = {
     reactStrictMode: true,
     transpilePackages: ['three'],
+    experimental: {
+        optimizePackageImports: ['motion/react'],
+    },
     async headers() {
         return [
             {

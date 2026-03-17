@@ -30,7 +30,7 @@ export const AudioControl = () => {
 
     return (
         <div className="fixed bottom-6 right-6 z-[100]">
-            <audio ref={audioRef} src="/audio.mp3" preload="auto" />
+            <audio ref={audioRef} src="/audio.mp3" preload="none" />
 
             <motion.button
                 onClick={togglePlay}
