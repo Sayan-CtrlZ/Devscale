@@ -39,7 +39,6 @@ const Toast = ({ p, onDismiss }: { p: Popup; onDismiss: (id: string) => void }) 
 
     return (
         <motion.div
-            layout
             initial={{ opacity: 0, x: -50, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8, x: -20, transition: { duration: 0.2 } }}
@@ -65,10 +64,10 @@ const Toast = ({ p, onDismiss }: { p: Popup; onDismiss: (id: string) => void }) 
             </div>
 
             <motion.div
-                initial={{ width: "100%" }}
-                animate={{ width: "0%" }}
+                initial={{ scaleX: 1 }}
+                animate={{ scaleX: 0 }}
                 transition={{ duration: 10, ease: "linear" }}
-                className="absolute bottom-0 left-0 h-[1.5px] bg-white/20"
+                className="absolute bottom-0 left-0 h-[1.5px] w-full origin-left bg-white/20"
             />
         </motion.div>
     );

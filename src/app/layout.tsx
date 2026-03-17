@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ClientSideBackgrounds } from "@/components/ClientSideBackgrounds";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LazyAnalytics } from "@/components/LazyAnalytics";
 
 const inter = Inter({
     variable: "--font-sans",
     subsets: ["latin"],
     display: "swap",
+    preload: false,
 });
 
 const spaceGrotesk = Space_Grotesk({
     variable: "--font-display",
     subsets: ["latin"],
     display: "swap",
+    preload: false,
 });
 
 const BASE_URL = "https://devscalelab.com";
@@ -94,8 +96,6 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -110,21 +110,7 @@ export default function RootLayout({
                     enableSystem={false}
                     disableTransitionOnChange
                 >
-                    {/* Google Analytics */}
-                    <Script
-                        src="https://www.googletagmanager.com/gtag/js?id=G-LHLMP493G0"
-                        strategy="lazyOnload"
-                    />
-                    <Script id="google-analytics" strategy="lazyOnload">
-                        {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-
-                        gtag('config', 'G-LHLMP493G0');
-                    `}
-                    </Script>
-
+                    <LazyAnalytics />
                     <ClientSideBackgrounds />
                     <Navbar />
                     {children}

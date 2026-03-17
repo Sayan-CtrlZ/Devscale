@@ -28,7 +28,7 @@ export const StarBackground = () => {
         if (!isClient) return { stars: [], twinkles: [] };
 
         // Generate static stars
-        const stars = [...Array(50)].map(() => ({
+        const stars = [...Array(28)].map(() => ({
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
             width: `${Math.random() * 1.5 + 0.5}px`,
@@ -37,7 +37,7 @@ export const StarBackground = () => {
         }));
 
         // Generate twinkling stars
-        const twinkles = [...Array(20)].map(() => ({
+        const twinkles = [...Array(8)].map(() => ({
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
             width: `${Math.random() * 2 + 1}px`,

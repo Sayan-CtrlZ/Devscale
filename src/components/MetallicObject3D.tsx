@@ -2,43 +2,29 @@
 "use client";
 
 import { useRef, memo, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, PresentationControls, AdaptiveDpr, Preload } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { PresentationControls, AdaptiveDpr } from '@react-three/drei';
 import * as THREE from 'three';
 
 // Memoized so it never re-renders unless props change
 const MetallicShape = memo(function MetallicShape() {
     const meshRef = useRef<THREE.Mesh>(null);
 
-    useFrame((_, delta) => {
-        if (meshRef.current) {
-            meshRef.current.rotation.x += delta * 0.2;
-            meshRef.current.rotation.y += delta * 0.3;
-        }
-    });
-
     return (
-        <Float
-            speed={1.5}
-            rotationIntensity={0.8}
-            floatIntensity={0.5}
-            floatingRange={[-0.1, 0.1]}
-        >
-            <mesh ref={meshRef} castShadow receiveShadow scale={0.63} position={[2.2, 0.4, 0]}>
-                <torusKnotGeometry args={[1.5, 0.4, 100, 16]} />
-                <meshPhysicalMaterial
-                    color="#ffffff"
-                    metalness={1.0}
-                    roughness={0.05}
-                    clearcoat={1.0}
-                    clearcoatRoughness={0.05}
-                    envMapIntensity={3.5}
-                    iridescence={0.8}
-                    iridescenceIOR={1.5}
-                    thickness={2}
-                />
-            </mesh>
-        </Float>
+        <mesh ref={meshRef} castShadow receiveShadow scale={0.63} position={[2.2, 0.4, 0]}>
+            <torusKnotGeometry args={[1.5, 0.4, 80, 12]} />
+            <meshPhysicalMaterial
+                color="#ffffff"
+                metalness={1.0}
+                roughness={0.08}
+                clearcoat={1.0}
+                clearcoatRoughness={0.08}
+                envMapIntensity={2.8}
+                iridescence={0.6}
+                iridescenceIOR={1.5}
+                thickness={1.6}
+            />
+        </mesh>
     );
 });
 
@@ -52,8 +38,8 @@ export const MetallicObject3D = memo(function MetallicObject3D() {
                     alpha: true,
                     powerPreference: 'high-performance',
                 }}
-                dpr={[1, 1.5]}
-                frameloop="always"
+                dpr={[1, 1.2]}
+                frameloop="demand"
                 style={{ pointerEvents: 'auto' }}
                 onCreated={({ gl }) => {
                     // Allow vertical scroll to pass through the canvas
@@ -78,7 +64,6 @@ export const MetallicObject3D = memo(function MetallicObject3D() {
                     </PresentationControls>
                 </Suspense>
                 <AdaptiveDpr pixelated />
-                <Preload all />
             </Canvas>
         </div>
     );

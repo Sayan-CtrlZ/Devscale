@@ -15,13 +15,47 @@ export function HomeClient() {
     const heroRef = useRef<HTMLElement>(null);
     const workflowRef = useRef<HTMLElement>(null);
     const [isDesktop, setIsDesktop] = useState(false);
+    const [load3D, setLoad3D] = useState(false);
 
     useEffect(() => {
-        const checkSize = () => setIsDesktop(window.innerWidth >= 768);
-        checkSize();
-        window.addEventListener('resize', checkSize);
-        return () => window.removeEventListener('resize', checkSize);
+        const mediaQuery = window.matchMedia('(min-width: 768px)');
+        const updateDesktopState = (event?: MediaQueryListEvent) => {
+            setIsDesktop(event ? event.matches : mediaQuery.matches);
+        };
+
+        updateDesktopState();
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', updateDesktopState);
+            return () => mediaQuery.removeEventListener('change', updateDesktopState);
+        }
+
+        mediaQuery.addListener(updateDesktopState);
+        return () => mediaQuery.removeListener(updateDesktopState);
     }, []);
+
+    useEffect(() => {
+        if (!isDesktop) {
+            setLoad3D(false);
+            return;
+        }
+
+        const enable3D = () => setLoad3D(true);
+        const events: Array<keyof WindowEventMap> = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+
+        events.forEach((eventName) => {
+            window.addEventListener(eventName, enable3D, { once: true, passive: true });
+        });
+
+        const fallbackTimer = window.setTimeout(enable3D, 8000);
+
+        return () => {
+            events.forEach((eventName) => {
+                window.removeEventListener(eventName, enable3D);
+            });
+            window.clearTimeout(fallbackTimer);
+        };
+    }, [isDesktop]);
 
     return (
         <>
@@ -30,7 +64,7 @@ export function HomeClient() {
                     {/* Wrapper for EVERYTHING in the hero */}
                     <div className="relative min-h-screen w-full overflow-hidden flex pointer-events-none">
                         {/* Background 3D Metallic Object — hidden on mobile, full hero on desktop */}
-                        {isDesktop && (
+                        {isDesktop && load3D && (
                             <div className="absolute inset-0 z-10">
                                 <MetallicObject3D />
                             </div>

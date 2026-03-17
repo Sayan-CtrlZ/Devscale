@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
