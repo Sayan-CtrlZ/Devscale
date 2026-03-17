@@ -130,7 +130,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/30 dark:text-white/30 mb-0.5 transition-colors">Email Us</h3>
-                                <a href="mailto:devscale.labs@gmail.com" className="text-base text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors">devscale.labs@gmail.com</a>
+                                <span className="text-base text-black/80 dark:text-white/80 transition-colors">contact@devscalelab.com</span>
                             </div>
                         </div>
 
@@ -287,7 +287,7 @@ export default function Contact() {
                     <div>
                         <h3 className="text-lg font-bold mb-3 text-black/90 dark:text-white/90 transition-colors">Prefer to Talk?</h3>
                         <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">
-                            You can also reach us directly by email at <a href="mailto:devscale.labs@gmail.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a> or by phone at <a href="tel:+918974637506" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">+91 89746 37506</a>. We are a remote-first agency, so we collaborate with clients worldwide across all time zones.
+                            You can also reach us directly by email at <span className="text-blue-600 dark:text-blue-400">contact@devscalelab.com</span> for inquiries or <span className="text-blue-600 dark:text-blue-400">support@devscalelab.com</span> for technical help, or by phone at <a href="tel:+918974637506" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">+91 89746 37506</a>. We are a remote-first agency, so we collaborate with clients worldwide across all time zones.
                         </p>
                     </div>
                 </div>

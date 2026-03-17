@@ -246,7 +246,7 @@ export default function BookAppointment() {
                             <div>
                                 <h3 className="font-bold mb-1 text-black dark:text-white transition-colors">Direct Inquiry</h3>
                                 <p className="text-xs text-black/40 dark:text-white/40 mb-3 transition-colors">Skip the form and send us a direct brief via email.</p>
-                                <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
+                                <a href="mailto:contact@devscalelab.com" className="text-sm text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">contact@devscalelab.com</a>
                             </div>
                         </div>
 
@@ -257,7 +257,7 @@ export default function BookAppointment() {
                             <div>
                                 <h3 className="font-bold mb-1 text-black dark:text-white transition-colors">Technical Support</h3>
                                 <p className="text-xs text-black/40 dark:text-white/40 mb-3 transition-colors">Already building with us? Get dedicated technical support.</p>
-                                <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
+                                <a href="mailto:support@devscalelab.com" className="text-sm text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">support@devscalelab.com</a>
                             </div>
                         </div>
                     </div>
