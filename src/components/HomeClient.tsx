@@ -568,7 +568,7 @@ export function HomeClient() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="relative z-10 flex flex-col items-center gap-8 w-full rounded-[40px] border border-white/10 bg-black/60 backdrop-blur-2xl p-10 md:p-14 shadow-[0_0_80px_rgba(0,0,0,0.5)]"
                     >
-                        <h2 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight text-white/95">
+                        <h3 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight text-white/95">
                             Ready to grow your<br />
                             <span className="relative inline-block mt-2">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/50">
@@ -576,7 +576,7 @@ export function HomeClient() {
                                 </span>
                                 <span className="absolute -bottom-3 left-0 w-full h-[3px] rounded-full bg-gradient-to-r from-transparent via-white/80 to-transparent shadow-[0_0_15px_rgba(255,255,255,0.8)]"></span>
                             </span>
-                        </h2>
+                        </h3>
 
                         <p className="text-white/50 text-lg md:text-xl max-w-2xl mt-4 font-light leading-relaxed">
                             Stop worrying about tech and focus on your customers. We'll build the smart digital systems you need to scale easily.
@@ -712,9 +712,9 @@ export function HomeClient() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="flex flex-col gap-4">
-                                <h2 className="text-xl font-display font-bold text-white/80 leading-snug">
+                                <h3 className="text-xl font-display font-bold text-white/80 leading-snug">
                                     Web Development for Startups & Businesses
-                                </h2>
+                                </h3>
                                 <p className="text-white/40 text-sm leading-relaxed">
                                     DevScale Lab is a professional web agency. We build fast, high-quality websites that help businesses and startups grow. Using modern tools like Next.js and React, we ensure your site is secure, easy to scale, and looks great on every screen.
                                 </p>

@@ -202,10 +202,10 @@ export default function About() {
             <section className="w-full max-w-5xl mx-auto px-6 py-32 text-center flex flex-col items-center">
                 <div className="p-16 border border-white/10 rounded-3xl w-full bg-white/[0.02] relative overflow-hidden group">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
-                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight text-white">
+                    <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight text-white">
                         Ready to grow your <br />
                         <span className="underline decoration-blue-500/50 underline-offset-8">business?</span>
-                    </h2>
+                    </h3>
                     <p className="text-white/50 mb-10 max-w-md mx-auto text-lg font-light">
                         Our systems grow with you and our designs are built to last. Start your digital journey with DavScale today.
                     </p>

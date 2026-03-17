@@ -86,7 +86,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 </p>
 
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-8 my-12">
-                    <h2 className="text-white font-display font-bold text-2xl mb-6">In this article, we explore:</h2>
+                    <h3 className="text-white font-display font-bold text-2xl mb-6">In this article, we explore:</h3>
                     <ul className="space-y-3">
                         <li className="flex gap-3"><span className="text-white/30">•</span> What AI-native design systems are</li>
                         <li className="flex gap-3"><span className="text-white/30">•</span> How generative UI works</li>
@@ -300,7 +300,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     Ultimately, the goal is software that evolves alongside its users. Interfaces will no longer be static layouts; they will become <b>living systems</b> that continuously adapt, optimize, and improve.
                 </p>
 
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-white mt-16 mb-8">Final Thoughts</h2>
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-white mt-16 mb-8">Final Thoughts</h3>
                 <p>
                     AI-native design systems represent the next major evolution in digital product development. With generative UI and self-healing interfaces, enterprise software will become <i>more adaptive, more intelligent, more visually consistent, and easier to maintain.</i>
                 </p>

@@ -405,9 +405,9 @@ export default function Services() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[300px] bg-white/5 blur-[100px] rounded-full pointer-events-none -z-10" />
 
                 <div className="p-12 md:p-16 rounded-[40px] border border-white/10 bg-black/50 backdrop-blur-xl shadow-2xl w-full flex flex-col items-center gap-6">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white/95">
+                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white/95">
                         Ready to Grow<br /> Your Business?
-                    </h2>
+                    </h3>
                     <p className="text-white/50 text-lg max-w-xl font-light">
                         Let us help you build better websites and smarter systems for your customers.
                     </p>

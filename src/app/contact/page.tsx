@@ -273,19 +273,19 @@ export default function Contact() {
             <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 mt-8 border-t border-white/5 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div>
-                        <h2 className="text-lg font-bold mb-3 text-white/90">How We Work With You</h2>
+                        <h3 className="text-lg font-bold mb-3 text-white/90">How We Work With You</h3>
                         <p className="text-white/40 text-sm leading-relaxed">
                             We make tech easy. We start by learning about your business and your goals. Then, we build the websites and tools you need to succeed. We handle everything from design to setup, and we're always here to help you grow.
                         </p>
                     </div>
                     <div>
-                        <h2 className="text-lg font-bold mb-3 text-white/90">What We Can Help You With</h2>
+                        <h3 className="text-lg font-bold mb-3 text-white/90">What We Can Help You With</h3>
                         <p className="text-white/40 text-sm leading-relaxed">
                             Need a fast website, a smart booking system, or a way to get more Google reviews? We've got you covered. We build tools that help you save time and make more money. No tech headaches, just simple solutions that work.
                         </p>
                     </div>
                     <div>
-                        <h2 className="text-lg font-bold mb-3 text-white/90">Prefer to Talk?</h2>
+                        <h3 className="text-lg font-bold mb-3 text-white/90">Prefer to Talk?</h3>
                         <p className="text-white/40 text-sm leading-relaxed">
                             You can also reach us directly by email at <a href="mailto:devscale.labs@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a> or by phone at <a href="tel:+918974637506" className="text-blue-400 hover:text-blue-300 transition-colors">+91 89746 37506</a>. We are a remote-first agency, so we collaborate with clients worldwide across all time zones.
                         </p>

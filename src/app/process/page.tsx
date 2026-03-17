@@ -144,7 +144,7 @@ export default function Process() {
                     viewport={{ once: true }}
                     className="mt-32 p-12 rounded-[32px] border border-white/10 bg-white/[0.02] text-center flex flex-col items-center shadow-2xl text-white"
                 >
-                    <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Ready to start the process?</h2>
+                    <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">Ready to start the process?</h3>
                     <p className="text-white/50 max-w-md mx-auto mb-8 font-light">Book your free discovery call today and let's map out your custom digital ecosystem.</p>
                     <Link href="/book" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                         Book a Consultation
