@@ -1,0 +1,11 @@
+
+# Modern browsers that natively support ES2020+ features
+# This prevents unnecessary polyfills from being included in the build
+
+defaults
+last 2 versions
+> 0.5%
+not dead
+not IE 11
+not IE 10
+not IE 9

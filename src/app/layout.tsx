@@ -10,11 +10,13 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({
     variable: "--font-sans",
     subsets: ["latin"],
+    display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
     variable: "--font-display",
     subsets: ["latin"],
+    display: "swap",
 });
 
 const BASE_URL = "https://devscalelab.com";
@@ -92,6 +94,8 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -53,11 +53,11 @@ body {
 }
 
 /* Improve muted text readability in light mode */
-html:not(.dark) .text-black\/20 { color: rgba(35, 24, 15, 0.5) !important; }
-html:not(.dark) .text-black\/30 { color: rgba(35, 24, 15, 0.6) !important; }
-html:not(.dark) .text-black\/40 { color: rgba(35, 24, 15, 0.68) !important; }
-html:not(.dark) .text-black\/50 { color: rgba(35, 24, 15, 0.76) !important; }
-html:not(.dark) .text-black\/60 { color: rgba(35, 24, 15, 0.84) !important; }
+html:not(.dark) .text-black\/20 { color: rgba(35, 24, 15, 0.65) !important; }
+html:not(.dark) .text-black\/30 { color: rgba(35, 24, 15, 0.76) !important; }
+html:not(.dark) .text-black\/40 { color: rgba(35, 24, 15, 0.84) !important; }
+html:not(.dark) .text-black\/50 { color: rgba(35, 24, 15, 0.90) !important; }
+html:not(.dark) .text-black\/60 { color: rgba(35, 24, 15, 0.94) !important; }
 
 .dark body {
   background-image:
