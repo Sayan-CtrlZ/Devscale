@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Cpu, Globe, Zap } from "lucide-react";
+import { Linkedin, Instagram, Mail } from "lucide-react";
 
 export const Footer = () => {
     return (
@@ -27,9 +27,9 @@ export const Footer = () => {
                             The AI-native design agency. We build autonomous digital ecosystems that learn, adapt, and convert.
                         </p>
                         <div className="flex gap-6">
-                            <a href="#" aria-label="Global Availability" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Globe className="w-5 h-5" /></a>
-                            <a href="#" aria-label="Neural Network Status" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Cpu className="w-5 h-5" /></a>
-                            <a href="#" aria-label="High Performance Edge" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Zap className="w-5 h-5" /></a>
+                            <a href="https://www.linkedin.com/company/devscale-lab" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Linkedin className="w-5 h-5" /></a>
+                            <a href="https://www.instagram.com/devscale.labs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Instagram className="w-5 h-5" /></a>
+                            <a href="mailto:contact@devscalelab.com" aria-label="Email us" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Mail className="w-5 h-5" /></a>
                         </div>
                     </div>
 
@@ -49,10 +49,16 @@ export const Footer = () => {
                         </div>
                         <div className="flex flex-col gap-6">
                             <span className="text-[11px] uppercase tracking-[0.3em] font-black text-black/50 dark:text-white/40 transition-colors">Connect</span>
-                            <ul className="flex flex-col gap-4 text-sm text-black/90 dark:text-white/80 font-medium transition-colors">
-                                <li><a href="https://www.linkedin.com/company/devscale-lab" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">LinkedIn</a></li>
-                                <li><a href="https://www.instagram.com/devscale.labs/" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors">Instagram</a></li>
-                            </ul>
+                            <div className="flex flex-col gap-4">
+                                <div className="flex gap-4">
+                                    <a href="https://www.linkedin.com/company/devscale-lab" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Linkedin className="w-5 h-5" /></a>
+                                    <a href="https://www.instagram.com/devscale.labs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-all transform hover:scale-110"><Instagram className="w-5 h-5" /></a>
+                                </div>
+                                <a href="mailto:contact@devscalelab.com" className="flex items-center gap-2 text-sm text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors">
+                                    <Mail className="w-4 h-4 shrink-0" />
+                                    contact@devscalelab.com
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
