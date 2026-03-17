@@ -111,11 +111,10 @@ export default function About() {
                         <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 via-emerald-500/10 to-purple-500/10 blur-3xl opacity-50 group-hover:opacity-70 transition-opacity" />
                         <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#0a0a0c]">
                             <Image
-                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"
+                                src="/assets/unsplashimage.avif"
                                 alt="Modern Office"
                                 width={1200}
                                 height={500}
-                                unoptimized
                                 className="w-full h-[500px] object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -181,7 +180,7 @@ export default function About() {
                             className="flex flex-col items-center text-center p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 team-card-transition hover:bg-white/[0.03] hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] group"
                         >
                             <div className="w-52 h-52 rounded-3xl overflow-hidden mb-8 border-2 border-white/10 relative">
-                                <Image src={member.image} alt={member.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <Image src={member.image} alt={member.name} width={208} height={208} className="object-cover transition-transform duration-700 group-hover:scale-110" />
                             </div>
                             <h3 className="text-xl font-bold mb-1 text-white">{member.name}</h3>
                             <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] uppercase tracking-widest font-bold mb-6">

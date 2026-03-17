@@ -255,7 +255,7 @@ export default function BookAppointment() {
                                 <MessageSquare className="w-5 h-5 text-white/40" />
                             </div>
                             <div>
-                                <h4 className="font-bold mb-1">Technical Support</h4>
+                                <h3 className="font-bold mb-1">Technical Support</h3>
                                 <p className="text-xs text-white/40 mb-3">Already building with us? Get dedicated technical support.</p>
                                 <a href="mailto:devscale.labs@gmail.com" className="text-sm text-blue-400 font-bold hover:text-blue-300 transition-colors">devscale.labs@gmail.com</a>
                             </div>

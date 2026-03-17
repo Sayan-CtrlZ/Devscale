@@ -439,14 +439,14 @@ export function HomeClient() {
                         </div>
 
                         <p className="text-white/50 text-lg leading-relaxed max-w-md">
-                            DevScale Lab builds intelligent, self-healing automation pipelines. Connect any trigger, route data through AI decision nodes, and deploy actions across your entire stack in minutes.
+                            We build smart automation that works. Connect your tools, let AI handle the hard decisions, and watch your business run smoothly in minutes.
                         </p>
 
                         <div className="flex flex-col gap-4">
                             {[
-                                { label: 'Visual drag-and-drop builder', desc: 'Design complex multi-step flows without writing a line of code.' },
-                                { label: 'AI-powered routing', desc: 'Decisions are made in real-time by trained models, not hard rules.' },
-                                { label: 'Auto-healing pipelines', desc: 'Errors are caught, retried, and escalated automatically.' },
+                                { label: 'Easy visual builder', desc: 'Design complex workflows without writing any code.' },
+                                { label: 'Smart AI routing', desc: 'Our AI makes real-time decisions to keep your data moving.' },
+                                { label: 'Self-fixing systems', desc: 'If something goes wrong, the system fixes it automatically.' },
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -624,7 +624,7 @@ export function HomeClient() {
                                         <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg mb-4 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
                                             <Sparkles className="w-5 h-5" />
                                         </div>
-                                        <h4 className="text-sm font-display font-bold mb-2">E-Intelligence</h4>
+                                        <h3 className="text-sm font-display font-bold mb-2">E-Intelligence</h3>
                                         <p className="text-[10px] text-white/30 uppercase tracking-widest leading-relaxed">
                                             Exploring the frontiers of autonomous digital entities.
                                         </p>
@@ -633,7 +633,7 @@ export function HomeClient() {
                                         <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg mb-4 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
                                             <Zap className="w-5 h-5" />
                                         </div>
-                                        <h4 className="text-sm font-display font-bold mb-2">Neural Design</h4>
+                                        <h3 className="text-sm font-display font-bold mb-2">Neural Design</h3>
                                         <p className="text-[10px] text-white/30 uppercase tracking-widest leading-relaxed">
                                             How generative models are redefining UI patterns.
                                         </p>
@@ -713,18 +713,18 @@ export function HomeClient() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="flex flex-col gap-4">
                                 <h2 className="text-xl font-display font-bold text-white/80 leading-snug">
-                                    Professional Web Development Agency for Startups &amp; Businesses
+                                    Web Development for Startups & Businesses
                                 </h2>
                                 <p className="text-white/40 text-sm leading-relaxed">
-                                    DevScale Lab is a professional web development and design agency focused on building high-quality, fast, SEO-optimized, and conversion-focused websites for businesses, startups, agencies, and personal brands. We develop websites using the latest technologies such as Next.js, React, Tailwind CSS, Node.js, and Vercel hosting to ensure maximum speed, scalability, and security.
+                                    DevScale Lab is a professional web agency. We build fast, high-quality websites that help businesses and startups grow. Using modern tools like Next.js and React, we ensure your site is secure, easy to scale, and looks great on every screen.
                                 </p>
                             </div>
                             <div className="flex flex-col gap-4">
                                 <h3 className="text-xl font-display font-bold text-white/80 leading-snug">
-                                    Full-Stack Web Solutions &amp; SEO Services
+                                    Full-Stack Web Solutions & SEO
                                 </h3>
                                 <p className="text-white/40 text-sm leading-relaxed">
-                                    We provide custom website development, landing page design, portfolio websites, real estate websites, business websites, and web applications tailored to client needs. Our websites are designed to load fast, rank better on Google, and convert visitors into customers. We also offer SEO optimization, website maintenance, performance improvement, domain setup, and hosting configuration for long-term success.
+                                    From landing pages to complex web apps, we provide custom solutions that fit your needs. Our websites are built to load fast and rank higher on Google. We also handle SEO, hosting, and regular maintenance so you can focus on running your business.
                                 </p>
                             </div>
                         </div>

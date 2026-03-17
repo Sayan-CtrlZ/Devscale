@@ -117,7 +117,7 @@ const ReputationMockups = () => (
 const BookingMockups = () => (
     <MockupFrame>
         <div className="flex justify-between items-center mb-6 text-white">
-            <h4 className="font-medium text-sm">March 2026</h4>
+            <div className="font-medium text-sm">March 2026</div>
             <div className="flex gap-1">
                 <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center text-xs">&lt;</div>
                 <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center text-xs">&gt;</div>

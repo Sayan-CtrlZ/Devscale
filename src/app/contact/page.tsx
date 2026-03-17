@@ -122,13 +122,14 @@ export default function Contact() {
                     </div>
 
                     <div className="flex flex-col gap-6">
+                        <h2 className="text-sm font-display font-bold text-white/40 uppercase tracking-[0.3em] mb-2">Our Channels</h2>
                         {/* Contact Items */}
                         <div className="flex items-center gap-5 group">
                             <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/30 transition-all duration-500">
                                 <Mail className="w-5 h-5 text-white/40 group-hover:text-blue-400 transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Email Us</h4>
+                                <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Email Us</h3>
                                 <a href="mailto:devscale.labs@gmail.com" className="text-base text-white/80 hover:text-white transition-colors">devscale.labs@gmail.com</a>
                             </div>
                         </div>
@@ -138,7 +139,7 @@ export default function Contact() {
                                 <Phone className="w-5 h-5 text-white/40 group-hover:text-amber-400 transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Call Us</h4>
+                                <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Call Us</h3>
                                 <a href="tel:+918974637506" className="text-base text-white/80 hover:text-white transition-colors">+91 89746 37506</a>
                             </div>
                         </div>
@@ -148,7 +149,7 @@ export default function Contact() {
                                 <MapPin className="w-5 h-5 text-white/40 group-hover:text-violet-400 transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Location</h4>
+                                <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 mb-0.5">Location</h3>
                                 <p className="text-base text-white/80">Remote-first specialized agency</p>
                             </div>
                         </div>

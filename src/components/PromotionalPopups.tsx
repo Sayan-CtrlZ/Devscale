@@ -52,7 +52,7 @@ const Toast = ({ p, onDismiss }: { p: Popup; onDismiss: (id: string) => void }) 
                     {p.icon}
                 </div>
                 <div className="flex-1 pt-0.5">
-                    <h4 className="text-white font-display font-bold text-[13px] tracking-tight mb-1">{p.title}</h4>
+                    <div className="text-white font-display font-bold text-[13px] tracking-tight mb-1">{p.title}</div>
                     <p className="text-white/50 text-[11px] leading-relaxed font-light">{p.message}</p>
                 </div>
                 <button

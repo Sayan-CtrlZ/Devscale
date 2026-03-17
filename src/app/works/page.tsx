@@ -87,9 +87,10 @@ function AgentScreenshotFlow({ screenshots, setSelectedImage }: {
                                         <Image
                                             src={shot.imgUrl}
                                             alt={shot.label}
-                                            fill
+                                            width={320}
+                                            height={240}
                                             sizes="(max-width: 768px) 100vw, 320px"
-                                            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                         />
                                     ) : (
                                         <AbstractFallback type={shot.type} />
@@ -408,9 +409,17 @@ export default function Works() {
                     <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 tracking-tight text-white/95">
                         Our Works
                     </h1>
-                    <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
-                        Explore the autonomous digital ecosystems we've engineered. Real solutions driving real results for our clients.
-                    </p>
+                   <p className="text-white/90 font-normal md:text-2xl leading-normal mb-12">
+                    In the fast-moving world of software, <i>AI-native design</i> is the next big step. Most websites use fixed designs that need manual updates. But new AI tools can now create dynamic layouts that adapt and fix themselves in real-time.
+                </p>
+ 
+                <p>
+                    These tools help automate design choices, fix layout issues instantly, and make it easy to scale large apps.
+                </p>
+ 
+                <p>
+                    If you are building business tools—like dashboards or SaaS platforms—this shift can save a lot of time and effort. It helps you focus on your users while improving the overall experience.
+                </p>
                 </motion.div>
             </section>
 
