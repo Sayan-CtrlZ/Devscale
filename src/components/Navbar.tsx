@@ -61,9 +61,9 @@ export const Navbar = () => {
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
-                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-300 origin-center ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-150 origin-center ${mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-150 ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+                        <span className={`block w-5 h-[2px] bg-black dark:bg-white transition-all duration-150 origin-center ${mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
                     </button>
                 </div>
 
@@ -71,11 +71,11 @@ export const Navbar = () => {
                 <AnimatePresence>
                     {mobileMenuOpen && (
                         <motion.div
-                            initial={{ opacity: 0, y: -20 }}
+                            initial={{ opacity: 0, y: -8 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto"
+                            exit={{ opacity: 0, y: -8 }}
+                            transition={{ duration: 0.12, ease: "easeOut" }}
+                            className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto will-change-transform"
                         >
                             <div className="rounded-2xl bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl p-6 flex flex-col gap-5">
                                 {[
