@@ -307,18 +307,18 @@ const portfolioData: Category[] = [
                 title: "Clinic Booking Agent",
                 description: "AI chatbot that answers patient questions and automatically schedules appointments with doctors.",
                 screenshots: [
-                    { type: "chat", label: "Chat Interface", imgUrl: "/mockups/clinic_chat.png" },
-                    { type: "calendar", label: "Booking Selection", imgUrl: "/mockups/clinic_calendar.png" },
-                    { type: "checkout", label: "Appointment Confirmation", imgUrl: "/mockups/clinic_success.png" }
+                    { type: "chat", label: "Chat Interface", imgUrl: "/mockups/clinic_chat.webp" },
+                    { type: "calendar", label: "Booking Selection", imgUrl: "/mockups/clinic_calendar.webp" },
+                    { type: "checkout", label: "Appointment Confirmation", imgUrl: "/mockups/clinic_success.webp" }
                 ]
             },
             {
                 title: "Salon Booking Assistant",
                 description: "AI assistant that helps customers book salon services instantly through chat.",
                 screenshots: [
-                    { type: "chat", label: "Chat Conversation", imgUrl: "/mockups/salon_chat.png" },
-                    { type: "calendar", label: "Time Slot Selection", imgUrl: "/mockups/salon_calendar.png" },
-                    { type: "chat", label: "Confirmation Message", imgUrl: "/mockups/salon_success.png" }
+                    { type: "chat", label: "Chat Conversation", imgUrl: "/mockups/salon_chat.webp" },
+                    { type: "calendar", label: "Time Slot Selection", imgUrl: "/mockups/salon_calendar.webp" },
+                    { type: "chat", label: "Confirmation Message", imgUrl: "/mockups/salon_success.webp" }
                 ]
             }
         ]
@@ -330,9 +330,9 @@ const portfolioData: Category[] = [
                 title: "Local Business Review System",
                 description: "Automated system that sends review requests to customers and helps businesses collect more 5-star reviews on Google.",
                 screenshots: [
-                    { type: "chat", label: "Review Request Message", imgUrl: "/mockups/review_request_chat.png" },
-                    { type: "review", label: "Google Review Page", imgUrl: "/mockups/google_review_page.png" },
-                    { type: "dashboard", label: "Reputation Dashboard", imgUrl: "/mockups/review_dashboard.png" }
+                    { type: "chat", label: "Review Request Message", imgUrl: "/mockups/review_request_chat.webp" },
+                    { type: "review", label: "Google Review Page", imgUrl: "/mockups/google_review_page.webp" },
+                    { type: "dashboard", label: "Reputation Dashboard", imgUrl: "/mockups/review_dashboard.webp" }
                 ]
             }
         ]
@@ -344,9 +344,9 @@ const portfolioData: Category[] = [
                 title: "Consultation Booking System",
                 description: "An automated booking system integrated with calendars that allows clients to schedule meetings easily.",
                 screenshots: [
-                    { type: "dashboard", label: "Booking Interface", imgUrl: "/mockups/booking_page.png" },
-                    { type: "calendar", label: "Calendar Availability", imgUrl: "/mockups/booking_calendar.png" },
-                    { type: "checkout", label: "Confirmation Page", imgUrl: "/mockups/booking_success.png" }
+                    { type: "dashboard", label: "Booking Interface", imgUrl: "/mockups/booking_page.webp" },
+                    { type: "calendar", label: "Calendar Availability", imgUrl: "/mockups/booking_calendar.webp" },
+                    { type: "checkout", label: "Confirmation Page", imgUrl: "/mockups/booking_success.webp" }
                 ]
             }
         ]
@@ -358,9 +358,9 @@ const portfolioData: Category[] = [
                 title: "Restaurant Online Ordering",
                 description: "A system allowing customers to browse food items, place orders online, and track their order status.",
                 screenshots: [
-                    { type: "menu", label: "Food Menu Interface", imgUrl: "/mockups/restaurant_menu.png" },
-                    { type: "checkout", label: "Order Checkout", imgUrl: "/mockups/restaurant_checkout.png" },
-                    { type: "dashboard", label: "Order Management Dashboard", imgUrl: "/mockups/restaurant_dashboard.png" }
+                    { type: "menu", label: "Food Menu Interface", imgUrl: "/mockups/restaurant_menu.webp" },
+                    { type: "checkout", label: "Order Checkout", imgUrl: "/mockups/restaurant_checkout.webp" },
+                    { type: "dashboard", label: "Order Management Dashboard", imgUrl: "/mockups/restaurant_dashboard.webp" }
                 ]
             }
         ]
@@ -372,18 +372,18 @@ const portfolioData: Category[] = [
                 title: "Inventory Management Tool",
                 description: "A custom dashboard that helps businesses track stock levels and manage inventory.",
                 screenshots: [
-                    { type: "dashboard", label: "Inventory Dashboard", imgUrl: "/mockups/inventory_dashboard.png" },
-                    { type: "table", label: "Product Management Page", imgUrl: "/mockups/inventory_table.png" },
-                    { type: "dashboard", label: "Analytics Panel", imgUrl: "/mockups/inventory_analytics.png" }
+                    { type: "dashboard", label: "Inventory Dashboard", imgUrl: "/mockups/inventory_dashboard.webp" },
+                    { type: "table", label: "Product Management Page", imgUrl: "/mockups/inventory_table.webp" },
+                    { type: "dashboard", label: "Analytics Panel", imgUrl: "/mockups/inventory_analytics.webp" }
                 ]
             },
             {
                 title: "Customer Management System",
                 description: "A tool that helps businesses manage customer data, track interactions, and organize leads.",
                 screenshots: [
-                    { type: "table", label: "Customer Database", imgUrl: "/mockups/crm_database.png" },
-                    { type: "profile", label: "Customer Profile", imgUrl: "/mockups/crm_profile.png" },
-                    { type: "table", label: "Activity Tracking", imgUrl: "/mockups/crm_activity.png" }
+                    { type: "table", label: "Customer Database", imgUrl: "/mockups/crm_database.webp" },
+                    { type: "profile", label: "Customer Profile", imgUrl: "/mockups/crm_profile.webp" },
+                    { type: "table", label: "Activity Tracking", imgUrl: "/mockups/crm_activity.webp" }
                 ]
             }
         ]

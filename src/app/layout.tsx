@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         siteName: "DevScale Lab",
         images: [
             {
-                url: "/og-image.jpg", // Placeholder
+                url: "/og-image.webp", // Placeholder
                 width: 1200,
                 height: 630,
             },
@@ -70,7 +70,7 @@ const organizationSchema = {
     "@type": "Organization",
     "name": "DevScale Lab",
     "url": BASE_URL,
-    "logo": `${BASE_URL}/logo.png`,
+    "logo": `${BASE_URL}/logo.webp`,
     "description": "AI-native design agency building autonomous digital ecosystems.",
     "sameAs": [
         "https://twitter.com/devscalelab",

@@ -7,7 +7,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-const ecommerceImg = "/mockups/ecommerce_ui_mockup.png"; // Updated path
+const ecommerceImg = "/mockups/ecommerce_ui_mockup.webp"; // Updated path
 
 // Reusable Mockup Container
 function MockupFrame({ children, className = "" }: { children: React.ReactNode, className?: string }) {
@@ -258,7 +258,7 @@ const servicesData = [
     },
     {
         title: "Online Ordering Systems",
-        summary: "Secure and seamless e-commerce setups to sell products and services globally.",
+        summary: "Secure online stores that let you sell products and services to anyone, anywhere.",
         icon: ShoppingCart,
         includes: ["Online store setup", "Secure checkout", "Order tracking", "Payment integrations"],
         benefits: ["Global reach", "Safe transactions", "Inventory tracking", "Automated receipts"],
@@ -272,7 +272,7 @@ const servicesData = [
     },
     {
         title: "Custom Business Tools",
-        summary: "Tailor-made software to manage your specific inventory, staff, or customer data.",
+        summary: "Custom software built to help you manage your stock, staff, or customer info.",
         icon: LayoutDashboard,
         includes: ["Inventory systems", "Customer management", "Staff tools", "Analytics dashboards"],
         benefits: ["Saves time", "Reduces manual work", "Improves organization", "Scales with business"],
@@ -309,7 +309,7 @@ export default function Services() {
                         </span>
                     </h1>
                     <p className="text-white/60 text-lg md:text-xl max-w-3xl leading-relaxed mt-4 font-light">
-                        We build websites, automation systems, and smart tools that help businesses attract customers, save time, and grow online. We help small and local businesses automate their operations, improve their online presence, and increase revenue using modern technology.
+                        We build websites and tools that help you find more customers and save time. We use smart technology to help small businesses grow and make more money.
                     </p>
                 </motion.div>
             </section>
@@ -409,7 +409,7 @@ export default function Services() {
                         Ready to Grow<br /> Your Business?
                     </h2>
                     <p className="text-white/50 text-lg max-w-xl font-light">
-                        Let us help you build smarter systems and better online experiences for your customers.
+                        Let us help you build better websites and smarter systems for your customers.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mt-6">
                         <Link href="/book" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">

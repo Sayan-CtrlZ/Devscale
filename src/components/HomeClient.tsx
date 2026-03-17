@@ -74,7 +74,7 @@ export function HomeClient() {
                                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                                 className="text-white/55 text-sm md:text-base font-light leading-relaxed max-w-md pointer-events-auto"
                             >
-                                DavScale Lab builds autonomous digital ecosystems where design, AI, and performance converge.
+                                We build smart websites and systems that use AI to help your business grow.
                             </motion.p>
 
                             {/* Feature rows with dividers */}
@@ -168,7 +168,7 @@ export function HomeClient() {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-white/90 max-w-4xl">
-                            DavScale Lab gives you a <span className="text-gradient-blue font-bold">complete evolution</span> of your digital presence from autonomous web design and intelligent automation to predictive user experiences. Every component learns and adapts, so you always stay ahead of the curve.
+                            DavScale Lab gives you a <span className="text-gradient-blue font-bold">better way</span> to build your online presence. We use AI and automation to create websites that learn and adapt. This helps you stay ahead of the competition.
                         </h2>
                     </motion.div>
                 </section>
@@ -533,10 +533,10 @@ export function HomeClient() {
                             transition={{ delay: 0.2 }}
                         >
                             <h3 className="text-4xl md:text-6xl font-display font-bold mb-8 text-white">
-                                Intelligence Foundations
+                                Smart Foundations
                             </h3>
                             <p className="text-white/50 text-lg md:text-xl leading-relaxed font-light max-xl">
-                                DevScale Lab operates at the intersection of neural architecture and creative expression. We build more than just websites; we engineer living digital entities that learn from user behavior, adapting their layout, content, and conversion funnels in real-time to redefine how brands connect with their audience in the decades ahead.
+                                We combine smart technology with great design. We don't just build websites; we create digital tools that learn from your customers. They change and improve over time to help you connect better with your audience.
                             </p>
                         </motion.div>
 
@@ -579,7 +579,7 @@ export function HomeClient() {
                         </h2>
 
                         <p className="text-white/50 text-lg md:text-xl max-w-2xl mt-4 font-light leading-relaxed">
-                            Stop worrying about technology and start focusing on your customers. We'll engineer the autonomous digital ecosystem you need to scale effortlessly.
+                            Stop worrying about tech and focus on your customers. We'll build the smart digital systems you need to scale easily.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-5 mt-10 w-full justify-center">

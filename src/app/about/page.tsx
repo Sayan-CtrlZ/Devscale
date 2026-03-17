@@ -62,7 +62,7 @@ export default function About() {
                         <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Small Business</span> Heart.
                     </h1>
                     <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                        We bring enterprise-grade AI and automation to growing businesses, empowering them to compete at the highest level without the corporate price tag.
+                        We bring powerful AI and automation to growing businesses. We help you compete with the biggest companies without the high cost.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/works" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all">
@@ -86,7 +86,7 @@ export default function About() {
                     >
                         <div>
                             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white">Our 'Growth First' Philosophy</h2>
-                            <p className="text-white/50 text-lg font-light">We don't care about buzzwords. We care about results and actually growing the needs of your business.</p>
+                            <p className="text-white/50 text-lg font-light">We don't use fancy words. We focus on results and helping your business grow.</p>
                         </div>
                         <div className="flex flex-col gap-6">
                             {philosophyItems.map((item, idx) => (
@@ -148,7 +148,7 @@ export default function About() {
                         </div>
                         <h3 className="text-2xl font-bold text-white">Our Mission</h3>
                         <p className="text-white/50 leading-relaxed font-light">
-                            To democratize high-end technology for small businesses through intelligent automation and pixel-perfect design, closing the digital gap between local icons and giant conglomerates.
+                            To make high-end technology available for small businesses. We use smart automation and great design to help small shops compete with big companies.
                         </p>
                     </div>
                     <div className="p-10 rounded-3xl bg-white/[0.02] border border-white/10 flex flex-col items-center gap-6 group hover:bg-white/[0.03] transition-all">
@@ -157,7 +157,7 @@ export default function About() {
                         </div>
                         <h3 className="text-2xl font-bold text-white">Our Vision</h3>
                         <p className="text-white/50 leading-relaxed font-light">
-                            To become the world's leading AI-native design agency, where human creativity and machine intelligence merge to build digital ecosystems that aren't just tools, but living business partners.
+                            To be the best AI-design agency. We combine human ideas with AI to build digital systems that help your business grow like a real partner.
                         </p>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ export default function About() {
                         <span className="underline decoration-blue-500/50 underline-offset-8">business?</span>
                     </h2>
                     <p className="text-white/50 mb-10 max-w-md mx-auto text-lg font-light">
-                        Our systems are build to scale and our designs are build to last. Start your digital journey with DavScale.
+                        Our systems grow with you and our designs are built to last. Start your digital journey with DavScale today.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
                         <Link href="/book" className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">

@@ -1,9 +1,66 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Clock, Loader2, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { Mail, Phone, MapPin, Clock, Loader2, CheckCircle, AlertCircle, ArrowRight, Plus, Minus } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+
+const faqs = [
+    {
+        question: "What services do you offer?",
+        answer: "We build websites, set up smart AI chatbots, automate your business tasks, and help you get more reviews on Google. Basically, we handle the tech so you can focus on your business."
+    },
+    {
+        question: "How long does a project typically take?",
+        answer: "Every project is different. A simple landing page can take 1-2 weeks, while a complex system might take 4-8 weeks. We'll give you a clear timeline before we start."
+    },
+    {
+        question: "Do you offer ongoing maintenance and support?",
+        answer: "Absolutely. We provide dedicated support and maintenance packages to ensure your digital ecosystem stays updated, secure, and performs at peak efficiency as your business scales."
+    },
+    {
+        question: "Can you help with AI integration into existing systems?",
+        answer: "Definitely. Whether you use WordPress or a custom site, we can add smart tools and AI to your current setup to make it work better for you."
+    },
+    {
+        question: "What's your pricing model?",
+        answer: "We offer clear, fixed pricing based on what you need. After our first talk, we'll give you a detailed quote so you know the exact cost upfront."
+    }
+];
+
+function FAQItem({ question, answer }: { question: string, answer: string }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <div 
+            className={`border border-white/10 rounded-3xl overflow-hidden transition-all duration-300 ${isOpen ? 'bg-white/5 border-white/20' : 'bg-white/[0.02] hover:bg-white/[0.04]'}`}
+        >
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full px-8 py-6 flex items-center justify-between gap-4 text-left"
+            >
+                <span className="text-base md:text-lg font-medium text-white/90">{question}</span>
+                <div className={`shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180 bg-white/10' : ''}`}>
+                    {isOpen ? <Minus className="w-4 h-4 text-blue-400" /> : <Plus className="w-4 h-4 text-white/40" />}
+                </div>
+            </button>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                        <div className="px-8 pb-8 text-white/50 text-base font-light leading-relaxed">
+                            {answer}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 const CONTACT_WEBHOOK_URL = "https://hook.eu1.make.com/8bjxcsmo9i6gast48myf9ds9wclqhbtr";
 
@@ -192,19 +249,38 @@ export default function Contact() {
                 </motion.div>
             </div>
 
+            {/* FAQ Section */}
+            <section className="w-full max-w-4xl mx-auto px-6 md:px-12 py-24 border-t border-white/5">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">Frequently Asked <span className="text-blue-400">Questions</span></h2>
+                    <p className="text-white/40 text-sm md:text-base font-light">Everything you need to know about working with DevScale Lab.</p>
+                </motion.div>
+
+                <div className="flex flex-col gap-4">
+                    {faqs.map((faq, idx) => (
+                        <FAQItem key={idx} question={faq.question} answer={faq.answer} />
+                    ))}
+                </div>
+            </section>
+
             {/* Descriptive SEO section */}
             <section className="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 mt-8 border-t border-white/5 text-white">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div>
                         <h2 className="text-lg font-bold mb-3 text-white/90">How We Work With You</h2>
                         <p className="text-white/40 text-sm leading-relaxed">
-                            Once you reach out, one of our team members will review your enquiry and respond within 2–4 hours during business hours. For project enquiries, we will typically schedule a short discovery call to understand your goals, timeline, and budget before proposing a tailored engagement plan.
+                            We make tech easy. We start by learning about your business and your goals. Then, we build the websites and tools you need to succeed. We handle everything from design to setup, and we're always here to help you grow.
                         </p>
                     </div>
                     <div>
                         <h2 className="text-lg font-bold mb-3 text-white/90">What We Can Help You With</h2>
                         <p className="text-white/40 text-sm leading-relaxed">
-                            Whether you need a new business website, an AI automation system, a landing page, or a full digital ecosystem, we are here to help. We work with startups, SMEs, agencies, and personal brands across industries including real estate, healthcare, e-commerce, education, and professional services.
+                            Need a fast website, a smart booking system, or a way to get more Google reviews? We've got you covered. We build tools that help you save time and make more money. No tech headaches, just simple solutions that work.
                         </p>
                     </div>
                     <div>

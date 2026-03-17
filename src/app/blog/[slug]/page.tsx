@@ -48,7 +48,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             "name": "DevScale Lab",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://devscalelab.com/logo.png"
+                "url": "https://devscalelab.com/logo.webp"
             }
         }
     };

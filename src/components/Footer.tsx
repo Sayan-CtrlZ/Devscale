@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
                     <div className="flex flex-col gap-8 max-w-sm">
                         <div className="flex items-center gap-3">
-                            <img src="/assets/logo.png" alt="DavScale Lab" className="h-8 w-auto object-contain" />
+                            <img src="/assets/logo.webp" alt="DavScale Lab" className="h-8 w-auto object-contain" />
                             <span className="font-display font-bold text-xl tracking-tight text-white">DavScale Lab</span>
                         </div>
                         <p className="text-white/70 text-sm leading-relaxed font-light">
