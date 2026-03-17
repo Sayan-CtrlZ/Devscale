@@ -37,7 +37,7 @@ export function HomeClient() {
 
     return (
         <>
-            <main className="relative w-full flex flex-col items-center">
+            <main className="relative w-full flex flex-col items-center overflow-x-hidden">
                 <section ref={heroRef} className="relative w-full min-h-screen pt-28 pb-8">
                     {/* Wrapper for EVERYTHING in the hero */}
                     <div className="relative min-h-screen w-full overflow-hidden flex pointer-events-none">
@@ -293,7 +293,7 @@ export function HomeClient() {
                             </div>
 
                             {/* Canvas area — horizontally scrollable on small screens */}
-                            <div className="relative h-[420px] p-6 overflow-x-auto overflow-y-hidden transition-colors"
+                            <div className="relative h-[420px] p-6 overflow-x-hidden md:overflow-x-auto overflow-y-hidden transition-colors"
                                 style={{ backgroundImage: `radial-gradient(circle, currentColor 1px, transparent 1px)`, backgroundSize: '28px 28px', color: 'rgba(128,128,128,0.15)' }}>
 
                                 {/* ─── Nodes ─── */}
