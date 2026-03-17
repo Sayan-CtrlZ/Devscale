@@ -16,7 +16,7 @@ const faqs = [
     },
     {
         question: "Do you offer ongoing maintenance and support?",
-        answer: "Absolutely. We provide dedicated support and maintenance packages to ensure your digital ecosystem stays updated, secure, and performs at peak efficiency as your business scales."
+        answer: "Yes. We provide support and maintenance to keep your website updated, secure, and working well as your business grows."
     },
     {
         question: "Can you help with AI integration into existing systems?",

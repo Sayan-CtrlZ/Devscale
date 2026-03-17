@@ -410,15 +410,11 @@ export default function Works() {
                         Our Works
                     </h1>
                    <p className="text-black/80 dark:text-white/90 font-normal md:text-2xl leading-normal mb-12 transition-colors">
-                    In the fast-moving world of software, <i>AI-native design</i> is the next big step. Most websites use fixed designs that need manual updates. But new AI tools can now create dynamic layouts that adapt and fix themselves in real-time.
+                    We build smart websites and AI tools that work. Every project is built to be fast, secure, and easy to scale.
                 </p>
  
                 <p className="text-black/60 dark:text-white/60 transition-colors">
-                    These tools help automate design choices, fix layout issues instantly, and make it easy to scale large apps.
-                </p>
- 
-                <p className="text-black/60 dark:text-white/60 transition-colors">
-                    If you are building business tools—like dashboards or SaaS platforms—this shift can save a lot of time and effort. It helps you focus on your users while improving the overall experience.
+                    From landing pages to complete business systems, we create digital solutions that help companies succeed.
                 </p>
                 </motion.div>
             </section>

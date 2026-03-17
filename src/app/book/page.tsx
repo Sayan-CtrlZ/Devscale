@@ -200,7 +200,7 @@ export default function BookAppointment() {
                         <span className="text-blue-600 dark:text-blue-400 italic transition-colors">New Project.</span>
                     </h1>
                     <p className="text-black/60 dark:text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto transition-colors">
-                        Tell us about your vision. We'll help you build an autonomous digital ecosystem that learns, adapts, and scales.
+                        Share your vision. We'll help you build smart digital systems that learn and improve as your business grows.
                     </p>
                 </motion.div>
 
@@ -270,21 +270,21 @@ export default function BookAppointment() {
                         <div className="flex flex-col gap-3">
                             <span className="text-4xl font-display font-bold text-black/5 dark:text-white/10 transition-colors">01</span>
                             <h3 className="text-base font-bold text-black/90 dark:text-white/90 transition-colors">Submit Your Vision</h3>
-                            <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">Fill in the project discovery form above with your goals, timeline, and budget. The more detail you provide, the better we can tailor our approach and estimate scope and cost accurately.</p>
+                            <p className="text-black/40 dark:text-white/40 text-sm font-light transition-colors">Share your goals and timeline. More details help us estimate the work and cost accurately.</p>
                         </div>
                         <div className="flex flex-col gap-3">
                             <span className="text-4xl font-display font-bold text-black/5 dark:text-white/10 transition-colors">02</span>
                             <h3 className="text-base font-bold text-black/90 dark:text-white/90 transition-colors">Discovery Call</h3>
-                            <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">We will reach out within 24 hours to schedule a free 30-minute discovery call. During this call, our engineering and design team will ask clarifying questions, share examples of similar work, and confirm the best way to move forward.</p>
+                            <p className="text-black/40 dark:text-white/40 text-sm max-w-md mx-auto transition-colors">We'll call within 24 hours. We'll discuss your needs, show you similar work, and explain how we'll help.</p>
                         </div>
                         <div className="flex flex-col gap-3">
                             <span className="text-4xl font-display font-bold text-black/5 dark:text-white/10 transition-colors">03</span>
                             <h3 className="text-base font-bold text-black/90 dark:text-white/90 transition-colors">Proposal &amp; Kick-off</h3>
-                            <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">After the discovery call, we will send a detailed project proposal covering scope, deliverables, timeline, and pricing. Once approved, we kick off with a structured onboarding sprint and deliver regular progress updates throughout the build.</p>
+                            <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">You'll get a full proposal with next steps and pricing. After you approve it, we start building and keep you updated regularly.</p>
                         </div>
                     </div>
                     <p className="text-black/30 dark:text-white/30 text-xs text-center max-w-2xl mx-auto transition-colors">
-                        Devscale Lab partners with startups, SMEs, agencies, and personal brands worldwide. We specialize in Next.js websites, AI automation pipelines, digital ecosystems, and conversion-focused landing pages. Our remote-first team operates across time zones so that your project always moves forward.
+                        We work with startups, businesses, and personal brands everywhere. We build websites, AI automation systems, and landing pages that convert. Our team works across time zones so your project keeps moving.
                     </p>
                 </section>
 

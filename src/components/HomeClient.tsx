@@ -168,7 +168,7 @@ export function HomeClient() {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-black dark:text-white/90 max-w-4xl transition-colors">
-                            Devscale Lab gives you a <span className="text-gradient-blue font-black">better way</span> to build your online presence. We use AI and automation to create websites that learn and adapt. This helps you stay ahead of the competition.
+                            <span className="text-gradient-blue font-black">AI-Powered</span> web solutions that grow your business
                         </h2>
                     </motion.div>
                 </section>

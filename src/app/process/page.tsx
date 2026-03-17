@@ -8,31 +8,31 @@ import Link from "next/link";
 const processSteps = [
     {
         title: "1. Discovery & Onboarding",
-        description: "We start by deeply understanding your business, your bottlenecks, and your ultimate goals. We analyze your current digital presence and identify exactly where automation and design can drive the most growth.",
+        description: "We learn about your business, your needs, and your goals. We check what you have now and see where we can help you grow the most.",
         icon: Map,
         deliverables: ["Initial Consultation", "Business Audit", "Goal Mapping", "Project Scope"]
     },
     {
         title: "2. Strategy & Architecture",
-        description: "Next, we blueprint your digital ecosystem. Whether it's a high-converting website, an AI agent, or an automated booking system, we map out the user journey and system architecture before writing a single line of code.",
+        description: "We plan your digital system. We map out how users will move through it and what technology we'll need before we start building.",
         icon: Rocket,
         deliverables: ["Wireframes & UI/UX Design", "System Architecture", "Tech Stack Selection", "Timeline Agreement"]
     },
     {
         title: "3. Development & Integration",
-        description: "Our engineers build the systems. We construct your website, train your AI agents, and setup the automations. We focus on speed, reliability, and seamless integration between all the moving parts of your ecosystem.",
+        description: "Our engineers build your systems. We construct your website, set up automations, and connect everything so it works together smoothly.",
         icon: Code,
         deliverables: ["Frontend & Backend Development", "AI Model Training", "CRM Integrations", "Automation Setup"]
     },
     {
         title: "4. Testing & Calibration",
-        description: "Before going live, everything goes through rigorous testing. We check for bugs across devices, simulate high-traffic scenarios, and fine-tune AI responses to ensure maximum accuracy and performance.",
+        description: "We test everything thoroughly. We check for problems on all devices, test how it handles heavy traffic, and fine-tune everything for best performance.",
         icon: CheckCircle,
         deliverables: ["Cross-Browser Testing", "Performance Optimization", "Security Audits", "User Acceptance Testing"]
     },
     {
-        title: "5. Launch & Autopilot Support",
-        description: "We deploy your new ecosystem to the world. But we don't just hand over the keys and vanish. We provide ongoing support, monitor system health, and make data-driven improvements to ensure long-term ROI.",
+        title: "5. Launch & Support",
+        description: "We deploy your system and support you after launch. We monitor performance and make improvements based on real data.",
         icon: HeadphonesIcon,
         deliverables: ["Live Deployment", "Staff Training", "Performance Monitoring", "Ongoing Maintenance"]
     }
@@ -62,7 +62,7 @@ export default function Process() {
                         Our Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-black/80 to-black/40 dark:from-white dark:via-white/80 dark:to-white/40 transition-colors">Process</span>
                     </h1>
                     <p className="text-black/60 dark:text-white/60 text-lg leading-relaxed max-w-2xl font-light transition-colors">
-                        We don't just build websites; we engineer autonomous digital ecosystems. Here is the step-by-step methodology we use to transform your business operations.
+                        We take it step by step: discovery, design, building, testing, and launch. Here's how we work.
                     </p>
                 </div>
 
@@ -145,7 +145,7 @@ export default function Process() {
                     className="mt-32 p-12 rounded-[32px] border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] text-center flex flex-col items-center shadow-2xl text-black dark:text-white transition-colors"
                 >
                     <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 transition-colors">Ready to start the process?</h3>
-                    <p className="text-black/50 dark:text-white/50 max-w-md mx-auto mb-8 font-light transition-colors">Book your free discovery call today and let's map out your custom digital ecosystem.</p>
+                    <p className="text-black/50 dark:text-white/50 max-w-md mx-auto mb-8 font-light transition-colors">Book a free call to discuss your needs and get started on your project.</p>
                     <Link href="/book" className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                         Book a Consultation
                     </Link>

@@ -202,85 +202,85 @@ const ToolsMockups = () => (
 const servicesData = [
     {
         title: "Business Websites",
-        summary: "Fast, modern, mobile-friendly websites that turn visitors into paying customers.",
+        summary: "Fast, modern websites that turn visitors into customers.",
         icon: Globe,
-        includes: ["Landing pages", "Personal landing pages", "Business websites", "Portfolio sites", "Local service websites", "SEO-optimized pages"],
-        benefits: ["Fast loading", "Mobile friendly", "Built for conversions", "Easy to manage"],
+        includes: ["Landing pages", "Business websites", "Portfolio sites", "Local service websites"],
+        benefits: ["Fast loading", "Mobile friendly", "Built to convert", "Easy to manage"],
         howItWorks: [
-            "We understand your business and goals",
-            "We design the website structure",
-            "We build and optimize the site",
+            "We learn about your business",
+            "We design the structure",
+            "We build and optimize",
             "We launch and support"
         ],
         MockupElement: WebsiteMockups
     },
     {
         title: "Automated Booking Agents",
-        summary: "AI chatbots that answer customer questions and book appointments automatically.",
+        summary: "AI chatbots that answer questions and book appointments automatically.",
         icon: Bot,
         includes: ["AI Agents", "Clinics", "Salons", "Consultants", "Service providers"],
-        benefits: ["AI chat support", "Automatic appointment booking", "24/7 responses", "Calendar integration"],
+        benefits: ["AI chat support", "24/7 automatic booking", "Calendar integration", "Saves time"],
         howItWorks: [
             "Customer asks a question",
-            "AI responds instantly",
-            "AI offers booking options",
+            "AI responds right away",
+            "AI offers booking times",
             "Appointment is confirmed"
         ],
         MockupElement: ChatbotMockups
     },
     {
         title: "Reputation Management",
-        summary: "Automatically collect more 5-star reviews and improve your Google ranking.",
+        summary: "Get more 5-star reviews and improve your Google ranking automatically.",
         icon: Star,
-        includes: ["Automatic review requests", "Google review collection", "Feedback monitoring", "Reputation dashboard"],
-        benefits: ["Higher search ranking", "More customer trust", "Hands-off operation", "Damage control"],
+        includes: ["Automatic review requests", "Google review collection", "Feedback tracking", "Reputation dashboard"],
+        benefits: ["Higher search ranking", "More customer trust", "Hands-free operation", "Protect your image"],
         howItWorks: [
-            "Customer finishes a service",
-            "System sends a review request",
+            "Customer finishes service",
+            "System asks for a review",
             "Customer leaves feedback",
-            "Reviews improve online reputation"
+            "Reviews boost your ranking"
         ],
         MockupElement: ReputationMockups
     },
     {
         title: "Booking Automation",
-        summary: "Automatically manage appointments, send reminders, and reduce manual work.",
+        summary: "Manage appointments, send reminders, and reduce manual work.",
         icon: Calendar,
         includes: ["Calendly integration", "Custom booking systems", "Booking dashboards", "Multi-staff calendars"],
-        benefits: ["Automatic reminders", "Email/SMS confirmations", "No double booking", "Saves hours per week"],
+        benefits: ["Automatic reminders", "Confirmations by SMS/email", "No double booking", "Saves hours per week"],
         howItWorks: [
-            "Customer selects time slot",
-            "System confirms booking",
+            "Customer picks a time",
+            "System confirms it",
             "Reminders are sent",
-            "Business manages bookings easily"
+            "You manage bookings easily"
         ],
         MockupElement: BookingMockups
     },
     {
         title: "Online Ordering Systems",
-        summary: "Secure online stores that let you sell products and services to anyone, anywhere.",
+        summary: "Secure online stores that let you sell products to anyone, anywhere.",
         icon: ShoppingCart,
-        includes: ["Online store setup", "Secure checkout", "Order tracking", "Payment integrations"],
-        benefits: ["Global reach", "Safe transactions", "Inventory tracking", "Automated receipts"],
+        includes: ["Online store setup", "Secure checkout", "Order tracking", "Payment integration"],
+        benefits: ["Reach global customers", "Safe transactions", "Inventory tracking", "Automated receipts"],
         howItWorks: [
             "Customer browses products",
             "Adds items to cart",
             "Secure checkout",
-            "Order confirmation"
+            "Order confirmation sent"
         ],
         MockupElement: CommerceMockups
     },
     {
         title: "Custom Business Tools",
-        summary: "Custom software built to help you manage your stock, staff, or customer info.",
+        summary: "Custom software to manage inventory, staff, or customer information.",
         icon: LayoutDashboard,
         includes: ["Inventory systems", "Customer management", "Staff tools", "Analytics dashboards"],
-        benefits: ["Saves time", "Reduces manual work", "Improves organization", "Scales with business"],
+        benefits: ["Saves time", "Less manual work", "Better organization", "Grows with you"],
         howItWorks: [
-            "Understand the business workflow",
-            "Design custom solution",
-            "Build and test system",
-            "Deploy and maintain"
+            "Understand your workflow",
+            "Design solution",
+            "Build and test",
+            "Deploy and support"
         ],
         MockupElement: ToolsMockups
     }

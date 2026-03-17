@@ -29,21 +29,24 @@ const teamMembers = [
         role: "Co-founder & CEO",
         bio: "Data Science student at IIT Madras. AI Automation Architect and ML developer specializing in high-performance enterprise systems.",
         image: "/assets/Harsh.webp",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/devscale-lab",
+        github: "https://github.com"
     },
     {
         name: "Sayan Shil",
         role: "Co-founder & CTO",
         bio: "Data Science student at IIT Madras. Full Stack Software Developer focused on building scalable, reliable, and user-centric digital products.",
         image: "/assets/Sayan.webp",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/devscale-lab",
+        github: "https://github.com"
     },
     {
         name: "Pooja Mandal",
         role: "Co-founder & COO",
         bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of Devscale Lab.",
         image: "/assets/Pooja.webp",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/company/devscale-lab",
+        github: "https://github.com"
     }
 ];
 
@@ -147,7 +150,7 @@ export default function About() {
                         </div>
                         <h3 className="text-2xl font-bold text-black dark:text-white transition-colors">Our Mission</h3>
                         <p className="text-black/50 dark:text-white/50 leading-relaxed font-light transition-colors">
-                            To make high-end technology available for small businesses. We use smart automation and great design to help small shops compete with big companies.
+                            We help small businesses use the same smart technology that big companies use. No high costs, no complicated setup.
                         </p>
                     </div>
                     <div className="p-10 rounded-3xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/10 dark:border-white/10 flex flex-col items-center gap-6 group hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-all">
@@ -156,7 +159,7 @@ export default function About() {
                         </div>
                         <h3 className="text-2xl font-bold text-black dark:text-white transition-colors">Our Vision</h3>
                         <p className="text-black/50 dark:text-white/50 leading-relaxed font-light transition-colors">
-                            To be the best AI-design agency. We combine human ideas with AI to build digital systems that help your business grow like a real partner.
+                            To be the best at combining AI and great design. We want to build systems that help your business grow and last.
                         </p>
                     </div>
                 </div>
@@ -190,8 +193,28 @@ export default function About() {
                                 {member.bio}
                             </p>
                             <div className="flex gap-4">
-                                {member.linkedin && <a href={member.linkedin} className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Linkedin className="w-4 h-4" /></a>}
-                                <a href="#" className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Github className="w-4 h-4" /></a>
+                                {member.linkedin && (
+                                    <a
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all"
+                                    >
+                                        <Linkedin className="w-4 h-4" />
+                                        <span className="sr-only">LinkedIn profile for {member.name}</span>
+                                    </a>
+                                )}
+                                {member.github && (
+                                    <a
+                                        href={member.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-all"
+                                    >
+                                        <Github className="w-4 h-4" />
+                                        <span className="sr-only">GitHub profile for {member.name}</span>
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     ))}
@@ -207,7 +230,7 @@ export default function About() {
                         <span className="underline decoration-blue-600/50 dark:decoration-blue-500/50 underline-offset-8 transition-colors">business?</span>
                     </h3>
                     <p className="text-black/50 dark:text-white/50 mb-10 max-w-md mx-auto text-lg font-light transition-colors">
-                        Our systems grow with you and our designs are built to last. Start your digital journey with DavScale today.
+                        Our systems grow with you. Start your digital journey with us today.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
                         <Link href="/book" className="px-10 py-4 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-black/90 dark:hover:bg-neutral-200 transition-all shadow-[0_0_30px_rgba(0,0,0,0.1)] dark:shadow-[0_0_30px_rgba(255,255,255,0.2)]">

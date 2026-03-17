@@ -60,7 +60,10 @@ html:not(.dark) .text-black\/50 { color: rgba(35, 24, 15, 0.76) !important; }
 html:not(.dark) .text-black\/60 { color: rgba(35, 24, 15, 0.84) !important; }
 
 .dark body {
-  background-image: none;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(79, 39, 131, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(29, 53, 87, 0.12), transparent 50%),
+    linear-gradient(180deg, rgba(10, 10, 15, 0.5), rgba(3, 3, 3, 0.8));
 }
 
 /* Global Image Protection */
