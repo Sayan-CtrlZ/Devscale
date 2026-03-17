@@ -24,9 +24,9 @@ export const Navbar = () => {
     return (
         <nav className="fixed top-0 inset-x-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 flex justify-center pointer-events-none transition-all duration-300">
             <div className="relative w-full max-w-7xl flex items-center justify-between pointer-events-auto bg-white/70 dark:bg-black/70 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10 px-4 py-2.5 md:px-8 md:py-3.5 shadow-lg shadow-black/[0.03] dark:shadow-white/[0.02]">
-                <Link href="/" aria-label="DavScale Lab Home" className="flex items-center gap-2 md:gap-3">
-                    <Image src="/assets/logo.webp" alt="DavScale Lab Logo" width={32} height={32} priority className="h-6 md:h-8 w-auto object-contain transition-all" />
-                    <span className="font-display font-black text-sm md:text-base tracking-tight text-black dark:text-white line-clamp-1 transition-colors">DavScale Lab</span>
+                <Link href="/" aria-label="Devscale Lab Home" className="flex items-center gap-2 md:gap-3">
+                    <Image src="/assets/logo.webp" alt="Devscale Lab Logo" width={32} height={32} priority className="h-6 md:h-8 w-auto object-contain transition-all" />
+                    <span className="font-display font-black text-sm md:text-base tracking-tight text-black dark:text-white line-clamp-1 transition-colors">Devscale Lab</span>
                 </Link>
 
                 {/* Desktop nav links */}
@@ -107,3 +107,4 @@ export const Navbar = () => {
         </nav>
     );
 };
+

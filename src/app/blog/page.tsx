@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Journal & Insights | DevScale Lab',
+    title: 'Journal & Insights | Devscale Lab',
     description: 'Explore the latest insights on AI automation, neural design, and high-performance digital ecosystems.',
     alternates: {
         canonical: '/blog',
@@ -21,7 +21,7 @@ export default function BlogList() {
                     Journal &amp; Insights
                 </h1>
                 <p className="text-black/60 dark:text-white/60 text-lg mb-8 max-w-2xl transition-colors">
-                    Insights, deep dives, and practical guides on building high-performance digital ecosystems, AI automation, and SEO-optimized web experiences. Written by the engineers and designers at DevScale Lab.
+                    Insights, deep dives, and practical guides on building high-performance digital ecosystems, AI automation, and SEO-optimized web experiences. Written by the engineers and designers at Devscale Lab.
                 </p>
 
                 {/* Topic filters */}
@@ -51,7 +51,7 @@ export default function BlogList() {
             <section className="border-t border-black/10 dark:border-white/10 pt-16 transition-colors">
                 <h2 className="text-2xl font-display font-bold text-black dark:text-white mb-4 transition-colors">What You Will Find Here</h2>
                 <p className="text-black/50 dark:text-white/50 text-sm leading-relaxed max-w-3xl mb-6 transition-colors">
-                    The DevScale Lab Journal is where we share everything we learn while building autonomous digital ecosystems for startups, agencies, and modern businesses. From technical deep dives into Next.js architecture and Vercel deployment strategies, to broader discussions on AI automation, conversion-rate optimization, and the future of intelligent design — every article is grounded in real project experience.
+                    The Devscale Lab Journal is where we share everything we learn while building autonomous digital ecosystems for startups, agencies, and modern businesses. From technical deep dives into Next.js architecture and Vercel deployment strategies, to broader discussions on AI automation, conversion-rate optimization, and the future of intelligent design — every article is grounded in real project experience.
                 </p>
                 <p className="text-black/50 dark:text-white/50 text-sm leading-relaxed max-w-3xl transition-colors">
                     Whether you are a founder looking to understand how AI can accelerate your business, a developer looking to improve web performance, or a designer exploring the intersection of generative AI and UI design, you will find practical, actionable content written by practitioners who do this work every day.
@@ -60,3 +60,4 @@ export default function BlogList() {
         </div>
     );
 }
+

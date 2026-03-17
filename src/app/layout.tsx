@@ -22,10 +22,10 @@ const BASE_URL = "https://devscalelab.com";
 export const metadata: Metadata = {
     metadataBase: new URL(BASE_URL),
     title: {
-        default: "DevScale Lab | The AI-Native Design Agency",
-        template: "%s | DevScale Lab"
+        default: "Devscale Lab | The AI-Native Design Agency",
+        template: "%s | Devscale Lab"
     },
-    description: "DevScale Lab is a premier web development agency building fast, SEO-optimized Next.js websites for startups and businesses worldwide.",
+    description: "Devscale Lab is a premier web development agency building fast, SEO-optimized Next.js websites for startups and businesses worldwide.",
     keywords: [
         "web development agency", "website development company", "next js developer", "react developer",
         "frontend developer", "full stack developer", "landing page developer", "business website design",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
         "custom web application", "business landing page", "digital agency website", "tech agency website",
         "fast loading website", "mobile responsive website", "website seo optimization", "technical seo",
         "on page seo", "website speed optimization", "vercel deployment", "nextjs agency", "react agency",
-        "devscale lab", "DevScale Lab"
+        "Devscale Lab", "Devscale Lab"
     ],
     openGraph: {
-        title: "DevScale Lab | The AI-Native Design Agency",
-        description: "DevScale Lab builds fast, SEO-optimized Next.js websites for startups and businesses. Get a high-converting site that ranks on Google.",
+        title: "Devscale Lab | The AI-Native Design Agency",
+        description: "Devscale Lab builds fast, SEO-optimized Next.js websites for startups and businesses. Get a high-converting site that ranks on Google.",
         url: BASE_URL,
-        siteName: "DevScale Lab",
+        siteName: "Devscale Lab",
         images: [
             {
                 url: "/og-image.webp", // Placeholder
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "DevScale Lab | The AI-Native Design Agency",
-        description: "DevScale Lab builds fast, SEO-optimized Next.js websites for startups and businesses.",
+        title: "Devscale Lab | The AI-Native Design Agency",
+        description: "Devscale Lab builds fast, SEO-optimized Next.js websites for startups and businesses.",
     },
     icons: {
         icon: "/assets/favicon.ico",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "DevScale Lab",
+    "name": "Devscale Lab",
     "url": BASE_URL,
     "logo": `${BASE_URL}/logo.webp`,
     "description": "AI-native design agency building autonomous digital ecosystems.",
@@ -130,3 +130,4 @@ export default function RootLayout({
         </html>
     );
 }
+

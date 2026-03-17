@@ -26,7 +26,7 @@ export default function Article() {
                             The future of digital business is not just about having a website—it's about building entirely self-sufficient, artificially intelligent ecosystems that work for you around the clock without manual intervention.
                         </p>
                         <p>
-                            Our vision at DavScale Lab is to empower businesses with platforms that automatically capture leads, answer questions, close deals, and build customer relationships. By connecting cutting-edge AI chatbots, seamless booking systems, dynamic storefronts, and automated marketing tools, we engineer a single continuous pipeline of growth.
+                            Our vision at Devscale Lab is to empower businesses with platforms that automatically capture leads, answer questions, close deals, and build customer relationships. By connecting cutting-edge AI chatbots, seamless booking systems, dynamic storefronts, and automated marketing tools, we engineer a single continuous pipeline of growth.
                         </p>
                         <div className="p-8 my-4 rounded-2xl bg-black/[0.02] dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-sm transition-colors">
                             <h3 className="text-xl font-bold text-black dark:text-white mb-4 -mt-2 transition-colors">What makes an ecosystem autonomous?</h3>
@@ -45,3 +45,4 @@ export default function Article() {
         </div>
     );
 }
+

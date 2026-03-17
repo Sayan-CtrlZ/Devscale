@@ -13,14 +13,14 @@ export const Footer = () => {
                         <Link href="/" className="relative flex items-center gap-2.5 group">
                             <Image
                                 src="/assets/logo.webp"
-                                alt="DavScale Lab Logo"
+                                alt="Devscale Lab Logo"
                                 width={32}
                                 height={32}
                                 priority
                                 className="w-8 h-8 object-contain transition-transform duration-500 group-hover:scale-110"
                             />
                             <span className="font-display text-xl font-black tracking-tight text-black dark:text-white group-hover:text-black/80 dark:group-hover:text-white/80 transition-colors">
-                                DavScale Lab
+                                Devscale Lab
                             </span>
                         </Link>
                         <p className="text-black/70 dark:text-white/70 text-sm leading-relaxed font-medium transition-colors">
@@ -65,7 +65,7 @@ export const Footer = () => {
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-black/5 dark:border-white/5 gap-6 transition-colors">
                     <span className="text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-mono text-black/40 dark:text-white/40 transition-colors text-center md:text-left">
-                        © 2026 DavScale Lab. All rights reserved.
+                        © 2026 Devscale Lab. All rights reserved.
                     </span>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em] font-mono text-black/40 dark:text-white/40 transition-colors">
                         <span>Est. 2026</span>
@@ -76,3 +76,4 @@ export const Footer = () => {
         </footer>
     );
 };
+

@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         "serviceType": service.title,
         "provider": {
             "@type": "Organization",
-            "name": "DevScale Lab"
+            "name": "Devscale Lab"
         },
         "description": service.description,
     };

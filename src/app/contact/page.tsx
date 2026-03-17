@@ -259,7 +259,7 @@ export default function Contact() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-display font-bold text-black dark:text-white mb-4 transition-colors">Frequently Asked <span className="text-blue-600 dark:text-blue-400">Questions</span></h2>
-                    <p className="text-black/40 dark:text-white/40 text-sm md:text-base font-light transition-colors">Everything you need to know about working with DevScale Lab.</p>
+                    <p className="text-black/40 dark:text-white/40 text-sm md:text-base font-light transition-colors">Everything you need to know about working with Devscale Lab.</p>
                 </motion.div>
 
                 <div className="flex flex-col gap-4">
@@ -295,3 +295,4 @@ export default function Contact() {
         </main>
     );
 }
+

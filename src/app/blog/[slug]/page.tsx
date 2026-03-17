@@ -7,7 +7,7 @@ const posts = {
         description: 'How generative UI and self-healing interfaces are redefining the standard for enterprise software aesthetics.',
         date: 'March 9, 2026',
         isoDate: '2026-03-09',
-        author: 'DevScale Lab Team',
+        author: 'Devscale Lab Team',
     }
 };
 
@@ -45,7 +45,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         },
         "publisher": {
             "@type": "Organization",
-            "name": "DevScale Lab",
+            "name": "Devscale Lab",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://devscalelab.com/logo.webp"
@@ -308,12 +308,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     Organizations that adopt these technologies early will gain a significant advantage in development speed, scalability, and user experience.
                 </p>
                 <p className="text-black/90 dark:text-white/90 font-medium transition-colors">
-                    At DevScale Lab, we believe the future of software design lies in AI-augmented creativity and intelligent interface systems. The next generation of enterprise applications will not just be built with AI; they will be designed, optimized, and continuously improved by AI.
+                    At Devscale Lab, we believe the future of software design lies in AI-augmented creativity and intelligent interface systems. The next generation of enterprise applications will not just be built with AI; they will be designed, optimized, and continuously improved by AI.
                 </p>
 
                 <div className="mt-24 p-12 rounded-3xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] text-center transition-colors">
                     <h3 className="text-2xl font-display font-bold text-black dark:text-white mb-4 transition-colors">Interested in implementing AI-native design systems?</h3>
-                    <p className="mb-8 transition-colors">DevScale Lab offers consulting and workshops on generative UI and AI-powered development workflows.</p>
+                    <p className="mb-8 transition-colors">Devscale Lab offers consulting and workshops on generative UI and AI-powered development workflows.</p>
                     <a href="/contact" className="inline-block px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-lg">
                         Contact Us
                     </a>

@@ -40,7 +40,7 @@ export default function Privacy() {
 
                     <section>
                         <h2 className="text-xl font-bold text-black dark:text-white mb-3 transition-colors">5. Data Sharing</h2>
-                        <p>We do not sell, trade, or rent your personal identification information to third parties. We may share generic aggregated demographic information — not linked to any personal identification information — about our visitors and users with our business partners and advertisers. We may also disclose your information where required by law or to protect the rights, property, or safety of DevScale Lab, our clients, or others.</p>
+                        <p>We do not sell, trade, or rent your personal identification information to third parties. We may share generic aggregated demographic information — not linked to any personal identification information — about our visitors and users with our business partners and advertisers. We may also disclose your information where required by law or to protect the rights, property, or safety of Devscale Lab, our clients, or others.</p>
                     </section>
 
                     <section>
@@ -64,7 +64,7 @@ export default function Privacy() {
                     </section>
 
                     <section className="mt-8 pt-8 border-t border-black/10 dark:border-white/10 transition-colors">
-                        <p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with DevScale Lab, please contact us at:</p>
+                        <p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with Devscale Lab, please contact us at:</p>
                         <p className="mt-2 text-black dark:text-white font-medium transition-colors">contact@devscalelab.com</p>
                     </section>
                 </div>
@@ -72,3 +72,4 @@ export default function Privacy() {
         </div>
     );
 }
+

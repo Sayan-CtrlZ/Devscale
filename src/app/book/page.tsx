@@ -284,7 +284,7 @@ export default function BookAppointment() {
                         </div>
                     </div>
                     <p className="text-black/30 dark:text-white/30 text-xs text-center max-w-2xl mx-auto transition-colors">
-                        DevScale Lab partners with startups, SMEs, agencies, and personal brands worldwide. We specialize in Next.js websites, AI automation pipelines, digital ecosystems, and conversion-focused landing pages. Our remote-first team operates across time zones so that your project always moves forward.
+                        Devscale Lab partners with startups, SMEs, agencies, and personal brands worldwide. We specialize in Next.js websites, AI automation pipelines, digital ecosystems, and conversion-focused landing pages. Our remote-first team operates across time zones so that your project always moves forward.
                     </p>
                 </section>
 
@@ -292,4 +292,5 @@ export default function BookAppointment() {
         </main>
     );
 }
+
 

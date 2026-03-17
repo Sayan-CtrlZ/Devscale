@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Our Services | DavScale Lab",
+    title: "Our Services | Devscale Lab",
     description: "From custom business websites to automated AI booking agents, discover our suite of intelligent digital services.",
     alternates: {
         canonical: "/services",
@@ -15,3 +15,4 @@ export default function ServicesLayout({
 }) {
     return <>{children}</>;
 }
+

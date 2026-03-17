@@ -41,7 +41,7 @@ const teamMembers = [
     {
         name: "Pooja Mandal",
         role: "Co-founder & COO",
-        bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of DavScale Lab.",
+        bio: "Data Science student at IIT Madras. Shaping the operational excellence and strategic growth of Devscale Lab.",
         image: "/assets/Pooja.webp",
         linkedin: "#"
     }
@@ -226,3 +226,4 @@ export default function About() {
         </main>
     );
 }
+

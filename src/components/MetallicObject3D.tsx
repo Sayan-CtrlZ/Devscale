@@ -82,3 +82,4 @@ export const MetallicObject3D = memo(function MetallicObject3D() {
         </div>
     );
 });
+

@@ -168,7 +168,7 @@ export function HomeClient() {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-display font-medium leading-[1.2] tracking-tight text-black dark:text-white/90 max-w-4xl transition-colors">
-                            DavScale Lab gives you a <span className="text-gradient-blue font-black">better way</span> to build your online presence. We use AI and automation to create websites that learn and adapt. This helps you stay ahead of the competition.
+                            Devscale Lab gives you a <span className="text-gradient-blue font-black">better way</span> to build your online presence. We use AI and automation to create websites that learn and adapt. This helps you stay ahead of the competition.
                         </h2>
                     </motion.div>
                 </section>
@@ -519,7 +519,7 @@ export function HomeClient() {
 
                             <div className="absolute bottom-8 left-0 right-0 text-center">
                                 <span className="text-[10px] uppercase tracking-[0.4em] font-mono text-black/20 dark:text-white/20 group-hover:text-black/40 dark:group-hover:text-white/40 transition-colors">
-                                    DavScale Lab || Systems
+                                    Devscale Lab || Systems
                                 </span>
                             </div>
                         </motion.div>
@@ -689,7 +689,7 @@ export function HomeClient() {
                                 </div>
                             </div>
                             <div className="pt-12 border-t border-black/10 dark:border-white/5 transition-colors">
-                                <span className="text-[10px] uppercase tracking-[0.5em] text-black/20 dark:text-white/20 font-mono transition-colors">DevScale Lab v1.0</span>
+                                <span className="text-[10px] uppercase tracking-[0.5em] text-black/20 dark:text-white/20 font-mono transition-colors">Devscale Lab v1.0</span>
                             </div>
                         </div>
                     </div>
@@ -706,7 +706,7 @@ export function HomeClient() {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 w-fit transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-black/40 dark:bg-white/40 transition-colors" />
-                            <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-black/40 dark:text-white/40 transition-colors">About DevScale Lab</span>
+                            <span className="text-[10px] uppercase tracking-[0.25em] font-medium text-black/40 dark:text-white/40 transition-colors">About Devscale Lab</span>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -715,7 +715,7 @@ export function HomeClient() {
                                     Web Development for Startups & Businesses
                                 </h3>
                                 <p className="text-black/40 dark:text-white/40 text-sm leading-relaxed transition-colors">
-                                    DevScale Lab is a professional web agency. We build fast, high-quality websites that help businesses and startups grow. Using modern tools like Next.js and React, we ensure your site is secure, easy to scale, and looks great on every screen.
+                                    Devscale Lab is a professional web agency. We build fast, high-quality websites that help businesses and startups grow. Using modern tools like Next.js and React, we ensure your site is secure, easy to scale, and looks great on every screen.
                                 </p>
                             </div>
                             <div className="flex flex-col gap-4">
@@ -730,7 +730,7 @@ export function HomeClient() {
 
                         {/* Visually hidden keyword block — readable by search engines */}
                         <p className="sr-only">
-                            web development agency, website development company, next js developer, react developer, frontend developer, full stack developer, landing page developer, business website design, seo optimized website, fast website development, vercel hosting, custom website development, responsive website design, ui ux design, website for real estate, agency website development, startup website, portfolio website, website maintenance service, affordable web development, professional website developer, india web developer, freelance web developer, modern website design, cloud hosting website, tailwind css developer, node js developer, javascript developer, website redesign service, high converting landing page, seo friendly website, google ranking website, performance optimized website, static website development, dynamic website development, custom web application, business landing page, digital agency website, tech agency website, best web developer, fast loading website, mobile responsive website, website for business, website for company, website for startup, web design service, web development service, website seo optimization, technical seo, on page seo, website speed optimization, vercel deployment, domain setup, dns setup, hosting setup, custom code website, premium website design, luxury website design, real estate website developer, agency landing page, nextjs agency, react agency, web solutions company, website experts, devscale lab
+                            web development agency, website development company, next js developer, react developer, frontend developer, full stack developer, landing page developer, business website design, seo optimized website, fast website development, vercel hosting, custom website development, responsive website design, ui ux design, website for real estate, agency website development, startup website, portfolio website, website maintenance service, affordable web development, professional website developer, india web developer, freelance web developer, modern website design, cloud hosting website, tailwind css developer, node js developer, javascript developer, website redesign service, high converting landing page, seo friendly website, google ranking website, performance optimized website, static website development, dynamic website development, custom web application, business landing page, digital agency website, tech agency website, best web developer, fast loading website, mobile responsive website, website for business, website for company, website for startup, web design service, web development service, website seo optimization, technical seo, on page seo, website speed optimization, vercel deployment, domain setup, dns setup, hosting setup, custom code website, premium website design, luxury website design, real estate website developer, agency landing page, nextjs agency, react agency, web solutions company, website experts, Devscale Lab
                         </p>
                     </motion.div>
                 </section>
@@ -738,3 +738,4 @@ export function HomeClient() {
         </>
     );
 }
+
