@@ -77,7 +77,7 @@ export const Navbar = () => {
                             transition={{ duration: 0.2 }}
                             className="absolute top-full left-0 w-full mt-3 px-4 pointer-events-auto"
                         >
-                            <div className="rounded-2xl liquid-glass p-6 flex flex-col gap-5">
+                            <div className="rounded-2xl bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl p-6 flex flex-col gap-5">
                                 {[
                                     { name: "Home", path: "/" },
                                     { name: "Process", path: "/process" },
